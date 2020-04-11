@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.poi:poi:4.1.1">
+    <CLASSES>
+      <root url="jar://D:/grails-3.3.9/caches/modules-2/files-2.1/org.apache.poi/poi/4.1.1/c915f1a426213a8450fb473b5b3adb63f5ac1017/poi-4.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/grails-3.3.9/caches/modules-2/files-2.1/org.apache.poi/poi/4.1.1/45d063946e80a2d08a209bebc7d87c7ad8d6d2cb/poi-4.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

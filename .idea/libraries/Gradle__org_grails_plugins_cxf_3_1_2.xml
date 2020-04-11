@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.grails.plugins:cxf:3.1.2">
+    <CLASSES>
+      <root url="jar://D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails.plugins/cxf/3.1.2/f62187cc7bc5c4cf6c3dcf8ae4d7a31ffa11b7e7/cxf-3.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails.plugins/cxf/3.1.2/1cb830db94f167ba25d69ab7dfbd76a9bf69d74f/cxf-3.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

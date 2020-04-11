@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf:cxf-rt-bindings-soap:3.1.8">
+    <CLASSES>
+      <root url="jar://D:/grails-3.3.9/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-bindings-soap/3.1.8/3386de88494f2453715e5f5868108a454fe848c1/cxf-rt-bindings-soap-3.1.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/grails-3.3.9/caches/modules-2/files-2.1/org.apache.cxf/cxf-rt-bindings-soap/3.1.8/97aca65ada57eccd8db1a9225ac2113f98e24f5a/cxf-rt-bindings-soap-3.1.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

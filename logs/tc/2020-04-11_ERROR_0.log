@@ -1,0 +1,2 @@
+16:32:04.963 [http-nio-8888-exec-9] ERROR o.a.c.c.C.[.[.[.[grailsDispatcherServlet] (DirectJDKLog.java:182) - Servlet.service() for servlet [grailsDispatcherServlet] in context with path [/blog] threw exception
+grails.plugin.springsecurity.userdetails.NoStackUsernameNotFoundException: User not found

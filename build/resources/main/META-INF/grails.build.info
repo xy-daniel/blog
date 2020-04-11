@@ -1,0 +1,6 @@
+#Wed, 08 Apr 2020 11:24:21 +0800
+
+info.app.version=0.1
+info.app.name=blog
+grails.env=development
+info.app.grailsVersion=3.3.9
