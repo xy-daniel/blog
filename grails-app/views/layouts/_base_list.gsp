@@ -28,31 +28,31 @@
         <ul class="sidebar-recent-post">
             <li>
                 <div class="info">
-                    <h4 class="title"><a href="#">Lorem ipsum dolor sit amet.</a></h4>
-                    <div class="date">23 December 2018</div>
+                    <h4 class="title"><a href="#">岳阳楼记. </a></h4>
+                    <div class="date">23 December 2020</div>
                 </div>
             </li>
             <li>
                 <div class="info">
-                    <h4 class="title"><a href="#">Vestibulum a cursus arcu.</a></h4>
+                    <h4 class="title"><a href="#">劝学. </a></h4>
                     <div class="date">16 December 2018</div>
                 </div>
             </li>
             <li>
                 <div class="info">
-                    <h4 class="title"><a href="#">Nullam vel condimentum lectus. </a></h4>
+                    <h4 class="title"><a href="#">过秦论. </a></h4>
                     <div class="date">7 December 2018</div>
                 </div>
             </li>
             <li>
                 <div class="info">
-                    <h4 class="title"><a href="#">Proin in dui egestas libero posuere ullamcorper. </a></h4>
+                    <h4 class="title"><a href="#">项脊轩志. </a></h4>
                     <div class="date">20 November 2018</div>
                 </div>
             </li>
             <li>
                 <div class="info">
-                    <h4 class="title"><a href="#">Interdum et malesuada fames ac ante.</a></h4>
+                    <h4 class="title"><a href="#">六国论.</a></h4>
                     <div class="date">5 November 2018</div>
                 </div>
             </li>
@@ -63,8 +63,8 @@
     <div class="section-container">
         <h4 class="section-title"><span>友链</span></h4>
         <ul class="sidebar-list">
-            <li><a href="#">江南一点雨</a></li>
-            <li><a href="#">丹尼尔</a></li>
+            <li><a target="_blank" href="http://www.javaboy.org">江南一点雨</a></li>
+            <li><a target="_blank" href="http://www.cwyuan.cn">丹尼尔</a></li>
         </ul>
     </div>
     <!-- end section-container -->

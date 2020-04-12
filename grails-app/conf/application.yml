@@ -191,9 +191,9 @@ grails:
                 #首页不需要任何权限
                 {pattern: '/',                          access: ['permitAll']},
                 {pattern: '/index/**',                  access: ['permitAll']},
+                {pattern: '/assets/**',                 access: ['permitAll']},
                 {pattern: '/**/favicon.ico',            access: ['permitAll']},
                 {pattern: '/error',                     access: ['permitAll']},
-                {pattern: '/assets/**',                 access: ['permitAll']},
                 {pattern: '/login/**',                  access: ['permitAll']},
                 {pattern: '/logout/**',                 access: ['permitAll']},
                 {pattern: '/stomp/**',                  access: ['permitAll']},

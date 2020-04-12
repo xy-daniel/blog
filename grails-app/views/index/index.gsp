@@ -105,22 +105,20 @@
 								<!-- begin post-info -->
 								<div class="post-info">
 									<h4 class="post-title">
-										<a href="post_detail.gsp">Bootstrap Carousel Blog Post</a>
+										<g:link controller="index" action="post_detail">鵩鸟赋</g:link>
 									</h4>
 									<div class="post-by">
-										Posted By <a href="#">admin</a> <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 Comments
+										作者 <a href="#">贾谊</a> <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 评论
 									</div>
 									<div class="post-desc">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit dolor, elementum ut ligula ultricies, 
-										aliquet eleifend risus. Vivamus ut auctor sapien. Morbi at nibh id lorem viverra commodo augue dui, in pellentesque odio tempor.
-										Etiam lobortis vel enim vitae facilisis. Suspendisse ac faucibus diam, non malesuada nisl. Maecenas vel aliquam eros, sit amet gravida lacus. 
-										nteger dictum, nulla [...]
+										单阏之岁兮，四月孟夏，庚子日斜兮，鵩集予舍。止于坐隅兮，貌甚闲暇。异物来萃兮，私怪其故。发书占之兮，谶言其度，曰：“野鸟入室兮，主人将去。”请问于鵩兮：“予去何之？吉乎告我，凶言其灾。淹速之度兮，语予其期。”鵩乃叹息，举首奋翼；口不能言，请对以臆：
+										“万物变化兮，固无休息。斡流而迁兮，或推而还。形气转续兮，变化而蟺。沕穆无穷兮，胡可胜言！祸兮福所倚，福兮祸所伏；优喜聚门兮，吉凶同域。彼吴强大兮，夫差以败；越栖会稽兮， [...]
 									</div>
 								</div>
 								<!-- end post-info -->
 								<!-- begin read-btn-container -->
 								<div class="read-btn-container">
-									<a href="post_detail.gsp">Read More <i class="fa fa-angle-double-right"></i></a>
+									<g:link controller="index" action="post_detail" class="read-btn">Read More <i class="fa fa-angle-double-right"></i></g:link>
 								</div>
 								<!-- end read-btn-container -->
 							</div>
@@ -166,58 +164,12 @@
 								<!-- end post-info -->
 								<!-- begin read-btn-container -->
 								<div class="read-btn-container">
-									<a href="post_detail.gsp" class="read-btn">Read More <i class="fa fa-angle-double-right"></i></a>
+									<g:link controller="index" action="post_detail" class="read-btn">Read More <i class="fa fa-angle-double-right"></i></g:link>
 								</div>
 								<!-- end read-btn-container -->
 							</div>
 							<!-- end post-content -->
 						</li>
-%{--						<li>--}%
-%{--							<!-- begin post-left-info -->--}%
-%{--							<div class="post-left-info">--}%
-%{--								<div class="post-date">--}%
-%{--									<span class="day">18</span>--}%
-%{--									<span class="month">OCT</span>--}%
-%{--								</div>--}%
-%{--								<div class="post-likes">--}%
-%{--									<i class="fa fa-heart"></i>--}%
-%{--									<span class="number">1,743</span>--}%
-%{--								</div>--}%
-%{--							</div>--}%
-%{--							<!-- end post-left-info -->--}%
-%{--							<!-- begin post-content -->--}%
-%{--							<div class="post-content">--}%
-%{--								<!-- begin post-video -->--}%
-%{--								<div class="post-video">--}%
-%{--									<div class="embed-responsive embed-responsive-16by9">--}%
-%{--										<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_5aKcpAhTOk" allowfullscreen></iframe>--}%
-%{--									</div>--}%
-%{--								</div>--}%
-%{--								<!-- end post-video -->--}%
-%{--								<!-- begin post-info -->--}%
-%{--								<div class="post-info">--}%
-%{--									<h4 class="post-title">--}%
-%{--										<a href="post_detail.gsp">Blog Post Video</a>--}%
-%{--									</h4>--}%
-%{--									<div class="post-by">--}%
-%{--										Posted By <a href="#">admin</a> <span class="divider">|</span> <a href="#">Movies</a>, <a href="#">Minions</a>, <a href="#">Trailer</a> <span class="divider">|</span> 1,292 Comments--}%
-%{--									</div>--}%
-%{--									<div class="post-desc">--}%
-%{--										Praesent maximus malesuada purus, sit amet auctor velit scelerisque nec. Suspendisse eget pellentesque dui, ut egestas orci. --}%
-%{--										Proin eget massa et magna faucibus pulvinar. Quisque tortor orci, volutpat vel auctor non, varius a augue. Cras non ante arcu. --}%
-%{--										Phasellus sit amet dolor non est dictum convallis vel eu lectus. --}%
-%{--										Etiam consectetur non leo at auctor. Proin porttitor tellus arcu, in accumsan eros tincidunt eget[...]--}%
-%{--									</div>--}%
-%{--								</div>--}%
-%{--								<!-- end post-info -->--}%
-%{--								<!-- begin read-btn-container -->--}%
-%{--								<div class="read-btn-container">--}%
-%{--									<a href="post_detail.gsp">Read More <i class="fa fa-angle-double-right"></i></a>--}%
-%{--								</div>--}%
-%{--								<!-- end read-btn-container -->--}%
-%{--							</div>--}%
-%{--							<!-- end post-content -->--}%
-%{--						</li>--}%
 						<li>
 							<!-- begin post-left-info -->
 							<div class="post-left-info">
@@ -256,7 +208,7 @@
 								<!-- end post-info -->
 								<!-- begin read-btn-container -->
 								<div class="read-btn-container">
-									<a href="post_detail.gsp" class="read-btn">Read More <i class="fa fa-angle-double-right"></i></a>
+									<g:link controller="index" action="post_detail" class="read-btn">Read More <i class="fa fa-angle-double-right"></i></g:link>
 								</div>
 								<!-- begin read-btn-container -->
 							</div>

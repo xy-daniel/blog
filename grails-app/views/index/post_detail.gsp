@@ -4,74 +4,35 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
-	<meta charset="utf-8" />
-	<title>Color Admin | Blog Concept Front End Theme</title>
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-	<meta content="" name="description" />
-	<meta content="" name="author" />
+	<!-- begin #page-loader -->
+	<g:render template="/layouts/base_loader"/>
+	<!-- end #page-loader -->
+	<title>文章</title>
 	
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="../assets/plugins/font-awesome/css/all.min.css" rel="stylesheet" />
-	<link href="../assets/plugins/animate/animate.min.css" rel="stylesheet" />
-	<link href="../assets/css/blog/style.min.css" rel="stylesheet" />
-	<link href="../assets/css/blog/style-responsive.min.css" rel="stylesheet" />
-	<link href="../assets/css/blog/theme/default.css" id="theme" rel="stylesheet" />
+	<asset:stylesheet rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+	<asset:stylesheet rel="stylesheet" href="font-awesome/css/all.min.css"/>
+	<asset:stylesheet rel="stylesheet" href="animate/animate.css"/>
+	<asset:stylesheet rel="stylesheet" href="blog/style.css"/>
+	<asset:stylesheet rel="stylesheet" href="blog/style-responsive.css"/>
+	<asset:stylesheet rel="stylesheet" href="blog/theme/default.css"/>
 	<!-- ================== END BASE CSS STYLE ================== -->
     
 	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="../assets/plugins/pace/pace.min.js"></script>
+	<asset:javascript src="pace/pace.min.js"/>
+	<asset:javascript src="jquery/jquery-3.3.1.min.js"/>
+	<asset:javascript src="bootstrap/js/bootstrap.bundle.min.js"/>
+	<asset:javascript src="js-cookie/js.cookie.js"/>
+	<asset:javascript src="masonry/masonry.min.js"/>
+	<asset:javascript src="paroller/jquery.paroller.min.js"/>
+	<asset:javascript src="blog/apps.min.js"/>
 	<!-- ================== END BASE JS ================== -->
 </head>
 <body>
-  <!-- begin #header -->
-	<div id="header" class="header navbar navbar-default navbar-fixed-top">
-		<!-- begin container -->
-		<div class="container">
-			<!-- begin navbar-header -->
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a href="index.html" class="navbar-brand">
-					<span class="brand-logo"></span>
-					<span class="brand-text">
-						COLOR ADMIN
-					</span>
-				</a>
-			</div>
-			<!-- end navbar-header -->
-			<!-- begin navbar-collapse -->
-			<div class="collapse navbar-collapse" id="header-navbar">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" data-toggle="dropdown">HOME <b class="caret"></b></a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="index_transparent_header.gsp">Page with Transparent Header</a>
-							<a class="dropdown-item" href="index_inverse_header.gsp">Page with Inverse Header</a>
-							<a class="dropdown-item" href="index.html">Default Header</a>
-						</div>
-					</li>
-					<li class="dropdown">
-						<a href="#" data-toggle="dropdown">POSTS <b class="caret"></b></a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="grid.gsp">Page with Grid View Blog Post</a>
-							<a class="dropdown-item" href="algorithm.gsp">Page without Sidebar</a>
-						</div>
-					</li>
-					<li><a href="about_me.gsp">ABOUT ME</a></li>
-					<li><a href="contact_us.gsp">CONTACT US</a></li>
-					<li><a href="https://wrapbootstrap.com/theme/color-admin-admin-template-front-end-WB0N89JMK">PURCHASE</a></li>
-				</ul>
-			</div>
-			<!-- end navbar-collapse -->
-		</div>
-		<!-- end container -->
-	</div>
-	<!-- end #header -->
+
+	<!-- begin #page-header -->
+	<g:render template="/layouts/base_header"/>
+	<!-- end #page-header -->
 	
 	<!-- begin #content -->
 	<div id="content" class="content">
@@ -84,77 +45,49 @@
 					<!-- begin post-detail -->
 					<div class="post-detail section-container">
 						<ul class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item"><a href="#">Sports</a></li>
-							<li class="breadcrumb-item active">Bootstrap Carousel Blog Post</li>
+							<li class="breadcrumb-item"><a href="#">主页</a></li>
+							<li class="breadcrumb-item"><a href="#">文言文</a></li>
+							<li class="breadcrumb-item active">鵩鸟赋</li>
 						</ul>
 						<h4 class="post-title">
-							<a href="post_detail.gsp">Bootstrap Carousel Blog Post</a>
+							<a href="post_detail.gsp">鵩鸟赋</a>
 						</h4>
 						<div class="post-by">
-							Posted By <a href="#">admin</a> <span class="divider">|</span> 10 June 2018 <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 Comments
+							作者 <a href="#">贾谊</a> <span class="divider">|</span> 10 June 2018 <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 评论
 						</div>
 						<!-- begin post-image -->
 						<div class="post-image">
-							<div class="post-image-cover" style="background-image: url(../assets/img/post/post-1.jpg)"></div>
+							<div class="post-image-cover" style="background-image: url('<asset:assetPath src="post/post-1.jpg"/>')"></div>
 						</div>
 						<!-- end post-image -->
 						<!-- begin post-desc -->
 						<div class="post-desc">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo eget quam sed tempor. 
-								Morbi vel libero eget urna interdum accumsan nec non nibh. Nam aliquam id ligula convallis egestas. 
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lacinia lectus nibh, nec 
-								pellentesque lorem iaculis ut. Cras finibus arcu eget feugiat hendrerit. Suspendisse quis 
-								molestie velit. In hendrerit justo ac magna tristique viverra. Pellentesque rhoncus metus 
-								eget ex sagittis lacinia. In at dapibus erat. Phasellus imperdiet dui risus, eget efficitur 
-								tortor egestas nec. Integer fermentum sit amet mauris sollicitudin pulvinar.
-								Quisque et viverra leo. Suspendisse neque nisi, lacinia facilisis sem ac, tincidunt lacinia augue. 
-								Etiam in dapibus nisl, non blandit urna. Proin scelerisque venenatis vestibulum. 
-								Proin iaculis finibus turpis, eget rhoncus tortor tempor a.
+								单阏之岁兮，四月孟夏，庚子日斜兮，鵩集予舍。止于坐隅兮，貌甚闲暇。异物来萃兮，私怪其故。发书占之兮，谶言其度，曰：“野鸟入室兮，主人将去。”请问于鵩兮：“予去何之？吉乎告我，凶言其灾。淹速之度兮，语予其期。”鵩乃叹息，举首奋翼；口不能言，请对以臆：
 							</p>
 						</div>
 						<!-- end post-desc -->
 						<!-- begin post-image -->
 						<div class="post-image">
-							<div class="post-image-cover" style="background-image: url(../assets/img/post/post-2.jpg)"></div>
+							<div class="post-image-cover" style="background-image: url('<asset:assetPath src="post/post-2.jpg"/>')"></div>
 						</div>
 						<!-- end post-image -->
 						<!-- begin post-desc -->
 						<div class="post-desc">
 							<p>
-								Donec ipsum augue, commodo in eleifend sit amet, pretium sed eros. 
-								Proin convallis ligula nec dolor ullamcorper dictum. Nullam dapibus pulvinar mi 
-								tristique rhoncus. Curabitur eget dolor sit amet ante pretium ultricies ut vel nisi. 
-								Vivamus vulputate feugiat ex, vitae vestibulum tortor eleifend id. Maecenas non justo leo. 
-								Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut venenatis tempus tortor, 
-								quis ultrices ligula lacinia et. Donec et lacus et felis viverra mollis. Ut sit amet urna 
-								et lectus eleifend vulputate ut at ex. Maecenas pulvinar nulla id elit maximus, vitae 
-								luctus augue porta. In consequat hendrerit mollis. Nam in justo non nunc placerat 
-								ultrices sed quis orci.
+								“万物变化兮，固无休息。斡流而迁兮，或推而还。形气转续兮，变化而蟺。沕穆无穷兮，胡可胜言！祸兮福所倚，福兮祸所伏；优喜聚门兮，吉凶同域。彼吴强大兮，夫差以败；越栖会稽兮，勾践霸世。斯游遂成兮，卒被五刑；傅说胥靡兮，乃相武丁。夫祸之与福兮，何异纠纆；命不可说兮，孰知其极！水激则旱兮，矢激则远；万物回薄兮，振荡相转。云蒸雨降兮，纠错相纷；大钧播物兮，坱圠无垠。天不可预虑兮，道不可预谋；迟速有命兮，焉识其时。
 							</p>
 						</div>
 						<!-- end post-desc -->
 						<!-- begin post-image -->
 						<div class="post-image">
-							<div class="post-image-cover" style="background-image: url(../assets/img/post/post-3.jpg)"></div>
+							<div class="post-image-cover" style="background-image: url('<asset:assetPath src="post/post-3.jpg"/>')"></div>
 						</div>
 						<!-- end post-image -->
 						<!-- begin post-desc -->
 						<div class="post-desc">
 							<p>
-								Aenean lacinia lorem id lectus malesuada eleifend. Integer porttitor commodo imperdiet. 
-								Ut id lacus diam. Pellentesque fringilla vitae eros a varius. Aenean vitae massa sem. 
-								Curabitur at interdum neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
-								per inceptos himenaeos. Aenean eget dui consectetur, sollicitudin ligula non, molestie orci. 
-								Fusce congue tempor lacus. Proin in tortor a est fermentum interdum a at ipsum.
-							</p>
-							<p>
-								Suspendisse nec molestie enim. Aliquam laoreet rhoncus erat, vel gravida purus dictum dignissim. 
-								Nam commodo tellus et aliquam consequat. Aliquam sed fringilla sem, et ullamcorper magna. 
-								Donec cursus a nulla et posuere. Nunc semper mattis tortor, nec tristique mi vehicula eget. 
-								Phasellus eget velit quam. Nunc placerat pellentesque bibendum. Nunc vestibulum facilisis purus,
-								eu dapibus diam placerat nec. Aliquam elementum neque quis fringilla mattis.
+								且夫天地为炉兮，造化为工；阴阳为炭兮，万物为铜。合散消息兮，安有常则？千变万化兮，未始有极，忽然为人兮，何足控抟；化为异物兮，又何足患！小智自私兮，贱彼贵我；达人大观兮，物无不可。贪夫殉财兮，烈士殉名。夸者死权兮，品庶每生。怵迫之徒兮，或趋西东；大人不曲兮，意变齐同。愚士系俗兮，窘若囚拘；至人遗物兮，独与道俱。众人惑惑兮，好恶积亿；真人恬漠兮，独与道息。释智遗形兮，超然自丧；寥廓忽荒兮，与道翱翔。乘流则逝兮，得坻则止；纵躯委命兮，不私与己。其生兮若浮，其死兮若休；澹乎若深渊止之静，泛乎若不系之舟。不以生故自宝兮，养空而浮；德人无累兮，知命不忧。细故蒂芥兮，何足以疑！”
 							</p>
 						</div>
 						<!-- end post-desc -->
@@ -162,7 +95,7 @@
 					<!-- end post-detail -->
 					<!-- begin section-container -->
 					<div class="section-container">
-						<h4 class="section-title"><span>All Comments (3)</span></h4>
+						<h4 class="section-title"><span>所有评论 (3)</span></h4>
 						<!-- begin comment-list -->
 						<ul class="comment-list">
 							<li>
@@ -174,18 +107,16 @@
 								<!-- begin comment-container -->
 								<div class="comment-container">
 									<div class="comment-author">
-										Aquila Erik 
+										张三
 										<span class="comment-date">
 										on <span class="underline">June 6, 2018</span> at <span class="underline">6:17 pm</span>
 										</span>
 									</div>
 									<div class="comment-content">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida blandit risus at finibus. 
-										In suscipit ligula velit, vel commodo libero viverra nec. Aenean luctus eleifend enim quis luctus. 
-										Aliquam vulputate placerat ullamcorper.
+										曲贾谊于长沙非无圣主.
 									</div>
 									<div class="comment-btn pull-left">
-										<a href="#"><i class="fa fa-reply"></i> Reply</a>
+										<a href="#"><i class="fa fa-reply"></i> 回复</a>
 									</div>
 									<div class="comment-rating">
 										Like or Dislike: 
@@ -203,18 +134,16 @@
 											<!-- begin comment-container -->
 											<div class="comment-container">
 												<div class="comment-author">
-													Gevorg Silvester 
+													李四
 													<span class="comment-date">
 													on <span class="underline">June 6, 2018</span> at <span class="underline">8:17 pm</span>
 													</span>
 												</div>
 												<div class="comment-content">
-													Quisque aliquam arcu nec nibh eleifend, ac varius ante lacinia. 
-													Nam nec varius enim, vel mollis dui. Duis malesuada lorem metus, 
-													ut placerat turpis vulputate vitae.
+													天地造物不测.
 												</div>
 												<div class="comment-btn pull-left">
-													<a href="#"><i class="fa fa-reply"></i> Reply</a>
+													<a href="#"><i class="fa fa-reply"></i> 回复</a>
 												</div>
 												<div class="comment-rating">
 													Like or Dislike: 
@@ -232,22 +161,22 @@
 							<li>
 								<!-- begin comment-avatar -->
 								<div class="comment-avatar">
-									<img src="../assets/img/user/user-1.jpg" alt="" />
+									<img src="<asset:assetPath src="work/user-1.jpg"/>" alt="" />
 								</div>
 								<!-- end comment-avatar -->
 								<!-- begin comment-container -->
 								<div class="comment-container">
 									<div class="comment-author">
-										Isador Ennio 
+										王五
 										<span class="comment-date">
 										on <span class="underline">June 6, 2018</span> at <span class="underline">11:23 pm</span>
 										</span>
 									</div>
 									<div class="comment-content">
-										Fusce urna massa, pellentesque eget interdum nec, lacinia nec velit.
+										呜呼哀哉.
 									</div>
 									<div class="comment-btn pull-left">
-										<a href="#"><i class="fa fa-reply"></i> Reply</a>
+										<a href="#"><i class="fa fa-reply"></i> 回复</a>
 									</div>
 									<div class="comment-rating">
 										Like or Dislike: 
@@ -263,27 +192,25 @@
 					<!-- end section-container -->
 					<!-- begin section-container -->
 					<div class="section-container">
-						<h4 class="section-title m-b-20"><span>Add a Comment</span></h4>
+						<h4 class="section-title m-b-20"><span>发表评论</span></h4>
 						<div class="alert alert-warning f-s-12">
-							Suspendisse vulputate pulvinar nisl, quis rutrum risus pretium ut. Nulla at risus facilisis, consectetur erat nec, 
-							posuere justo. Ut elementum, elit pellentesque eleifend semper, elit metus venenatis libero, 
-							non fermentum mi est eu neque. Ut vel metus eget tortor viverra varius et quis eros.
+							如果您已经有一个Daniel博客的账号您可以直接发表评论/匿名评论当然我是不推荐的，或者您可以尝试选择下面的复选框发表评论的同时为您创建一个账号。当然，此账号仅作为您发表评论所用别无他用。
 						</div>
 						<form class="form-horizontal" action="" method="POST">
 							<div class="form-group row">
-								<label class="col-form-label f-s-12 col-md-2 text-md-right">Your Name <span class="text-danger">*</span></label>
+								<label class="col-form-label f-s-12 col-md-2 text-md-right">用户名 <span class="text-danger">*</span></label>
 								<div class="col-md-10">
 									<input type="text" class="form-control" />
 								</div>
 							</div>
 							<div class="form-group row">
-								<label class="col-form-label f-s-12 col-md-2 text-md-right">Your Email <span class="text-danger">*</span></label>
+								<label class="col-form-label f-s-12 col-md-2 text-md-right">电子邮箱 <span class="text-danger">*</span></label>
 								<div class="col-md-10">
 									<input type="text" class="form-control" />
 								</div>
 							</div>
 							<div class="form-group row">
-								<label class="col-form-label f-s-12 col-md-2 text-md-right">Comment <span class="text-danger">*</span></label>
+								<label class="col-form-label f-s-12 col-md-2 text-md-right">评论内容 <span class="text-danger">*</span></label>
 								<div class="col-md-10">
 									<textarea class="form-control" rows="10"></textarea>
 								</div>
@@ -292,13 +219,13 @@
 								<div class="col-md-10 offset-md-2">
 									<div class="custom-control custom-checkbox f-s-12">
 										<input type="checkbox" class="custom-control-input" id="emailNotify" name="email_notify" />
-										<label class="custom-control-label p-t-3" for="emailNotify">Notify me of follow-up comments by email.</label>
+										<label class="custom-control-label p-t-3" for="emailNotify">若您选择申请账号此后关于此评论的问答将以邮箱的形式发送给您.</label>
 									</div>
 								</div>
 							</div>
 							<div class="form-group row">
 								<div class="col-md-10 offset-md-2">
-									<button type="submit" class="btn btn-inverse btn-lg">Submit Comment</button>
+									<button type="submit" class="btn btn-inverse btn-lg">发表评论</button>
 								</div>
 							</div>
 						</form>
@@ -307,79 +234,7 @@
 				</div>
 				<!-- end col-9 -->
 				<!-- begin col-3 -->
-				<div class="col-md-3">
-					<!-- begin section-container -->
-					<div class="section-container">
-						<div class="input-group sidebar-search">
-							<input type="text" class="form-control" placeholder="Search Our Stories..." />
-							<span class="input-group-append">
-							<button class="btn btn-inverse" type="button"><i class="fa fa-search"></i></button>
-							</span>
-						</div>
-					</div>
-					<!-- end section-container -->
-					<!-- begin section-container -->
-					<div class="section-container">
-						<h4 class="section-title"><span>Categories</span></h4>
-						<ul class="sidebar-list">
-							<li><a href="#">Sports (20)</a></li>
-							<li><a href="#">Outdoor Sports (45)</a></li>
-							<li><a href="#">Indoor Sports (1,292)</a></li>
-							<li><a href="#">Video Shooting (12)</a></li>
-							<li><a href="#">Drone (229)</a></li>
-							<li><a href="#">Uncategorized (1,482)</a></li>
-						</ul>
-					</div>
-					<!-- end section-container -->
-					<!-- begin section-container -->
-					<div class="section-container">
-						<h4 class="section-title"><span>Recent Post</span></h4>
-						<ul class="sidebar-recent-post">
-							<li>
-								<div class="info">
-									<h4 class="title"><a href="#">Lorem ipsum dolor sit amet.</a></h4>
-									<div class="date">23 December 2018</div>
-								</div>
-							</li>
-							<li>
-								<div class="info">
-									<h4 class="title"><a href="#">Vestibulum a cursus arcu.</a></h4>
-									<div class="date">16 December 2018</div>
-								</div>
-							</li>
-							<li>
-								<div class="info">
-									<h4 class="title"><a href="#">Nullam vel condimentum lectus. </a></h4>
-									<div class="date">7 December 2018</div>
-								</div>
-							</li>
-							<li>
-								<div class="info">
-									<h4 class="title"><a href="#">Proin in dui egestas libero posuere ullamcorper. </a></h4>
-									<div class="date">20 November 2018</div>
-								</div>
-							</li>
-							<li>
-								<div class="info">
-									<h4 class="title"><a href="#">Interdum et malesuada fames ac ante.</a></h4>
-									<div class="date">5 November 2018</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<!-- end section-container -->
-					<!-- begin section-container -->
-					<div class="section-container">
-						<h4 class="section-title"><span>Follow Us</span></h4>
-						<ul class="sidebar-social-list">
-							<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
-					<!-- end section-container -->
-				</div>
+				<g:render template="/layouts/base_list"/>
 				<!-- end col-3 -->
 			</div>
 			<!-- end row -->
@@ -387,152 +242,11 @@
 		<!-- end container -->
 	</div>
 	<!-- end #content -->
-    
-	<!-- begin #footer -->
-	<div id="footer" class="footer">
-		<!-- begin container -->
-		<div class="container">
-			<!-- begin row -->
-			<div class="row">
-				<!-- begin col-3 -->
-				<div class="col-md-3 col-sm-3">
-					<!-- begin section-container -->
-					<div class="section-container">
-						<h4 class="footer-title">Categories</h4>
-						<ul class="categories">
-							<li><a href="#">Sports</a></li>
-							<li><a href="#">Outdoor Sports</a></li>
-							<li><a href="#">Indoor Sports</a></li>
-							<li><a href="#">Video Shooting</a></li>
-							<li><a href="#">Drone</a></li>
-							<li><a href="#">Uncategorized</a></li>
-						</ul>
-					</div>
-					<!-- end section-container -->
-				</div>
-				<!-- end col-3 -->
-				<!-- begin col-3 -->
-				<div class="col-md-3 col-sm-3">
-					<!-- begin section-container -->
-					<div class="section-container">
-						<h4 class="footer-title">Archives</h4>
-						<ul class="archives">
-							<li><a href="#">June 2018</a> <span class="total">(102)</span></li>
-							<li><a href="#">May 2018</a> <span class="total">(46)</span></li>
-							<li><a href="#">April 2018</a> <span class="total">(84)</span></li>
-							<li><a href="#">March 2018</a> <span class="total">(67)</span></li>
-							<li><a href="#">February 2018</a> <span class="total">(99)</span></li>
-							<li><a href="#">January 2018</a> <span class="total">(113)</span></li>
-							<li><a href="#">December 2017</a> <span class="total">(25)</span></li>
-						</ul>
-					</div>
-					<!-- end section-container -->
-				</div>
-				<!-- end col-3 -->
-				<!-- begin col-3 -->
-				<div class="col-md-3 col-sm-3">
-					<!-- begin section-container -->
-					<div class="section-container">
-						<h4 class="footer-title">Recent Posts</h4>
-						<ul class="recent-post">
-							<li>
-								<h4>
-									<a href="#">Nam ut urna hendrerit</a>
-									<span class="time">February 22, 2018</span>
-								</h4>
-							</li>
-							<li>
-								<h4>
-									<a href="#">Class aptent taciti sociosqu</a>
-									<span class="time">July 15, 2018</span>
-								</h4>
-							</li>
-							<li>
-								<h4>
-									<a href="#">Donec rhoncus arcu</a>
-									<span class="time">March 21, 2018</span>
-								</h4>
-							</li>
-						</ul>
-					</div>
-					<!-- end section-container -->
-				</div>
-				<!-- end col-3 -->
-				<!-- begin col-3 -->
-				<div class="col-md-3 col-sm-3">
-					<div class="section-container">
-						<h4 class="footer-title">About Color Admin</h4>
-						<address>
-							<strong>Twitter, Inc.</strong><br />
-							795 Folsom Ave, Suite 600<br />
-							San Francisco, CA 94107<br />
-							P: (123) 456-7890<br />
-							<br />
-							<strong>Full Name</strong><br />
-							<a href="#">first.last@example.com</a>
-						</address>
-					</div>
-					<!-- end section-container -->
-				</div>
-				<!-- end col-3 -->
-			</div>
-			<!-- end row -->
-		</div>
-		<!-- end container -->
-	</div>
-	<!-- end #footer -->
-	
-	<!-- begin #footer-copyright -->
-	<div id="footer-copyright" class="footer-copyright">
-		<!-- begin container -->
-		<div class="container">
-			<span class="copyright">&copy; 2019 SeanTheme All Right Reserved</span>
-			<ul class="social-media-list mt-2 mt-sm-0 float-none float-sm-right">
-				<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-				<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fa fa-rss"></i></a></li>
-			</ul>
-		</div>
-		<!-- end container -->
-	</div>
-	<!-- end #footer-copyright -->
-	
-	<!-- begin theme-panel -->
-	<div class="theme-panel">
-		<a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
-		<div class="theme-panel-content">
-			<ul class="theme-list clearfix">
-				<li><a href="javascript:;" class="bg-red" data-theme="red" data-theme-file="../assets/css/blog/theme/red.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-pink" data-theme="pink" data-theme-file="../assets/css/blog/theme/pink.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Pink" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-orange" data-theme="orange" data-theme-file="../assets/css/blog/theme/orange.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Orange" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-yellow" data-theme="yellow" data-theme-file="../assets/css/blog/theme/yellow.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Yellow" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-lime" data-theme="lime" data-theme-file="../assets/css/blog/theme/lime.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Lime" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-green" data-theme="green" data-theme-file="../assets/css/blog/theme/green.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Green" data-original-title="" title="">&nbsp;</a></li>
-				<li class="active"><a href="javascript:;" class="bg-teal" data-theme="default" data-theme-file="../assets/css/blog/theme/default.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Default" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-aqua" data-theme="aqua" data-theme-file="../assets/css/blog/theme/aqua.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Aqua" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-blue" data-theme="blue" data-theme-file="../assets/css/blog/theme/blue.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Blue" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-purple" data-theme="purple" data-theme-file="../assets/css/blog/theme/purple.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Purple" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-indigo" data-theme="indigo" data-theme-file="../assets/css/blog/theme/indigo.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Indigo" data-original-title="" title="">&nbsp;</a></li>
-				<li><a href="javascript:;" class="bg-black" data-theme="black" data-theme-file="../assets/css/blog/theme/black.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Black" data-original-title="" title="">&nbsp;</a></li>
-			</ul>
-		</div>
-	</div>
-	<!-- end theme-panel -->
-    
-	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="../assets/plugins/jquery/jquery-3.3.1.min.js"></script>
-	<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<!--[if lt IE 9]>
-		<script src="../assets/crossbrowserjs/html5shiv.js"></script>
-		<script src="../assets/crossbrowserjs/respond.min.js"></script>
-		<script src="../assets/crossbrowserjs/excanvas.min.js"></script>
-	<![endif]-->
-	<script src="../assets/plugins/js-cookie/js.cookie.js"></script>
-	<script src="../assets/js/blog/apps.min.js"></script>
-	<!-- ================== END BASE JS ================== -->
-	
+
+	<!-- begin #page-copyright -->
+	<g:render template="/layouts/base_copyright"/>
+	<!-- end #page-copyright -->
+
 	<script>
 		$(document).ready(function() {
 			App.init();

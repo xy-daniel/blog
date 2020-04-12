@@ -46,4 +46,11 @@ class IndexController {
     def file(){
 
     }
+
+    /**
+     * 文章页面
+     */
+    def post_detail(){
+
+    }
 }
