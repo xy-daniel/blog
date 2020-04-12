@@ -32,7 +32,7 @@ appender('STDOUT', ConsoleAppender) {
 def targetDir = BuildSettings.TARGET_DIR
 if (Environment.isDevelopmentMode() && targetDir != null) {
     appender("FULL_STACKTRACE", FileAppender) {
-        file = "${targetDir}/tc/stacktrace.log"
+        file = "${targetDir}/blog/stacktrace.log"
         append = true
         encoder(PatternLayoutEncoder) {
             pattern = "%level %logger - %msg%n"
@@ -60,7 +60,7 @@ appender("ERROR", RollingFileAppender) {
     }
     //指定日志生成格式
     rollingPolicy(TimeBasedRollingPolicy) {
-        fileNamePattern = "${HOME_DIR}/logs/tc/%d{yyyy-MM-dd}_ERROR_%i.log"
+        fileNamePattern = "${HOME_DIR}/logs/blog/%d{yyyy-MM-dd}_ERROR_%i.log"
         maxHistory = 30 //日志最长保留30天
         timeBasedFileNamingAndTriggeringPolicy(SizeAndTimeBasedFNATP) {
             maxFileSize = "10MB"
@@ -88,7 +88,7 @@ appender("INFO", RollingFileAppender) {
     //指定日志生成格式，文件名以日期命名，生成每日日志文件，如果超出大小则另起文件存放
     //%d{yyyy-MM-dd}-日期，%i-用于记录每日日志个数
     rollingPolicy(TimeBasedRollingPolicy) {
-        fileNamePattern = "${HOME_DIR}/logs/tc/%d{yyyy-MM-dd}_INFO_%i.log"
+        fileNamePattern = "${HOME_DIR}/logs/blog/%d{yyyy-MM-dd}_INFO_%i.log"
         maxHistory = 30 //日志最长保留30天
         timeBasedFileNamingAndTriggeringPolicy(SizeAndTimeBasedFNATP) {
             maxFileSize = "10MB" //单个日志文件最大为10MB

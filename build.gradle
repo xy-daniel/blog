@@ -11,7 +11,7 @@ buildscript {
 }
 
 version "0.1"
-group "technologcourt"
+group "blog"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
@@ -62,7 +62,7 @@ dependencies {
     compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.poi.xwpf.converter.xhtml', version: '2.0.2'
     compile 'org.grails.plugins:quartz:2.0.13'   //定时器
     compile 'org.grails.plugins:cxf:3.1.2'  //cxf
-    compile group: 'ws.schild', name: 'jave-all-deps', version: '2.7.1'//视频
+//    compile group: 'ws.schild', name: 'jave-all-deps', version: '2.7.1'//视频
 
 
     profile "org.grails.profiles:web"
