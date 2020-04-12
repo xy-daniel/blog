@@ -35,7 +35,7 @@
 	<g:render template="/layouts/base_header"/>
 	<!-- end #page-header -->
 
-	<div class="container" style="padding-top: 95px;padding-bottom: 20px">
+	<div class="container" style="padding-top: 100px;padding-bottom: 20px">
 		<h2>时光轴</h2>
 	</div>
 
