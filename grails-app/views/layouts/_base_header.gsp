@@ -9,25 +9,18 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="index.gsp" class="navbar-brand">
+				<g:link controller="index" action="index" class="navbar-brand">
 					<span class="brand-logo"></span>
 					<span class="brand-text">
 						Daniel's Blog
 					</span>
-				</a>
+				</g:link>
 			</div>
 			<!-- end navbar-header -->
 			<!-- begin navbar-collapse -->
 			<div class="collapse navbar-collapse" id="header-navbar">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" data-toggle="dropdown">主页 <b class="caret"></b></a>
-						<div class="dropdown-menu">
-%{--							<a class="dropdown-item" href="index_transparent_header.gsp">Page with Transparent Header</a>--}%
-%{--							<a class="dropdown-item" href="index_inverse_header.gsp">Page with Inverse Header</a>--}%
-%{--							<a class="dropdown-item" href="index.gsp">Default Header</a>--}%
-						</div>
-					</li>
+					<li><g:link controller="index" action="index">主页</g:link></li>
 					<li class="dropdown">
 						<a href="#" data-toggle="dropdown">帖子 <b class="caret"></b></a>
 						<div class="dropdown-menu">
@@ -35,8 +28,9 @@
 							<g:link class="dropdown-item" controller="index" action="algorithm">算法</g:link>
 						</div>
 					</li>
-					<li><a href="../index/about_me.gsp">关于我</a></li>
-					<li><a href="../index/contact_us.gsp">联系我</a></li>
+					<li><g:link controller="index" action="file">时光轴</g:link></li>
+					<li><g:link controller="index" action="about_me">关于我</g:link></li>
+					<li><g:link controller="index" action="contact_us">联系我</g:link></li>
 				</ul>
 			</div>
 			<!-- end navbar-collapse -->

@@ -61,12 +61,10 @@
     <!-- end section-container -->
     <!-- begin section-container -->
     <div class="section-container">
-        <h4 class="section-title"><span>Follow Me</span></h4>
-        <ul class="sidebar-social-list">
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <h4 class="section-title"><span>友链</span></h4>
+        <ul class="sidebar-list">
+            <li><a href="#">江南一点雨</a></li>
+            <li><a href="#">丹尼尔</a></li>
         </ul>
     </div>
     <!-- end section-container -->

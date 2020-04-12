@@ -16,9 +16,14 @@
 	<asset:stylesheet rel="stylesheet" href="blog/style-responsive.css"/>
 	<asset:stylesheet rel="stylesheet" href="blog/theme/default.css"/>
 	<!-- ================== END BASE CSS STYLE ================== -->
-    
 	<!-- ================== BEGIN BASE JS ================== -->
 	<asset:javascript src="pace/pace.min.js"/>
+	<asset:javascript src="jquery/jquery-3.3.1.min.js"/>
+	<asset:javascript src="bootstrap/js/bootstrap.bundle.min.js"/>
+	<asset:javascript src="js-cookie/js.cookie.js"/>
+	<asset:javascript src="masonry/masonry.min.js"/>
+	<asset:javascript src="paroller/jquery.paroller.min.js"/>
+	<asset:javascript src="blog/apps.min.js"/>
 	<!-- ================== END BASE JS ================== -->
 </head>
 <body>
@@ -197,16 +202,6 @@
 	<!-- begin #page-copyright -->
 	<g:render template="/layouts/base_copyright"/>
 	<!-- end #page-copyright -->
-    
-	<!-- ================== BEGIN BASE JS ================== -->
-	<asset:javascript src="jquery/jquery-3.3.1.min.js"/>
-	<asset:javascript src="bootstrap/js/bootstrap.bundle.min.js"/>
-
-	<asset:javascript src="js-cookie/js.cookie.js"/>
-	<asset:javascript src="masonry/masonry.min.js"/>
-	<asset:javascript src="paroller/jquery.paroller.min.js"/>
-	<asset:javascript src="blog/apps.min.js"/>
-	<!-- ================== END BASE JS ================== -->
 
 	<script>
 		$(document).ready(function() {
