@@ -20,37 +20,41 @@
         <!-- end sidebar user -->
         <!-- begin sidebar nav -->
         <ul class="nav">
+            <li class="has-sub">
+                <a href="javascript:void(0);">
+                    <b class="caret"></b>
+                    <i class="fa fa-table"></i>
+                    <span>系统配置</span>
+                </a>
+                <ul class="sub-menu">
+                    <!-- 添加文章  可以保存为关于我的文章 -->
+                    <li><a href="/blog">异常列表</a></li>
+                    <!-- 添加文章的时候需要填写是什么种类的文章方便前段进行遍历-->
+                    <li><a href="/blog">联系列表</a></li>
+                </ul>
+            </li>
             <!-- 文章管理 -->
             <li class="has-sub">
                 <a href="javascript:void(0);">
                     <b class="caret"></b>
                     <i class="fa fa-table"></i>
-                    <span>表格</span>
+                    <span>文章</span>
                 </a>
                 <ul class="sub-menu">
-                    <!-- 添加文章 -->
+                    <!-- 添加文章  可以保存为关于我的文章 -->
                     <li><a href="/blog">添加文章</a></li>
-                    <li class="has-sub">
-                        <!-- 文章管理 -->
-                        <a href="javascript:;"><b class="caret pull-right"></b> 文章管理</a>
-                        <ul class="sub-menu">
-                            <!-- 文章列表 -->
-                            <li><a href="/blog">文章列表</a></li>
-                            <!-- 文章分类列表 -->
-                            <li><a href="/blog">文章分类</a></li>
-                            <li><a href="/blog">字典管理</a></li>
-                        </ul>
-                    </li>
+                    <!-- 添加文章的时候需要填写是什么种类的文章方便前段进行遍历-->
+                    <li><a href="/blog">文章管理</a></li>
                 </ul>
             </li>
-            <!-- 用户管理 -->
-            <li><a href="/blog"><i class="fas fa-user"></i> <span>用户管理</span></a></li>
+            <!-- 评论用户管理 -->
+            <li><a href="/blog"><i class="fas fa-user"></i> <span>评论用户管理</span></a></li>
             <!-- 友链管理 -->
-            <li><a href="/blog"><i class="fas fa-user"></i> <span>友链管理</span></a></li>
+            <li><g:link controller="friend" action="list"><i class="fas fa-user"></i> <span>友链管理</span></g:link></li>
             <!-- 分类管理 -->
             <li><a href="/blog"><i class="fas fa-user"></i> <span>分类管理</span></a></li>
-            <!-- 作者管理 -->
-            <li><a href="/blog"><i class="fas fa-user"></i> <span>作者管理</span></a></li>
+
+            <li><a href="/blog"><i class="fas fa-user"></i> <span>座右铭管理</span></a></li>
             <!-- begin sidebar minify button -->
             <li><a href="javascript:void(0);" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
             <!-- end sidebar minify button -->
