@@ -5,10 +5,8 @@ class UrlMappings {
     static mappings = {
         "/$controller/$action?/$id?(.$format)?" {
             constraints {
-                // apply constraints here
             }
         }
-        //给书记员远程签名用的公开接口
         group "/api/client/signature", {
             "/list/$id"(controller: "api", action: "clientSignaturePersonList")//GET获取签名数据
             "/down/$id"(controller: "api", action: "clientSignatureDownload")//下载签名图片
@@ -16,7 +14,8 @@ class UrlMappings {
 
         "/plan/connect?/$id?(.$format)?"(controller: "plan", action: "connect")
 
-        "/"(controller: "index")
+//        登陆成功或者是直接请求/到达的是控制台而不是博客地址
+        "/"(controller: "console")
         "500"(controller: "error")
         "404"(controller: "error")
         "405"(controller: "error")

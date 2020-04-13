@@ -49,7 +49,7 @@
 			<!-- begin brand -->
 			<div class="login-header">
 				<div class="brand">
-					<span class="logo"></span> <b>Daniel's</b> 控制台
+					<span class="logo"></span> <b>Blog</b> 控制台
 					<small>cruder拯救者</small>
 				</div>
 				<div class="icon">
@@ -101,6 +101,7 @@
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
 	<asset:javascript src="console/demo/login-v2.demo.min.js" />
+	<asset:javascript src="login/login.js"/>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 
 	<script>

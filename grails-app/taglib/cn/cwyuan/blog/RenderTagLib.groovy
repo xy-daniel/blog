@@ -8,7 +8,7 @@ import org.grails.web.errors.ErrorsViewStackTracePrinter
 import org.springframework.util.StringUtils
 
 class RenderTagLib {
-    static namespace = "tc"
+    static namespace = "blog"
     SpringSecurityService springSecurityService
     CodecLookup codecLookup
     ErrorsViewStackTracePrinter errorsViewStackTracePrinter
