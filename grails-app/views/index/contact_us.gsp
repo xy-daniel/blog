@@ -57,11 +57,11 @@
 					<!-- end section-container -->
 					<!-- begin section-container -->
 					<div class="section-container">
-						<h4 class="section-title m-b-20"><span>CONTACT ME</span></h4>
+						<h4 class="section-title m-b-20"><span>联系我</span></h4>
 						<p class="m-b-30 f-s-13">
-							If you have a project you would like to discuss, get in touch with us.
-							Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, 
-							lectus arcu pulvinar risus, vitae facilisis libero dolor a purus.
+							如果你有一个项目想要与我讨论共同创作或者您有更好的资源与我共享(包括但不限于推荐公司入职)，
+							你可以在这儿填写您的姓名(当然您可以随意填写您想让我知道的昵称)、邮箱(手机号)和主要内容。
+							我看到之后将及时通过邮件联系您。
 						</p>
 						<!-- begin row -->
 						<div class="row row-space-30 f-s-12 text-inverse">
@@ -69,19 +69,19 @@
 							<div class="col-md-8">
 								<form class="form-horizontal">
 									<div class="form-group row">
-										<label class="col-form-label col-md-3 text-md-right">Name <span class="text-danger">*</span></label>
+										<label class="col-form-label col-md-3 text-md-right">姓名(昵称) <span class="text-danger">*</span></label>
 										<div class="col-md-9">
 											<input type="text" class="form-control">
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-form-label col-md-3 text-md-right">Email <span class="text-danger">*</span></label>
+										<label class="col-form-label col-md-3 text-md-right">邮箱(手机号) <span class="text-danger">*</span></label>
 										<div class="col-md-9">
 											<input type="text" class="form-control">
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-form-label col-md-3 text-md-right">Message <span class="text-danger">*</span></label>
+										<label class="col-form-label col-md-3 text-md-right">简述概要 <span class="text-danger">*</span></label>
 										<div class="col-md-9">
 											<textarea class="form-control" rows="10"></textarea>
 										</div>
@@ -89,7 +89,7 @@
 									<div class="form-group row">
 										<label class="col-form-label col-md-3 text-md-right"></label>
 										<div class="col-md-9 text-left">
-											<button type="submit" class="btn btn-inverse btn-lg btn-block">Send Message</button>
+											<button type="submit" class="btn btn-inverse btn-lg btn-block">提交</button>
 										</div>
 									</div>
 								</form>
@@ -98,14 +98,13 @@
 							<!-- begin col-4 -->
 							<div class="col-md-4">
 								<p>
-									<strong>SeanTheme Studio, Inc</strong><br>
-									795 Folsom Ave, Suite 600<br>
-									San Francisco, CA 94107<br>
-									P: (123) 456-7890<br>
+									<strong>联系电话</strong><br>
+									如非重要事情希望您忽略这不值一提的11位数,下面有更好的16个字符<br>
+									PN：(+86) 17865814986<br>
 								</p>
 								<p>
-									<span class="phone">+11 (0) 123 456</span><br>
-									<a href="mailto:hello@emailaddress.com">seanthemes@support.com</a>
+									<strong>邮箱</strong><br>
+									<a>myarctic@163.com</a>
 								</p>
 							</div>
 							<!-- end col-4 -->
