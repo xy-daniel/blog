@@ -11,7 +11,7 @@ Website: http://www.seantheme.com/color-admin-v4.3/admin/
 .header .navbar-nav > li > a .label,
 .label.label-theme,
 .btn.btn-scroll-to-top {
-	background: #0866c6;
+	background: #00acac;
 }
 .header.navbar-inverse .navbar-brand {
 	color: #fff !important;
@@ -81,5 +81,5 @@ Website: http://www.seantheme.com/color-admin-v4.3/admin/
 .top-menu .nav > li.active > a i, 
 .top-menu .nav > li.active > a:focus i, 
 .top-menu .nav > li.active > a:hover i {
-	color: #fff;
+	color: #00acac;
 }

@@ -22,28 +22,21 @@ class TcAuthenticationProvider implements AuthenticationProvider {
     Authentication authenticate(Authentication authentication) throws AuthenticationException {
         def username = authentication.getName()
         def password = authentication.getCredentials().toString()
-        def user
+
+        def user = User.findByUsernameAndPassword(username, password)
+        if (!user) {
+            throw new UsernameNotFoundException("用户名或密码错误！")//用户不存在
+        }
+        if (user.accountExpired || user.accountLocked) {
+            throw new AccountExpiredException("账号已经过期！")//账户过期与密码过期
+        }
+        if (user.accountLocked) {
+            throw new AccountLockedException("账号已被锁定！")//账号被锁定
+        }
         def grantedAuth = []
-        try {
-            user = User.findByUsernameAndPassword(username, password)
-            if (!user) {
-                //用户不存在
-                throw new UsernameNotFoundException("用户名或密码错误！")
-            }
-            if (user.accountExpired || user.accountLocked) {
-                //账户过期与密码过期
-                throw new AccountExpiredException("账号已经过期！")
-            }
-            if (user.accountLocked) {
-                throw new AccountLockedException("账号已被锁定！")
-            }
-            def roleList = user.authorities*.authority
-            for (def userRole : roleList) {
-                grantedAuth.add(new SimpleGrantedAuthority(userRole))
-            }
-        } catch (Exception e) {
-            log.info(e.toString())
-            throw new RuntimeException(e.getMessage())
+        def roleList = user.authorities*.authority
+        for (def userRole : roleList) {
+            grantedAuth.add(new SimpleGrantedAuthority(userRole))
         }
         return new UsernamePasswordAuthenticationToken(user, password, grantedAuth)
     }

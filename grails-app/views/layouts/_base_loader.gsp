@@ -3,9 +3,9 @@
 <meta content="" name="description" />
 <meta content="" name="author" />
 <!--[if lt IE 9]>
-<asset:javascript src="../../assets/crossbrowserjs/html5shiv.js"/>
-<asset:javascript src="../../assets/crossbrowserjs/respond.min.js"/>
-<asset:javascript src="../../assets/crossbrowserjs/excanvas.min.js"/>
+<asset:javascript src="html5shiv.js"/>
+<asset:javascript src="respond.min.js"/>
+<asset:javascript src="excanvas.min.js"/>
 <![endif]-->
 
 <!-- ================== BEGIN BASE CSS STYLE ================== -->

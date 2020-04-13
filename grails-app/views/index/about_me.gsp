@@ -24,7 +24,7 @@
 	<asset:javascript src="bootstrap/js/bootstrap.bundle.min.js"/>
 	<asset:javascript src="js-cookie/js.cookie.js"/>
 	<asset:javascript src="paroller/jquery.paroller.min.js"/>
-	<asset:javascript src="blog/apps.min.js"/>
+	<asset:javascript src="blog/apps.js"/>
 	<!-- ================== END BASE JS ================== -->
 </head>
 <body>

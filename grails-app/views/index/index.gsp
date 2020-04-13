@@ -22,8 +22,8 @@
 	<asset:javascript src="jquery/jquery-3.3.1.min.js"/>
 	<asset:javascript src="bootstrap/js/bootstrap.bundle.min.js"/>
 	<asset:javascript src="js-cookie/js.cookie.js"/>
-	<asset:javascript src="../assets/plugins/paroller/jquery.paroller.min.js"/>
-	<asset:javascript src="../assets/js/blog/apps.min.js"/>
+	<asset:javascript src="paroller/jquery.paroller.min.js"/>
+	<asset:javascript src="blog/apps.js"/>
 	<asset:javascript src="pace/pace.min.js" />
 	<!-- ================== END BASE JS ================== -->
 </head>

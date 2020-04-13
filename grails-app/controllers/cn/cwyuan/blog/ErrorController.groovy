@@ -1,6 +1,5 @@
-package blog
+package cn.cwyuan.blog
 
-import cn.cwyuan.blog.Resp
 import cn.cwyuan.blog.enums.RespType
 
 

@@ -26,7 +26,7 @@
 	<asset:javascript src="js-cookie/js.cookie.js"/>
 	<asset:javascript src="masonry/masonry.min.js"/>
 	<asset:javascript src="paroller/jquery.paroller.min.js"/>
-	<asset:javascript src="blog/apps.min.js"/>
+	<asset:javascript src="blog/apps.js"/>
 	<asset:javascript src="jquery/jquery_flexslider.js"/>
 	<!-- ================== END BASE JS ================== -->
 </head>

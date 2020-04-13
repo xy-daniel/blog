@@ -134,7 +134,7 @@ Website: http://www.seantheme.com/color-admin-v4.3/admin/
 		border-bottom: 1px solid #eee;
 	}
 	.navbar-inverse .navbar-header {
-		border-bottom: 1px solid #0866c6;
+		border-bottom: 1px solid #2d353c;
 	}
 	.header .navbar-nav {
 		margin-right: 0;
@@ -380,7 +380,7 @@ Website: http://www.seantheme.com/color-admin-v4.3/admin/
 	}
 	.page-sidebar-toggled .sidebar-bg {
 		position: fixed;
-		background: #0866c6;
+		background: #2d353c;
 		left: 0;
 		animation: sidebarSlideInLeft .2s;
 		-webkit-animation: sidebarSlideInLeft .2s;
@@ -397,7 +397,7 @@ Website: http://www.seantheme.com/color-admin-v4.3/admin/
 	}
 	.page-sidebar-toggled.page-sidebar-minified .sidebar-bg {
 		position: fixed;
-		background: #0866c6;
+		background: #2d353c;
 		z-index: 1010;
 		left: 0;
 		animation: sidebarSlideInLeft .2s;
