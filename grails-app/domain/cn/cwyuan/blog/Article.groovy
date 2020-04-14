@@ -4,6 +4,8 @@ class Article {
 
     //唯一编号
     String uid
+    //文章类型---->0:无图片  1:单图片  2:多图片
+    Integer type
     //文章名
     String title
     //作者
@@ -29,6 +31,7 @@ class Article {
 
     static constraints = {
         uid nullable: false, maxSize: 64, unique: true
+        type nullable: false
         title nullable: false
         author nullable: false
         summary nullable: false
@@ -42,6 +45,7 @@ class Article {
 
     static mapping = {
         uid comment: "唯一编号", index:true
+        type comment: "文章类型"
         title comment: "文章名称"
         author comment: "文章作者"
         summary sqlType: "text", comment: "文章概要"

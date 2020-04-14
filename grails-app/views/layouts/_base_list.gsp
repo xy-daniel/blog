@@ -12,13 +12,7 @@
     <!-- begin section-container -->
     <div class="section-container">
         <h4 class="section-title"><span>分类</span></h4>
-        <ul class="sidebar-list">
-            <li><a href="#">Java (45)</a></li>
-            <li><a href="#">Groovy (1,292)</a></li>
-            <li><a href="#">Css (12)</a></li>
-            <li><a href="#">Java Script (229)</a></li>
-            <li><a href="#">Linux (1,482)</a></li>
-            <li><a href="#">Sport (20)</a></li>
+        <ul class="sidebar-list" id="tags">
         </ul>
     </div>
     <!-- end section-container -->
@@ -69,8 +63,18 @@
                 $.get(
                     "/blog/friend/data",{},function (result) {
                         if(result.code===0){
-                            for (var i=0; i<result.data.length; i++){
+                            for (let i=0; i<result.data.length; i++){
                                 $(".friendData").append("<li><a target=\"_blank\" href=\""+ result.data[i].url +"\">"+ result.data[i].name +"</a></li>");
+                            }
+                        }
+                    },'json'
+                )
+                $.get(
+                    "/blog/tags/data",{},function (result) {
+                        if(result.code===0){
+                            for (let i=0; i<result.data.length; i++){
+                                $("#tags").append("<input type=\"hidden\" value=\""+ result.data[i].id +"\"/>\n" +
+                                    "            <li><a href=\"#\">"+ result.data[i].name +" ("+ result.data[i].uid +")</a></li>")
                             }
                         }
                     },'json'
