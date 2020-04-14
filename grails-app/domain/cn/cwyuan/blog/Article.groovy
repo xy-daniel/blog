@@ -1,8 +1,7 @@
 package cn.cwyuan.blog
 
-//文章表
-class Article implements Serializable {
-    private static final long serialVersionUID = 1
+class Article {
+
     //唯一编号
     String uid
     //文章名
@@ -10,21 +9,34 @@ class Article implements Serializable {
     //作者
     String author
     //概要
-    String outline
-    //正文
-    Content content
+    String summary
+    //点赞数
+    Integer poll_count
+    //评论数
+    Integer comment_count
+    //阅读数
+    Integer read_count
+    //是否精华
+    boolean is_essence
+    //是否置顶
+    boolean is_top
     //关键词
     String keys
     //创建时间
     Date dateCreated
     //修改时间
     Date lastUpdated
+
     static constraints = {
         uid nullable: false, maxSize: 64, unique: true
         title nullable: false
         author nullable: false
-        outline nullable: false
-        content nullable: false
+        summary nullable: false
+        poll_count nullable: true
+        comment_count nullable: true
+        read_count nullable: true
+        is_essence default: false
+        is_top default: false
         keys nullable: true
     }
 
@@ -32,8 +44,12 @@ class Article implements Serializable {
         uid comment: "唯一编号", index:true
         title comment: "文章名称"
         author comment: "文章作者"
-        outline sqlType: "text", comment: "文章概要"
-        content comment : "文章正文"
+        summary sqlType: "text", comment: "文章概要"
+        poll_count comment: "点赞数"
+        comment_count comment: "评论数"
+        read_count comment: "阅读数"
+        is_essence comment: "是否精华"
+        is_top comment: "是否置顶"
         keys comment : "文章关键词"
         comment "文章表"
     }
