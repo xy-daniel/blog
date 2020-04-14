@@ -5,6 +5,70 @@
 
     //内部核心属性
     const core = {
+        /**
+         * 删除所选择的法庭
+         */
+        delCheckedBtn:function(){
+            $("#checkedBtn").click(function () {
+                swal({
+                    title:"确认删除?",
+                    type:"warning",
+                    showCancelButton:true,
+                    cancelButtonText:'取 消',
+                    cancelButtonColor:'#b9b9b9',
+                    showConfirmButton:true,
+                    confirmButtonText:'确 认',
+                    confirmButtonColor:"#dd6b55",
+                    closeOnConfirm:false,
+                    closeOnCancel:true
+                },function(){
+                    const checkedBox = document.getElementsByName("checkbox-select");
+                    let ids = "";
+                    for (let i=0; i<checkedBox.length; i++){
+                        if (checkedBox[i].checked){
+                            if (ids===""){
+                                ids = checkedBox[i].value;
+                            }else{
+                                ids = ids + "," + checkedBox[i].value;
+                            }
+                        }
+                    }
+                    $.get(
+                        contextPath + 'tags/del',
+                        {
+                            ids:ids
+                        },
+                        function (result) {
+                            if (result.code===0){
+                                swal({
+                                    title: '删除成功!',
+                                    type: 'success',
+                                    confirmButtonText:'确 认'
+                                },function () {
+                                    window.location.reload()
+                                });
+                            }
+                            if (result.code===1){
+                                swal({
+                                    title: '部分标签下含有文章自动为您拒绝删除',
+                                    type: 'warning',
+                                    confirmButtonText:'确 认'
+                                },function () {
+                                    window.location.reload()
+                                })
+                            }
+                            if (result.code===410){
+                                swal({
+                                    title: '请选择数据',
+                                    type: 'error',
+                                    confirmButtonText:'确 认'
+                                })
+                            }
+                        },'json'
+                    )
+                })
+            })
+        },
         handleSelect: function () {
             $('#table_checkbox_all').click(function () {
                 const checkbox = $("input[type='checkbox']");
@@ -117,6 +181,7 @@
 
     function init_event() {//初始化页面事件
         core.render_table();
+        core.delCheckedBtn();
     }
     //对外公开的方法
     const page = {};

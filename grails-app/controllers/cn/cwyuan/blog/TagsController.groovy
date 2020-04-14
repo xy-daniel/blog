@@ -1,6 +1,7 @@
 package cn.cwyuan.blog
 
 import cn.cwyuan.blog.utils.UUIDGenerator
+import cn.cwyuan.blog.enums.RespType
 import grails.converters.JSON
 
 class TagsController {
@@ -56,5 +57,20 @@ class TagsController {
         tags.name = name
         tags.save(flush: true)
         redirect(controller: "tags", action: "list")
+    }
+
+    def del(){
+        def idsStr = params.get("ids") as String
+        if (!idsStr) {
+            render Resp.toJson(RespType.DATA_NOT_EXIST)
+            return
+        }
+        def idsArr = idsStr.split(",")
+        def num = tagsService.del(idsArr)
+        if (num > 0) {
+            render Resp.toJson(RespType.FAIL)
+            return
+        }
+        render Resp.toJson(RespType.SUCCESS)
     }
 }

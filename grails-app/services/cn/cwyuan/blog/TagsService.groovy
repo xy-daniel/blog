@@ -37,4 +37,22 @@ class TagsService {
         model.put("data", modelDataList)
         model
     }
+
+    def del(String[] idsArr){
+        def num = 0
+        for (String id : idsArr) {
+            def tags = Tags.get(id as Long)
+            def count = ArticleTags.findAllByTags(tags).size()
+            if (count > 0) {
+                num++
+            }else{
+                tags.delete(flush: true)
+                if (tags.hasErrors()) {
+                    log.info("删除本地审理庭数据时出错 TagsService.del tags.errors [${tags.errors}]")
+                    throw new RuntimeException()
+                }
+            }
+        }
+        num
+    }
 }
