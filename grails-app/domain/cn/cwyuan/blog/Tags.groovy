@@ -8,19 +8,19 @@ class Tags implements Serializable {
     String uid
     //标签名称
     String name
-    //标签下文章数目
-    Long number
+    //创建时间
+    Date dateCreated
+    //修改时间
+    Date lastUpdated
 
     static constraints = {
         uid nullable: false, maxSize: 64, unique: true
         name nullable: false
-        number nullable: true
     }
 
     static mapping = {
         uid comment: "唯一编号", index:true
         name comment: "标签名称"
-        number comment: "标签下文章数目"
         comment "标签表"
     }
 }

@@ -39,7 +39,7 @@
             <!-- 评论用户管理 -->
             <li><a href="/blog"><i class="fas fa-user"></i> <span>用户管理</span></a></li>
             <!-- 标签管理 -->
-            <li><a href="/blog"><i class="fas fa-tags"></i> <span>标签管理</span></a></li>
+            <li><g:link controller="tags" action="list"><i class="fas fa-tags"></i> <span>标签管理</span></g:link></li>
             <!-- 留言管理 -->
             <li><a href="/blog"><i class="fas fa-microphone"></i> <span>留言管理</span></a></li>
             <!-- 友链管理 -->

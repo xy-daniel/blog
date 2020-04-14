@@ -14,7 +14,6 @@ class UrlMappings {
 
         "/plan/connect?/$id?(.$format)?"(controller: "plan", action: "connect")
 
-//        登陆成功或者是直接请求/到达的是控制台而不是博客地址
         "/"(controller: "console")
         "500"(controller: "error")
         "404"(controller: "error")
