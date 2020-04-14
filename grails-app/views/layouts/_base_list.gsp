@@ -62,10 +62,21 @@
     <!-- begin section-container -->
     <div class="section-container">
         <h4 class="section-title"><span>友链</span></h4>
-        <ul class="sidebar-list">
-            <li><a target="_blank" href="http://www.javaboy.org">江南一点雨</a></li>
-            <li><a target="_blank" href="http://www.cwyuan.cn">丹尼尔</a></li>
+        <ul class="sidebar-list friendData">
         </ul>
+        <script>
+            $(function () {
+                $.get(
+                    "/blog/friend/data",{},function (result) {
+                        if(result.code===0){
+                            for (var i=0; i<result.data.length; i++){
+                                $(".friendData").append("<li><a target=\"_blank\" href=\""+ result.data[i].url +"\">"+ result.data[i].name +"</a></li>");
+                            }
+                        }
+                    },'json'
+                )
+            })
+        </script>
     </div>
     <!-- end section-container -->
 </div>

@@ -4,6 +4,7 @@ package cn.cwyuan.blog
  * 友链
  */
 class Friend implements Serializable {
+    private static final long serialVersionUID = 1
 
     //唯一编号
     String uid
