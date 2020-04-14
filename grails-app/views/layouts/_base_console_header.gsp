@@ -2,7 +2,7 @@
 <div id="header" class="header navbar-default">
     <!-- begin navbar-header -->
     <div class="navbar-header">
-        <a href="/blog/" class="navbar-brand"><span class="navbar-logo"></span> <b>Blog</b> 控制台</a>
+        <a href="${createLink(uri: '/')}" class="navbar-brand"><span class="navbar-logo"></span> <b>Blog</b> 控制台</a>
         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -88,15 +88,11 @@
         <li class="dropdown navbar-user">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="<asset:assetPath src="user/user-13.jpg"/>" alt="" />
-                <span class="d-none d-md-inline">超级管理员</span> <b class="caret"></b>
+                <span class="d-none d-md-inline"><blog:realName/></span> <b class="caret"></b>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="javascript:void(0);" class="dropdown-item">Edit Profile</a>
-                <a href="javascript:void(0);" class="dropdown-item"><span class="badge badge-danger pull-right">2</span> Inbox</a>
-                <a href="javascript:void(0);" class="dropdown-item">Calendar</a>
-                <a href="javascript:void(0);" class="dropdown-item">Setting</a>
-                <div class="dropdown-divider"></div>
-                <a href="javascript:void(0);" class="dropdown-item">Log Out</a>
+                <g:link url="${createLink(uri: '/')}self/edit" class="dropdown-item">个人信息</g:link>
+                <g:link url="${createLink(uri: '/')}logout" class="dropdown-item">登出</g:link>
             </div>
         </li>
     </ul>

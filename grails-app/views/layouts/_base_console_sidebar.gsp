@@ -11,7 +11,7 @@
                         <img src="<asset:assetPath src="user/user-13.jpg"/>" alt="" />
                     </div>
                     <div class="info">
-                        超级管理员
+                        <blog:realName/>
                         <small>万物皆有裂痕,那是光进来的地方</small>
                     </div>
                 </a>
