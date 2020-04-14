@@ -18,12 +18,6 @@
 	<asset:stylesheet rel="stylesheet" href="default/style-responsive.css"/>
 	<asset:stylesheet id="theme" rel="stylesheet" href="default/theme/default.css"/>
 	<!-- ================== END BASE CSS STYLE ================== -->
-
-	<!-- ================== BEGIN PAGE CSS STYLE ================== -->
-	<asset:stylesheet href="DataTables/media/css/dataTables.bootstrap.min.css"/>
-	<asset:stylesheet href="bootstrap-sweetalert/sweetalert.css"/>
-	<asset:stylesheet href="DataTables/extensions/Responsive/css/responsive.bootstrap.min.css"/>
-	<!-- ================== END PAGE CSS STYLE ================== -->
 	
 	<!-- ================== BEGIN BASE JS ================== -->
 	<asset:javascript src="jquery/jquery-3.3.1.min.js" />
@@ -49,58 +43,78 @@
 		<div id="content" class="content">
 	<!-- begin breadcrumb -->
 	<ol class="breadcrumb pull-right">
-		<li class="breadcrumb-item"><g:link controller="console">首页</g:link></li>
-		<li class="breadcrumb-item active">友链管理</li>
+		<li class="breadcrumb-item"><g:link controller="index">首页</g:link></li>
+		<li class="breadcrumb-item">友链管理</li>
+		<li class="breadcrumb-item active">添加友链</li>
 	</ol>
 	<!-- end breadcrumb -->
 	<!-- begin page-header -->
-	<h1 class="page-header">管理 <small>友链管理</small></h1>
+	<h1 class="page-header">友链管理 <small>添加友链</small></h1>
 	<!-- end page-header -->
 	<div class="panel panel-inverse">
 		<div class="panel-heading">
 			<div class="panel-heading-btn">
-				<a href="javascript:void(0);" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+				<a href="javascript:void(0);" class="btn btn-xs btn-icon btn-circle btn-default"
+				   data-click="panel-expand"><i class="fa fa-expand"></i></a>
 			</div>
-			<h4 class="panel-title">友链列表</h4>
+			<h4 class="panel-title">添加友链</h4>
 		</div>
 		<div class="panel-body">
-			<div class="table-btn-row m-b-15">
-				<g:link controller="friend" action="add" class="btn btn-sm btn-inverse btn-add"><i class="fa fa-plus m-r-5"></i> 添加友链</g:link>
-			</div>
-			<table id="data-table" class="table table-striped table-bordered display" style="width:100%">
-				<thead>
-				<tr>
-					<th class="with-checkbox">
-						<div class="checkbox checkbox-css">
-							<input type="checkbox" value="" id="table_checkbox_all" />
-							<label for="table_checkbox_all"></label>
+			<g:form controller="friend" action="addSave" method="POST" data-parsley-validate="true">
+				<div class="col-md-8 offset-md-2">
+					<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16 text-inverse">添加友链请填写以下信息 </legend>
+					<!-- begin form-group row -->
+					<div class="form-group row m-b-10">
+						<label id="name" class="col-md-3 text-md-right col-form-label">网站名称 </label>
+
+						<div class="col-md-6">
+							<input type="text" class="form-control m-b-5" name="name" data-parsley-required="true"
+								   data-parsley-required-message="此项不能为空"/>
 						</div>
-					</th>
-					<th class="text-nowrap">名称</th>
-					<th class="text-nowrap">链接</th>
-					<th class="text-nowrap">状态</th>
-					<th class="text-nowrap">操作</th>
-				</tr>
-				</thead>
-				<tbody>
-				</tbody>
-			</table>
+					</div>
+					<!-- end form-group row -->
+					<!-- begin form-group row -->
+					<div class="form-group row m-b-10">
+						<label id="url" class="col-md-3 text-md-right col-form-label">网站地址 </label>
+
+						<div class="col-md-6">
+							<input type="text" class="form-control m-b-5" name="url" data-parsley-required="true"
+								   data-parsley-required-message="此项不能为空"/>
+						</div>
+					</div>
+					<!-- end form-group row -->
+
+					<!-- begin form-group row -->
+					<div class="form-group row m-b-10">
+						<label id="status" class="col-md-3 text-md-right col-form-label">状态 </label>
+
+						<div class="col-md-6">
+							<select name="status" class="form-control m-b-5" data-parsley-required="false">
+								<option value="0">已审核</option>
+								<option value="1">待审核</option>
+							</select>
+						</div>
+					</div>
+					<!-- end form-group row -->
+					<div class="form-group row m-b-10">
+						<label class="col-md-3 text-md-right col-form-label"></label>
+
+						<div class="col-md-6">
+							<button type="submit" class="btn btn-sm btn-primary m-r-5">提交</button>
+						</div>
+					</div>
+				</div>
+			</g:form>
 		</div>
 	</div>
 		</div>
 		<!-- end #content -->
 		<g:render template="/layouts/base_console_topbtn"/>
 	</div>
+
+
 	<!-- end page container -->
-
-	<!-- =========================BEGIN PAGE LEVEL JS======================== -->
-	<asset:javascript src="DataTables/media/js/jquery.dataTables.min.js"/>
-	<asset:javascript src="bootstrap-sweetalert/sweetalert.js"/>
-	<asset:javascript src="DataTables/media/js/dataTables.bootstrap.min.js"/>
-	<asset:javascript src="DataTables/extensions/Responsive/js/dataTables.responsive.min.js"/>
-	<asset:javascript src="console/friend/list.js"/>
-	<!-- =========================END PAGE LEVEL JS======================== -->
-
+	
 	<script>
 		$(document).ready(function() {
 			App.init();

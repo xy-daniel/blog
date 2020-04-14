@@ -5,75 +5,8 @@
 
     //内部核心属性
     const core = {
-        ctrl: function () {
-
-        },
-        /**
-         * 删除所选择的法庭
-         */
-        delCheckedBtn: function () {
-            $("#checkedBtn").click(function () {
-                swal({
-                    title: "确认删除?",
-                    type: "warning",
-                    showCancelButton: true,
-                    cancelButtonText: '取 消',
-                    cancelButtonColor: '#b9b9b9',
-                    showConfirmButton: true,
-                    confirmButtonText: '确 认',
-                    confirmButtonColor: "#dd6b55",
-                    closeOnConfirm: false,
-                    closeOnCancel: true
-                }, function () {
-                    const checkedBox = document.getElementsByName("checkbox-select");
-                    let ids = "";
-                    for (let i = 0; i < checkedBox.length; i++) {
-                        if (checkedBox[i].checked) {
-                            if (ids === "") {
-                                ids = checkedBox[i].value;
-                            } else {
-                                ids = ids + "," + checkedBox[i].value;
-                            }
-                        }
-                    }
-                    $.get(
-                        contextPath + 'courtroom/del',
-                        {
-                            ids: ids
-                        },
-                        function (result) {
-                            if (result.code === 0) {
-                                swal({
-                                    title: '删除成功!',
-                                    type: 'success',
-                                    confirmButtonText: '确 认'
-                                }, function () {
-                                    window.location.href = contextPath + 'courtroom/list';
-                                });
-                            }
-                            if (result.code === 1) {
-                                swal({
-                                    title: '部分本地审理庭正在使用已自动为您拒绝删除',
-                                    type: 'error',
-                                    confirmButtonText: '确 认'
-                                }, function () {
-                                    window.location.href = contextPath + 'courtroom/list';
-                                })
-                            }
-                            if (result.code === 410) {
-                                swal({
-                                    title: '请选择数据',
-                                    type: 'error',
-                                    confirmButtonText: '确 认'
-                                })
-                            }
-                        }, 'json'
-                    )
-                })
-            })
-        },
         handleSelect: function () {
-            $('#table_checkbox_all').click(function (e) {
+            $('#table_checkbox_all').click(function () {
                 const checkbox = $("input[type='checkbox']");
                 if ($(this).is(':checked')) {
                     checkbox.prop("checked", true);
@@ -84,14 +17,15 @@
             //每一次的小checkbox点击事件
             $(".ck").click(function () {
                 //获取所有的小的checkbox
-                const checkboxs = $(".ck");
-                for (let i = 0; i < checkboxs.length; i++) {
-                    if (!checkboxs[i].checked) {
-                        $('#table_checkbox_all').prop("checked", false);
+                const checkboxes = $(".ck");
+                const checker = $('#table_checkbox_all');
+                for (let i = 0; i < checkboxes.length; i++) {
+                    if (!checkboxes[i].checked) {
+                        checker.prop("checked", false);
                         return;
                     }
                 }
-                $('#table_checkbox_all').prop("checked", true);
+                checker.prop("checked", true);
             })
         },
         render_table: function () {
@@ -154,22 +88,34 @@
                     {
                         "mDataProp": "status",
                         "mRender": function (data, type, full) {
-                            return data
+                            if (data===0){
+                                return "已审核"
+                            }
+                            return "待审核"
                         }
                     },
                     {
-                        "mDataProp": "id",
+                        "mDataProp": "id_status",
                         "sClass": "center",
                         "mRender": function (data, type, full) {
-                            const id_typeArr = data.toString().split("_");
+                            const dataArr = data.split("_");
                             let html = '<div class="table-text">';
-                            html += '<a href="' + contextPath + 'friend/edit/' + id_typeArr[0] + '" class="btn btn-inverse btn-xs m-r-5 btn-enabled">编辑</a>';
+                            html += '<input type="hidden" value="' + dataArr[0] + '">';
+                            html += '<a href="' + contextPath + 'friend/edit/' + dataArr[0] + '" class="btn btn-inverse btn-xs m-r-5 btn-enabled">编辑</a>';
+                            if (dataArr[1]==='0'){
+                                html += '<a href="" class="btn btn-inverse btn-xs m-r-5 btn-enabled" onclick="active(this)">取消激活</a>';
+                            }
+                            if (dataArr[1]==='1'){
+                                html += '<button class="btn btn-inverse btn-xs m-r-5 btn-enabled" onclick="active(this)">激活</button>';
+                            }
                             html += '</div>';
                             return html
                         }
                     }
                 ],
                 fnDrawCallback: function () {
+                    $("th").attr("style", "display: table-cell;vertical-align: middle;");
+                    $("td").attr("style", "display: table-cell;vertical-align: middle;");
                     core.handleSelect();
                 }
             });
@@ -188,11 +134,35 @@
 
     function init_event() {//初始化页面事件
         core.render_table();
-        core.delCheckedBtn();
-        core.ctrl()
     }
     //对外公开的方法
     const page = {};
     init();
     window.p = page;
 }(window);
+
+function active(elem) {
+    const id = elem.parentNode.firstChild.value;
+    let xmlHttp;
+    if (window.XMLHttpRequest) {
+        xmlHttp = new XMLHttpRequest();
+    } else {
+        xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    const url = contextPath + 'friend/active?id=' + id;
+    xmlHttp.open("GET", url, true);
+    xmlHttp.send();
+    //接收服务器返回的数据
+    xmlHttp.onreadystatechange = function () {
+        if (xmlHttp.readyState === 4 && xmlHttp.status === 200) {
+            const data = JSON.parse(xmlHttp.responseText);
+            if (data.code === 0) {
+                if (elem.innerText === "激活"){
+                    elem.innerText = "取消激活"
+                }else{
+                    elem.innerText = "激活"
+                }
+            }
+        }
+    };
+}

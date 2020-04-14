@@ -33,6 +33,7 @@ class FriendService {
             data.put("name", friend.name)
             data.put("url", friend.url)
             data.put("status", friend.status)
+            data.put("id_status", friend.id+"_"+friend.status)
             modelDataList.add(data)
         }
         model.put("recordsTotal", count)//数据总条数
