@@ -246,5 +246,6 @@
 	<!-- begin #page-copyright -->
 	<g:render template="/layouts/base_copyright"/>
 	<!-- end #page-copyright -->
+	<asset:javascript src="index/index.js"/>
 </body>
 </html>

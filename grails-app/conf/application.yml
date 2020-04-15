@@ -192,6 +192,8 @@ grails:
             interceptUrlMap: [
                 #index相关的博客地址不需要任何权限
                 {pattern: '/index/**',                  access: ['permitAll']},
+                # 前台接口不需要登录的数据
+                {pattern: '/api/**',                    access: ['permitAll']},
                 #前端插件不需要任何权限
                 {pattern: '/assets/**',                 access: ['permitAll']},
                 #favicon.ico不需要任何权限

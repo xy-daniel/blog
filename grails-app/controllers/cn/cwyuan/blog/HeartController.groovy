@@ -61,6 +61,12 @@ class HeartController {
         def keys = params.get("keys")
         def tags = params.get("tags")
         def md = params.get("content")
+        def number = 0
+        def i = 0
+        while((i=md.indexOf("![](", i))!=-1) {
+            number++
+            i++
+        }
         def html = params.get("editormd-html-code")
         if (!(title && summary && keys && tags && md && html)){
             redirect(controller: "heart", action: "add")
@@ -69,7 +75,7 @@ class HeartController {
         }
         def heart = new Heart(
                 uid: UUIDGenerator.nextUUID(),
-                lx: 0,
+                lx: (number!=0 && number != 1)?number:2,
                 wzm: title,
                 gy: summary,
                 gjc: keys
@@ -77,7 +83,7 @@ class HeartController {
         heartService.addSave(heart, md, html, tags)
         def last = Memorandum.findAll()
         if (last){
-            last.content = ""
+            last.get(0).content = ""
             last.get(0).save(flush: true)
         }
         redirect(controller: "heart", action: "list")

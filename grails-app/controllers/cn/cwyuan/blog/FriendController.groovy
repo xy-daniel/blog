@@ -90,11 +90,4 @@ class FriendController {
         friend.save(flush: true)
         render Resp.toJson(RespType.SUCCESS)
     }
-
-    /**
-     * 友链数据
-     */
-    def data(){
-        render Resp.toJson(RespType.SUCCESS, Friend.findAllByStatus(0))
-    }
 }
