@@ -63,13 +63,6 @@ class HeartController {
         def md = params.get("content")
         def html = params.get("editormd-html-code")
         if (!(title && summary && keys && tags && md && html)){
-            //只存储这个用户的一条数据成功后删除
-            def memorandum = Memorandum.findAll().get(0)
-            if (!memorandum){
-                memorandum = new Memorandum()
-            }
-            memorandum.content = md
-            memorandum.save(flush: true)
             redirect(controller: "heart", action: "add")
             render Resp.toJson(RespType.FAIL)
             return
@@ -82,14 +75,34 @@ class HeartController {
                 gjc: keys
         )
         heartService.addSave(heart, md, html, tags)
-        def last = Memorandum.findAll().get(0)
-        last.content = ""
-        last.save(flush: true)
-//        redirect(controller: "heart", action: "list")
-        render Resp.toJson(RespType.SUCCESS)
+        def last = Memorandum.findAll()
+        if (last){
+            last.content = ""
+            last.get(0).save(flush: true)
+        }
+        redirect(controller: "heart", action: "list")
     }
 
     def list(){
 
+    }
+
+    //数据推送
+    def update(){
+        def mdc = params.get("mdc")
+        //只存储这个用户的一条数据成功后删除
+        def memorandums = Memorandum.findAll()
+        def memorandum
+        if (!memorandums){
+            memorandum = new Memorandum()
+        }else{
+            memorandum = memorandums.get(0)
+        }
+        memorandum.content = mdc
+        memorandum.save(flush: true)
+        if (memorandum.hasErrors()){
+            throw new RuntimeException()
+        }
+        render Resp.toJson(RespType.SUCCESS)
     }
 }
