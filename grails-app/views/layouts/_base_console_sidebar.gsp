@@ -31,7 +31,7 @@
                 </a>
                 <ul class="sub-menu">
                     <!-- 添加文章  可以保存为关于我的文章 -->
-                    <li><a href="/blog">发布文章</a></li>
+                    <li><g:link controller="article" action="add">发布文章</g:link></li>
                     <!-- 添加文章的时候需要填写是什么种类的文章方便前段进行遍历-->
                     <li><a href="/blog">文章列表</a></li>
                 </ul>

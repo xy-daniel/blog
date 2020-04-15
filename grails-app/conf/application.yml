@@ -67,8 +67,8 @@ grails:
     controllers:
         defaultScope: singleton
         upload:
-            maxFileSize: 2000000
-            maxRequestSize: 2000000
+            maxFileSize: 20000000
+            maxRequestSize: 20000000
     converters:
         encoding: UTF-8
     views:
@@ -210,7 +210,12 @@ server:
     servlet:
         session:
             timeout: 7200
-    context-path: '/blog'
+    contextPath: '/blog'
+blog:
+    editormd:
+#        filePath: /usr/local/blog/
+        filePath: D://blog/
+        serverPath: http://139.9.119.104:8080/blog/
 jwt:
     info:
         secret: XXXXX
