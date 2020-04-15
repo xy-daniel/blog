@@ -1,17 +1,26 @@
 package cn.cwyuan.blog
 
-class Article {
+/**
+ * 友链
+ */
+class Heart implements Serializable {
+    private static final long serialVersionUID = 1
 
     //唯一编号
     String uid
-    //文章类型---->0:无图片  1:单图片  2:多图片
-    Integer type
+
+    //文章类型
+    Integer lx
+
     //文章名
-    String title
-    //作者
-    String author
+    String wzm
+
     //概要
-    String summary
+    String gy
+
+    //关键词
+    String gjc
+
     //点赞数
     Integer poll_count
     //评论数
@@ -22,39 +31,39 @@ class Article {
     boolean is_essence
     //是否置顶
     boolean is_top
-    //关键词
-    String keys
+
     //创建时间
     Date dateCreated
+
     //修改时间
     Date lastUpdated
 
     static constraints = {
         uid nullable: false, maxSize: 64, unique: true
-        type nullable: false
-        title nullable: false
-        author nullable: false
-        summary nullable: false
+        lx nullable: false
+        wzm nullable: false
+        gy nullable: false
+        gjc nullable: false
         poll_count nullable: true
         comment_count nullable: true
         read_count nullable: true
-        is_essence default: false
-        is_top default: false
-        keys nullable: true
+        is_essence nullable: true
+        is_top nullable: true
     }
 
     static mapping = {
+        autoTimestamp(true)
         uid comment: "唯一编号", index:true
-        type comment: "文章类型"
-        title comment: "文章名称"
-        author comment: "文章作者"
-        summary sqlType: "text", comment: "文章概要"
+        lx comment: "文章类型"
+        wzm comment: "文章标题"
+        gy sqlType: "text", comment: "概要"
+        gjc comment: "关键词"
         poll_count comment: "点赞数"
         comment_count comment: "评论数"
         read_count comment: "阅读数"
         is_essence comment: "是否精华"
         is_top comment: "是否置顶"
-        keys comment : "文章关键词"
-        comment "文章表"
+        comment "友链表"
     }
+
 }

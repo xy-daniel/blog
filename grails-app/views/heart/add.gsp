@@ -29,7 +29,7 @@
 		<g:render template="/layouts/base_console_sidebar"/>
 		<!-- begin #content -->
 		<div id="content" class="content">
-			<form controller="article" action="addSave" method="POST" data-parsley-validate="true">
+			<g:form controller="heart" action="addSave" method="POST" data-parsley-validate="true">
 				<div class="col-md-12">
 					<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16 text-inverse">发布文章 </legend>
 					<!-- begin form-group row 文章名称 -->
@@ -60,8 +60,25 @@
 						</div>
 					</div>
 					<!-- end form-group row 关键词 -->
+					<!-- begin form-group row 分类 -->
+					<div class="form-group row m-b-8">
+						<label id="tags" class="col-md-1 text-md-right col-form-label">分类(必填) </label>
+						<div class="col-md-10" style="margin-left: 10px">
+							<div class="row">
+								<g:each in="${tags}" var="tag" status="i">
+									<div class="col-md-2 checkbox checkbox-css">
+										<input type="checkbox" name="tags" id="cssCheckbox${i}" value="${tag.id}" />
+										<label for="cssCheckbox${i}">${tag.name}</label>
+									</div>
+								</g:each>
+							</div>
+						</div>
+					</div>
+					<!-- end form-group row 关键词 -->
 					<!-- begin markdown -->
-					<div id="test-editormd"></div>
+					<div id="editormd">
+						<textarea name="content" data-parsley-required="true" data-parsley-required-message="此项不能为空">${memorandum}</textarea>
+					</div>
 					<!-- end markdown -->
 					<!-- end form-group row -->
 					<div class="form-group row m-b-8">
@@ -70,7 +87,7 @@
 						</div>
 					</div>
 				</div>
-			</form>
+			</g:form>
 </div>
 		<!-- end #content -->
 		<g:render template="/layouts/base_console_topbtn"/>
@@ -86,9 +103,9 @@
 	<!-- end parsley -->
 	<asset:javascript src="md/js/editormd.js" />
 	<script type="text/javascript">
-		let testEditor;
+		let editor;
 		$(function() {
-			testEditor = editormd("test-editormd", {
+			editor = editormd("editormd", {
 				width: "100%",
 				height: 800,
 				path : '../../blog/assets/md/lib/',

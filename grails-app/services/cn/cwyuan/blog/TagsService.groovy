@@ -29,7 +29,7 @@ class TagsService {
             def data = [:]
             data.put("id", tags.id)
             data.put("name", tags.name)
-            data.put("number", ArticleTags.findAllByTags(tags).size())
+            data.put("number", HeartTags.findAllByTags(tags).size())
             modelDataList.add(data)
         }
         model.put("recordsTotal", count)//数据总条数
@@ -42,7 +42,7 @@ class TagsService {
         def num = 0
         for (String id : idsArr) {
             def tags = Tags.get(id as Long)
-            def count = ArticleTags.findAllByTags(tags).size()
+            def count = HeartTags.findAllByTags(tags).size()
             if (count > 0) {
                 num++
             }else{

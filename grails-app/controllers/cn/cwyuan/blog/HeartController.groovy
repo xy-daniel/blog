@@ -6,10 +6,15 @@ import grails.converters.JSON
 import org.springframework.web.multipart.MultipartHttpServletRequest
 import cn.cwyuan.blog.enums.RespType
 
-class ArticleController {
+class HeartController {
+
+    HeartService heartService
 
     //前往添加文章页面
-    def add() { }
+    def add() {
+        def memorandum = Memorandum.findAll()
+        [tags:Tags.findAll(), memorandum: memorandum.size()==0?"":memorandum.get(0).content]
+    }
 
     def upload(){
         if (request.method == "POST") {
@@ -48,5 +53,43 @@ class ArticleController {
                 render Resp.toJson(RespType.FAIL)
             }
         }
+    }
+
+    def addSave(){
+        def title = params.get("title")
+        def summary = params.get("summary")
+        def keys = params.get("keys")
+        def tags = params.get("tags")
+        def md = params.get("content")
+        def html = params.get("editormd-html-code")
+        if (!(title && summary && keys && tags && md && html)){
+            //只存储这个用户的一条数据成功后删除
+            def memorandum = Memorandum.findAll().get(0)
+            if (!memorandum){
+                memorandum = new Memorandum()
+            }
+            memorandum.content = md
+            memorandum.save(flush: true)
+            redirect(controller: "heart", action: "add")
+            render Resp.toJson(RespType.FAIL)
+            return
+        }
+        def heart = new Heart(
+                uid: UUIDGenerator.nextUUID(),
+                lx: 0,
+                wzm: title,
+                gy: summary,
+                gjc: keys
+        )
+        heartService.addSave(heart, md, html, tags)
+        def last = Memorandum.findAll().get(0)
+        last.content = ""
+        last.save(flush: true)
+//        redirect(controller: "heart", action: "list")
+        render Resp.toJson(RespType.SUCCESS)
+    }
+
+    def list(){
+
     }
 }

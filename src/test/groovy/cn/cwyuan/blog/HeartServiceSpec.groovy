@@ -1,9 +1,9 @@
 package cn.cwyuan.blog
 
-import grails.testing.gorm.DomainUnitTest
+import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-class ArticleTagsSpec extends Specification implements DomainUnitTest<ArticleTags> {
+class HeartServiceSpec extends Specification implements ServiceUnitTest<HeartService>{
 
     def setup() {
     }

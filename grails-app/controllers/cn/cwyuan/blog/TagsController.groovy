@@ -24,7 +24,7 @@ class TagsController {
         //获取所有标签
         def tags = Tags.findAll()
         for (Tags tag : tags){
-            tag.uid = ArticleTags.findAllByTags(tag).size().toString()
+            tag.uid = HeartTags.findAllByTags(tag).size().toString()
         }
         render Resp.toJson(RespType.SUCCESS, tags)
     }

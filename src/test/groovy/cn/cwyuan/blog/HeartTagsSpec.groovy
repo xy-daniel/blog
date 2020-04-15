@@ -1,9 +1,9 @@
 package cn.cwyuan.blog
 
-import grails.testing.web.controllers.ControllerUnitTest
+import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class ArticleControllerSpec extends Specification implements ControllerUnitTest<ArticleController> {
+class HeartTagsSpec extends Specification implements DomainUnitTest<HeartTags> {
 
     def setup() {
     }
