@@ -87,7 +87,7 @@
         </li>
         <li class="dropdown navbar-user">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="<asset:assetPath src="user/user-13.jpg"/>" alt="" />
+                <img src="<blog:photo/>/>" onerror="this.src='<asset:assetPath src="user/user-13.jpg" />'" alt="" />
                 <span class="d-none d-md-inline"><blog:realName/></span> <b class="caret"></b>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
