@@ -33,7 +33,7 @@
                     <!-- 添加文章  可以保存为关于我的文章 -->
                     <li><g:link controller="heart" action="add">发布文章</g:link></li>
                     <!-- 添加文章的时候需要填写是什么种类的文章方便前段进行遍历-->
-                    <li><a href="/blog">文章列表</a></li>
+                    <li><g:link controller="heart" action="list">文章列表</g:link></li>
                 </ul>
             </li>
             <!-- 评论用户管理 -->

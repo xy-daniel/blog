@@ -20,4 +20,41 @@ class HeartService {
                 html: html
         ).save(flush: true)
     }
+
+    def list(int draw, int start, int length, String search) {
+        def model = [:]
+        model.put("draw", draw)
+        def count = Heart.createCriteria().count() {
+            if (search) {
+                like("wzm", "%${search}%")
+                like("gjc", "%${search}%")
+            }
+        }
+        def dataList = Heart.createCriteria().list {
+            and {
+                setMaxResults(length)
+                setFirstResult(start)
+            }
+            if (search) {
+                like("wzm", "%${search}%")
+                like("gjc", "%${search}%")
+            }
+            order("dateCreated", "desc")
+        } as List<Heart>
+        def modelDataList = []
+        for (def heart : dataList) {
+            def data = [:]
+            data.put("wzm", heart.wzm)
+            data.put("gjc", heart.gjc)
+            data.put("poll", heart.poll_count)
+            data.put("read", heart.read_count)
+            data.put("comment", heart.comment_count)
+            data.put("id_isTop", heart.id + "_" + heart.is_top)
+            modelDataList.add(data)
+        }
+        model.put("recordsTotal", count)//数据总条数
+        model.put("recordsFiltered", count)//显示的条数
+        model.put("data", modelDataList)
+        model
+    }
 }

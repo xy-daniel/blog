@@ -80,7 +80,10 @@ class HeartController {
                 wzm: title,
                 gy: summary,
                 gjc: keys,
-                origin: origin
+                origin: origin,
+                poll_count: 0,
+                read_count: 0,
+                comment_count: 0
         )
         heartService.addSave(heart, md, html, tags)
         def last = Memorandum.findAll()
@@ -92,7 +95,14 @@ class HeartController {
     }
 
     def list(){
-
+        if (request.method == "POST") {
+            def draw = params.int("draw") ?: 1// 记录操作的次数 每次加1
+            def start = params.int("start") ?: 0// 起始
+            def length = params.int("length") ?: 20// 每页显示的size
+            def search = params.get("search[value]") as String//搜索内容
+            def model = heartService.list(draw, start, length, search)
+            render model as JSON
+        }
     }
 
     //数据推送
@@ -111,6 +121,17 @@ class HeartController {
         if (memorandum.hasErrors()){
             throw new RuntimeException()
         }
+        render Resp.toJson(RespType.SUCCESS)
+    }
+
+    //文章置顶
+    def top(){
+        def preHeart = Heart.findByIs_top(true)
+        preHeart.is_top = false
+        preHeart.save(flush: true)
+        def heart = Heart.get(params.long("id"))
+        heart.is_top = true
+        heart.save(flush: true)
         render Resp.toJson(RespType.SUCCESS)
     }
 }
