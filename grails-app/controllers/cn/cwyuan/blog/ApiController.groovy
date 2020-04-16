@@ -60,8 +60,8 @@ class ApiController {
             }
             def dataList = Heart.createCriteria().list {
                 and {
-                    setMaxResults(6)
-                    setFirstResult((currentPage-1)*6)
+                    setMaxResults(3)
+                    setFirstResult((currentPage-1)*3)
                 }
                 if (search) {
                     like("wzm", "%${search}%")
@@ -72,16 +72,32 @@ class ApiController {
             } as List<Heart>
             for (def heart : dataList) {
                 def data = [:]
+                //id
                 data.put("id", heart.id)
+                //文章名
                 data.put("wzm", heart.wzm)
+                //作者
                 data.put("zz", "Cruder拯救者")
+                //概要
                 data.put("gy", heart.gy)
+                //关键词
+                data.put("gjc", heart.gjc)
+                //评论数
+                data.put("pls", heart.comment_count?:0)
+                //点赞数
+                data.put("dzs", heart.poll_count?:0)
+                //文章类型
+//                data.put("lx", heart.lx)
+                data.put("lx", 0)
+                //最后更新时间
+                data.put("date", heart.dateCreated)
                 modelDataList.add(data)
             }
         }
         model.put("recordsTotal", count)//数据总条数
         model.put("recordsFiltered", count)//显示的条数
         model.put("data", modelDataList)
+        model.put("currentPage", currentPage)
         render model as JSON
     }
 }
