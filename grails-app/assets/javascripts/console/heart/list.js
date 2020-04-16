@@ -78,7 +78,7 @@
                             const dataArr = data.split("_");
                             let html = '<div class="table-text">';
                             html += '<input type="hidden" value="' + dataArr[0] + '">';
-                            html += '<a href="' + contextPath + 'friend/edit/' + dataArr[0] + '" class="btn btn-inverse btn-xs m-r-5 btn-enabled">详情</a>';
+                            html += '<a href="' + contextPath + 'heart/edit/' + dataArr[0] + '" class="btn btn-inverse btn-xs m-r-5 btn-enabled">详情</a>';
                             if (dataArr[1]==="false"){
                                 html += '<a href="javascript:void(0)" class="btn btn-inverse btn-xs m-r-5 btn-enabled" onclick="isTop(this)">置顶</a>';
                             }

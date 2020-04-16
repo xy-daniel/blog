@@ -71,7 +71,6 @@ class HeartController {
         def html = params.get("editormd-html-code")
         if (!(title && summary && keys && tags && md && html)){
             redirect(controller: "heart", action: "add")
-            render Resp.toJson(RespType.FAIL)
             return
         }
         def heart = new Heart(
@@ -133,5 +132,50 @@ class HeartController {
         heart.is_top = true
         heart.save(flush: true)
         render Resp.toJson(RespType.SUCCESS)
+    }
+
+    //编辑页面
+    def edit(){
+        def heart = Heart.get(params.long("id"))
+        def hts = HeartTags.findAllByHeart(heart)
+        String ids = ""
+        for (HeartTags ht:hts){
+            if (ids){
+                ids = ids + ",id=" + ht.tags.id + "=di"
+            }else{
+                ids = "id=" + ht.tags.id + "=di"
+            }
+        }
+        [heart: heart, tags: Tags.findAll(), content: Content.findByHeartId(heart.id).content, ids: ids]
+    }
+
+    //编辑保存
+    def editSave(){
+        def id = params.long("id")
+        def title = params.get("title")
+        def origin = params.get("origin")
+        def summary = params.get("summary")
+        def keys = params.get("keys")
+        def tags = params.get("tags")
+        def md = params.get("content")
+        def number = 0
+        def i = 0
+        while((i=md.indexOf("![](", i))!=-1) {
+            number++
+            i++
+        }
+        def html = params.get("editormd-html-code")
+        if (!(title && summary && keys && tags && md && html)){
+            redirect(controller: "heart", action: "edit", id: id)
+            return
+        }
+        def heart = Heart.get(id)
+        heart.lx = (number!=0 && number != 1)?number:2
+        heart.wzm = title
+        heart.gy = summary
+        heart.gjc = keys
+        heart.origin = origin
+        heartService.addSave(heart, md, html, tags)
+        redirect(controller: "heart", action: "list")
     }
 }

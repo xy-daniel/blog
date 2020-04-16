@@ -29,14 +29,15 @@
 		<g:render template="/layouts/base_console_sidebar"/>
 		<!-- begin #content -->
 		<div id="content" class="content">
-			<g:form controller="heart" action="addSave" method="POST" data-parsley-validate="true">
+			<g:form controller="heart" action="editSave" method="POST" data-parsley-validate="true">
 				<div class="col-md-12">
-					<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16 text-inverse">发布文章 </legend>
+					<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16 text-inverse">更新文章 </legend>
+					<input type="hidden" name="id" value="${heart.id}">
 					<!-- begin form-group row 文章名称 -->
 					<div class="form-group row m-b-8">
 						<label id="title" class="col-md-1 text-md-right col-form-label">文章标题 </label>
 						<div class="col-md-10">
-							<input type="text" class="form-control m-b-5" name="title" data-parsley-required="true"
+							<input type="text" class="form-control m-b-5" name="title" value="${heart.wzm}" data-parsley-required="true"
 								   data-parsley-required-message="此项不能为空"/>
 						</div>
 					</div>
@@ -47,7 +48,7 @@
 						<div class="col-md-10">
 							<ul id="tagIt" class="primary">
 							</ul>
-							<input type="hidden" id="tagsValues" name="keys" data-parsley-required="true" data-parsley-required-message="此项不能为空"/>
+							<input type="hidden" id="tagsValues" name="keys" value="${heart.gjc}" data-parsley-required="true" data-parsley-required-message="此项不能为空"/>
 						</div>
 					</div>
 					<!-- end form-group row 关键词 -->
@@ -58,8 +59,8 @@
 							<div class="row">
 								<g:each in="${tags}" var="tag" status="i">
 									<div class="col-md-2 checkbox checkbox-css">
-										<input type="checkbox" name="tags" <g:if test="${tag.id}">  </g:if> id="cssCheckbox${i}" value="${tag.id}" />
-										<label for="cssCheckbox${i}">${tag.name}</label>
+										<input type="checkbox" name="tags" id="cssCheckbox${tag.id}" <g:if test="${ids.indexOf("id="+tag.id+"=di") != -1}"> checked </g:if> value="${tag.id}" />
+										<label for="cssCheckbox${tag.id}">${tag.name}</label>
 									</div>
 								</g:each>
 							</div>
@@ -70,7 +71,7 @@
 					<div class="form-group row m-b-8">
 						<label id="summary" class="col-md-1 text-md-right col-form-label">文章概要 </label>
 						<div class="col-md-10">
-							<textarea class="form-control" name="summary" data-parsley-maxlength="200" style="height: 100px"></textarea>
+							<textarea class="form-control" name="summary" data-parsley-maxlength="200" style="height: 100px">${heart.gy}</textarea>
 						</div>
 					</div>
 					<!-- end form-group row 文章概要 -->
@@ -79,19 +80,19 @@
 						<label id="origin" class="col-md-1 text-md-right col-form-label">问题情景 </label>
 						<div class="col-md-10">
 							<textarea class="form-control" name="origin" data-parsley-required="true" data-parsley-maxlength="200"
-									  data-parsley-required-message="此项不能为空" style="height: 100px"></textarea>
+									  data-parsley-required-message="此项不能为空" style="height: 100px">${heart.origin}</textarea>
 						</div>
 					</div>
 					<!-- end form-group row 问题情景 -->
 					<!-- begin markdown -->
 					<div id="editormd">
-						<textarea name="content" data-parsley-required="true" data-parsley-required-message="此项不能为空">${memorandum}</textarea>
+						<textarea name="content" data-parsley-required="true" data-parsley-required-message="此项不能为空">${content}</textarea>
 					</div>
 					<!-- end markdown -->
 					<!-- end form-group row -->
 					<div class="form-group row m-b-8">
 						<div class="col-md-2">
-							<button type="submit" class="btn btn-sm btn-primary m-r-5">发布</button>
+							<button type="submit" class="btn btn-sm btn-primary m-r-5">更新</button>
 						</div>
 					</div>
 				</div>
@@ -116,7 +117,7 @@
 			editor = editormd("editormd", {
 				width: "100%",
 				height: 800,
-				path : '../../blog/assets/md/lib/',
+				path : '../../assets/md/lib/',
 				theme : "dark",
 				previewTheme : "white",
 				editorTheme : "pastel-on-dark",
@@ -142,20 +143,6 @@
 				imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
 				imageUploadURL : "./upload"
 			});
-			//现在设置一个定时器定时器每隔1分钟往服务器推送已经编写的数据
-			setInterval(update,60*1000);
-			function update() {
-				//获取markdown数据
-				const mdc = editor.getMarkdown();
-				$.get("./update",{
-					mdc: mdc
-				},function (result) {
-					if(result.code===0){
-						console.log("推送成功")
-					}
-				}, 'json')
-			}
-
 		});
 	</script>
 	<!-- =========================  END PAGE LEVEL JS========================= -->

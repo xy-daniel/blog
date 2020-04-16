@@ -8,17 +8,21 @@ class HeartService {
     //保存
     def addSave(Heart heart, def  content,def html, String[] tags) {
         heart.save(flush: true)
+        //就这样吧挺快的
+        def hts = HeartTags.findAllByHeart(heart)
+        for (HeartTags ht:hts){
+            ht.delete(flush: true)
+        }
         for (String tag:tags){
             new HeartTags(
                     heart: heart,
                     tags: Tags.get(tag as Long)
             ).save(flush: true)
         }
-        new Content(
-                heartId: heart.id,
-                content: content,
-                html: html
-        ).save(flush: true)
+        def contentClass = Content.findByHeartId(heart.id)
+        contentClass.content = content
+        contentClass.html = html
+        contentClass.save(flush: true)
     }
 
     def list(int draw, int start, int length, String search) {
