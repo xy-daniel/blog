@@ -215,9 +215,8 @@ server:
     contextPath: '/blog'
 blog:
     editormd:
-#        filePath: /usr/local/blog/
-
-        filePath: D://blog/
+        filePath: /usr/local/blog/
+#        filePath: D://blog/
         serverPath: http://139.9.119.104:8080/images/
 jwt:
     info:
