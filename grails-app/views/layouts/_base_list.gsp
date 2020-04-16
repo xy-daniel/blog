@@ -2,9 +2,9 @@
     <!-- begin section-container -->
     <div class="section-container">
         <div class="input-group sidebar-search">
-            <input type="text" class="form-control" placeholder="Time Machine Biu" />
+            <input id="searchVal" type="text" class="form-control" placeholder="关键词搜索" />
             <span class="input-group-append">
-                <button class="btn btn-inverse" type="button"><i class="fa fa-search"></i></button>
+                <button id="search" class="btn btn-inverse" type="button"><i class="fa fa-search"></i></button>
             </span>
         </div>
     </div>

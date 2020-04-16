@@ -2,6 +2,7 @@ package cn.cwyuan.blog
 
 import cn.cwyuan.blog.enums.RespType
 import grails.converters.JSON
+import org.hibernate.Criteria
 
 class ApiController {
 
@@ -51,25 +52,8 @@ class ApiController {
                 modelDataList.add(data)
             }
         }else{
-            count = Heart.createCriteria().count() {
-                if (search) {
-                    like("wzm", "%${search}%")
-                    like("gjc", "%${search}%")
-                    like("gy", "%${search}%")
-                }
-            }
-            def dataList = Heart.createCriteria().list {
-                and {
-                    setMaxResults(3)
-                    setFirstResult((currentPage-1)*3)
-                }
-                if (search) {
-                    like("wzm", "%${search}%")
-                    like("gjc", "%${search}%")
-                    like("gy", "%${search}%")
-                }
-                order("lastUpdated", "desc")
-            } as List<Heart>
+            count = Heart.findAllByGjcLikeOrGyLikeOrWzmLike("%${search}%", "%${search}%", "%${search}%").size()
+            def dataList = Heart.findAllByGjcLikeOrGyLikeOrWzmLike("%${search}%", "%${search}%", "%${search}%",[max:3,offset:(currentPage-1)*3,sort:"lastUpdated",order:"desc"])
             for (def heart : dataList) {
                 def data = [:]
                 //id
@@ -89,6 +73,8 @@ class ApiController {
                 //文章类型
 //                data.put("lx", heart.lx)
                 data.put("lx", 0)
+                //问题情境
+                data.put("origin", heart.origin)
                 //最后更新时间
                 data.put("date", heart.dateCreated)
                 modelDataList.add(data)

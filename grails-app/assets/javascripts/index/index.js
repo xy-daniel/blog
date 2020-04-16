@@ -6,19 +6,18 @@
     //内部核心属性
     const core = {
         data: function () {
-
             //初始化数据
-            getData(1,"", "")
-
+            getData(1,"", "");
             //点击标签数据
 
             //点击搜索数据
+            $("#search").bind('click', function() {
+                const searchVal = $("#searchVal").val();
+                getData(1, searchVal, "");
+            });
+            //点击下一页数据
 
-            // //当前页、是否点击了链接
-            //             // $("#active").click(function () {
-            //             //     getData()
-            //             // })
-
+            //点击到达数据
         }
     };
     'use strict';
@@ -40,6 +39,7 @@
     init();
     window.p = page;
     function getData(toPage, search, tag) {
+        console.log(search);
         $.get(
             "/blog/api/heartData",
             {
@@ -51,6 +51,7 @@
                 tag: tag
             },
             function (result) {
+                console.log(result);
                 //总页数
                 const totalPage = Math.ceil(result.recordsTotal / 3);
                 //当前页
@@ -59,18 +60,20 @@
                 const data = result.data;
                 //分页插件
                 pageNum(totalPage, currentPage);
+                const list = $(".post-list");
+                list.empty();
                 //数据处理
                 for (let i=0; i<data.length; i++){
                     const date = data[i].date.split("-");
                     const gjc = data[i].gjc.split(",");
-                    var gjxHref = "";
-                    for (var j=0; j<gjc.length; j++){
+                    const gjxHref = "";
+                    for (let j=0; j<gjc.length; j++){
                         if (gjxHref===""){
 
                         }
                     }
                     if (data[i].lx===0){
-                        $(".post-list").append("<li>\n" +
+                        list.append("<li>\n" +
                             "\t\t\t\t\t\t\t<!-- begin post-left-info -->\n" +
                             "\t\t\t\t\t\t\t<div class=\"post-left-info\">\n" +
                             "\t\t\t\t\t\t\t\t<div class=\"post-date\">\n" +
@@ -87,7 +90,7 @@
                             "\t\t\t\t\t\t\t<div class=\"post-content\">\n" +
                             "\t\t\t\t\t\t\t\t<!-- begin blockquote -->\n" +
                             "\t\t\t\t\t\t\t\t<blockquote>\n" +
-                            "\t\t\t\t\t\t\t\t\t\"What is design? It's where you stand with a foot in two worlds - the world of technology and the world of people and human purposes - and you try to bring the two together.\"\n" +
+                            "\t\t\t\t\t\t\t\t\t"+ data[i].origin +"\n" +
                             "\t\t\t\t\t\t\t\t</blockquote>\n" +
                             "\t\t\t\t\t\t\t\t<!-- end blockquote -->\n" +
                             "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
@@ -119,6 +122,7 @@
     //分页插件
     function pageNum(totalPage, currentPage) {
         const pagination = $(".pagination");
+        pagination.empty();
         pagination.append("<li class=\"page-item upPage\"><a class=\"page-link\" href=\"javascript:void(0);\">上页</a></li>");
         if (totalPage<=7){
             for (let i=1; i<=totalPage; i++){

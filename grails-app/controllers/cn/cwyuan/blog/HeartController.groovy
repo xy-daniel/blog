@@ -57,6 +57,7 @@ class HeartController {
 
     def addSave(){
         def title = params.get("title")
+        def origin = params.get("origin")
         def summary = params.get("summary")
         def keys = params.get("keys")
         def tags = params.get("tags")
@@ -78,7 +79,8 @@ class HeartController {
                 lx: (number!=0 && number != 1)?number:2,
                 wzm: title,
                 gy: summary,
-                gjc: keys
+                gjc: keys,
+                origin: origin
         )
         heartService.addSave(heart, md, html, tags)
         def last = Memorandum.findAll()
