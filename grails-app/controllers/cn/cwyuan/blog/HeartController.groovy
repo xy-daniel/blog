@@ -62,14 +62,15 @@ class HeartController {
         def keys = params.get("keys")
         def tags = params.get("tags")
         def md = params.get("content")
+        def html = params.get("editormd-html-code")
+        def wzlx = params.int("wzlx")
         def number = 0
         def i = 0
-        while((i=md.indexOf("![](", i))!=-1) {
+        while((i=html.indexOf("img", i))!=-1) {
             number++
             i++
         }
-        def html = params.get("editormd-html-code")
-        if (!(title && summary && keys && tags && md && html)){
+        if (!(title && summary && keys && tags && md && html && wzlx)){
             redirect(controller: "heart", action: "add")
             return
         }
@@ -82,7 +83,8 @@ class HeartController {
                 origin: origin,
                 poll_count: 0,
                 read_count: 0,
-                comment_count: 0
+                comment_count: 0,
+                wzlx: wzlx
         )
         heartService.addSave(heart, md, html, tags)
         def last = Memorandum.findAll()
@@ -158,14 +160,16 @@ class HeartController {
         def keys = params.get("keys")
         def tags = params.get("tags")
         def md = params.get("content")
+        def html = params.get("editormd-html-code")
+        def wzlx = params.int("wzlx")
         def number = 0
         def i = 0
-        while((i=md.indexOf("![](", i))!=-1) {
+        while((i=html.indexOf("img", i))!=-1) {
             number++
             i++
         }
-        def html = params.get("editormd-html-code")
-        if (!(title && summary && keys && tags && md && html)){
+
+        if (!(title && summary && keys && tags && md && html && wzlx)){
             redirect(controller: "heart", action: "edit", id: id)
             return
         }
@@ -175,6 +179,7 @@ class HeartController {
         heart.gy = summary
         heart.gjc = keys
         heart.origin = origin
+        heart.wzlx = wzlx
         heartService.addSave(heart, md, html, tags)
         redirect(controller: "heart", action: "list")
     }

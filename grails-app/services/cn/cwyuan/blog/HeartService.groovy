@@ -19,7 +19,8 @@ class HeartService {
                     tags: Tags.get(tag as Long)
             ).save(flush: true)
         }
-        def contentClass = Content.findByHeartId(heart.id)
+        def contentClass = new Content()
+        contentClass.heartId = heart.id
         contentClass.content = content
         contentClass.html = html
         contentClass.save(flush: true)
