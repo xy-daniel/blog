@@ -1,6 +1,7 @@
 package cn.cwyuan.blog
 
 import cn.cwyuan.blog.utils.DateUtil
+import cn.cwyuan.blog.utils.ImgUtil
 import cn.cwyuan.blog.utils.UUIDGenerator
 import grails.converters.JSON
 import org.springframework.web.multipart.MultipartHttpServletRequest
@@ -64,19 +65,13 @@ class HeartController {
         def md = params.get("content")
         def html = params.get("editormd-html-code")
         def wzlx = params.int("wzlx")
-        def number = 0
-        def i = 0
-        while((i=html.indexOf("img", i))!=-1) {
-            number++
-            i++
-        }
         if (!(title && summary && keys && tags && md && html && wzlx)){
             redirect(controller: "heart", action: "add")
             return
         }
         def heart = new Heart(
                 uid: UUIDGenerator.nextUUID(),
-                lx: (number!=0 && number != 1)?number:2,
+                img: ImgUtil.getImgAddress(html),
                 wzm: title,
                 gy: summary,
                 gjc: keys,
@@ -162,25 +157,18 @@ class HeartController {
         def md = params.get("content")
         def html = params.get("editormd-html-code")
         def wzlx = params.int("wzlx")
-        def number = 0
-        def i = 0
-        while((i=html.indexOf("img", i))!=-1) {
-            number++
-            i++
-        }
-
         if (!(title && summary && keys && tags && md && html && wzlx)){
             redirect(controller: "heart", action: "edit", id: id)
             return
         }
         def heart = Heart.get(id)
-        heart.lx = (number!=0 && number != 1)?number:2
+        heart.img = ImgUtil.getImgAddress(html)
         heart.wzm = title
         heart.gy = summary
         heart.gjc = keys
         heart.origin = origin
         heart.wzlx = wzlx
-        heartService.addSave(heart, md, html, tags)
+        heartService.editSave(heart, md, html, tags)
         redirect(controller: "heart", action: "list")
     }
 }

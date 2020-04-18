@@ -71,8 +71,7 @@ class ApiController {
                 //点赞数
                 data.put("dzs", heart.poll_count)
                 //文章类型
-//                data.put("lx", heart.lx)
-                data.put("lx", 0)
+                data.put("img", heart.img)
                 //问题情境
                 data.put("origin", heart.origin)
                 //最后更新时间

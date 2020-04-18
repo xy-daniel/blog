@@ -39,7 +39,6 @@
     init();
     window.p = page;
     function getData(toPage, search, tag) {
-        console.log(search);
         $.get(
             "/blog/api/heartData",
             {
@@ -51,7 +50,6 @@
                 tag: tag
             },
             function (result) {
-                console.log(result);
                 //总页数
                 const totalPage = Math.ceil(result.recordsTotal / 3);
                 //当前页
@@ -114,6 +112,12 @@
                             "\t\t\t\t\t\t\t</div>\n" +
                             "\t\t\t\t\t\t\t<!-- end post-content -->\n" +
                             "\t\t\t\t\t\t</li>")
+                    }
+                    if (data[i].lx===1){
+                        console.log("只有一个图片")
+                    }
+                    if (data[i].lx===2){
+                        console.log("有很多图片")
                     }
                 }
             }, 'json'

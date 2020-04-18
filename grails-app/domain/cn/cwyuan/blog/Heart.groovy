@@ -10,7 +10,7 @@ class Heart implements Serializable {
     String uid
 
     //文章类型---->用于记录文章中图片的数量
-    Integer lx
+    String img
 
     //问题由来---->存储类型0的why以及其他类型的图片地址
     String origin
@@ -46,7 +46,7 @@ class Heart implements Serializable {
 
     static constraints = {
         uid nullable: false, maxSize: 64, unique: true
-        lx nullable: false
+        img nullable: true
         wzlx nullable: false
         origin nullable: false
         wzm nullable: false
@@ -62,7 +62,7 @@ class Heart implements Serializable {
     static mapping = {
         autoTimestamp(true)
         uid comment: "唯一编号", index:true
-        lx comment: "文章类型"
+        img comment: "图片地址"
         wzlx comment: "文章类型：学习笔记，技术文章，算法文章"
         origin sqlType: "text", comment: "问题由来"
         wzm comment: "文章标题"

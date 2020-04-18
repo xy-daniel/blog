@@ -220,13 +220,6 @@
 						<!-- begin pagination -->
 						<div class="pagination-container">
 							<ul class="pagination justify-content-center">
-%{--								<li class="page-item upPage disabled"><a class="page-link" href="javascript:void(0);">Prev</a></li>--}%
-%{--								<li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>--}%
-%{--								<li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>--}%
-%{--								<li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>--}%
-%{--								<li class="page-item"><span class="text">...</span></li>--}%
-%{--								<li class="page-item"><a class="page-link" href="javascript:void(0);">1797</a></li>--}%
-%{--								<li class="page-item downPage"><a class="page-link" href="javascript:void(0);">Next</a></li>--}%
 							</ul>
 						</div>
 						<!-- end pagination -->
