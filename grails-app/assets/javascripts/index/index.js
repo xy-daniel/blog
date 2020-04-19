@@ -63,14 +63,9 @@
                 //数据处理
                 for (let i=0; i<data.length; i++){
                     const date = data[i].date.split("-");
-                    const gjc = data[i].gjc.split(",");
-                    const gjxHref = "";
-                    for (let j=0; j<gjc.length; j++){
-                        if (gjxHref===""){
-
-                        }
-                    }
-                    if (data[i].lx===0){
+                    const img = data[i].img.split(",");
+                    const imgLength = img.length;
+                    if (imgLength===0){
                         list.append("<li>\n" +
                             "\t\t\t\t\t\t\t<!-- begin post-left-info -->\n" +
                             "\t\t\t\t\t\t\t<div class=\"post-left-info\">\n" +
@@ -97,7 +92,7 @@
                             "\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\">"+ data[i].wzm +"</a>\n" +
                             "\t\t\t\t\t\t\t\t\t</h4>\n" +
                             "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
-                            "\t\t\t\t\t\t\t\t\t\tPosted By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ gjc[0] +"</a> <span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
+                            "\t\t\t\t\t\t\t\t\t\tPosted By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a> <span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
                             "\t\t\t\t\t\t\t\t\t</div>\n" +
                             "\t\t\t\t\t\t\t\t\t<div class=\"post-desc\">\n" +
                             "\t\t\t\t\t\t\t\t\t\t"+ data[i].gy +"\n" +
@@ -112,12 +107,194 @@
                             "\t\t\t\t\t\t\t</div>\n" +
                             "\t\t\t\t\t\t\t<!-- end post-content -->\n" +
                             "\t\t\t\t\t\t</li>")
-                    }
-                    if (data[i].lx===1){
-                        console.log("只有一个图片")
-                    }
-                    if (data[i].lx===2){
-                        console.log("有很多图片")
+                    }else if (imgLength===1){
+                        list.append("<li>\n" +
+                            "\t\t\t\t\t\t\t<!-- begin post-left-info -->\n" +
+                            "\t\t\t\t\t\t\t<div class=\"post-left-info\">\n" +
+                            "\t\t\t\t\t\t\t\t<div class=\"post-date\">\n" +
+                            "\t\t\t\t\t\t\t\t\t<span class=\"day\">"+ date[2].substring(0,2) +"</span>\n" +
+                            "\t\t\t\t\t\t\t\t\t<span class=\"month\">"+ month(date[1]) + date[0] +"</span>\n" +
+                            "\t\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
+                            "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
+                            "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
+                            "\t\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\t<!-- end post-left-info -->\n" +
+                            "\t\t\t\t\t\t\t<!-- begin post-content -->\n" +
+                            "\t\t\t\t\t\t\t<div class=\"post-content\">\n" +
+                            "\t\t\t\t\t\t\t\t<!-- begin post-image -->\n" +
+                            "\t\t\t\t\t\t\t\t<div class=\"post-image\">\n" +
+                            "\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\">\n" +
+                            "\t\t\t\t\t\t\t\t\t\t<div class=\"post-image-cover\" style=\"background-image: url("+ img[0].replace(/\s/g,"%20") +");\"></div>\n" +
+                            "\t\t\t\t\t\t\t\t\t</a>\n" +
+                            "\t\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\t\t<!-- end post-image -->\n" +
+                            "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
+                            "\t\t\t\t\t\t\t\t<div class=\"post-info\">\n" +
+                            "\t\t\t\t\t\t\t\t\t<h4 class=\"post-title\">\n" +
+                            "\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\">"+ data[i].wzm +"</a>\n" +
+                            "\t\t\t\t\t\t\t\t\t</h4>\n" +
+                            "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
+                            "\t\t\t\t\t\t\t\t\t\tPosted By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
+                            "\t\t\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\t\t\t<div class=\"post-desc\">\n" +
+                            "\t\t\t\t\t\t\t\t\t\t"+ data[i].gy +"\n" +
+                            "\t\t\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\t\t<!-- end post-info -->\n" +
+                            "\t\t\t\t\t\t\t\t<!-- begin read-btn-container -->\n" +
+                            "\t\t\t\t\t\t\t\t<div class=\"read-btn-container\">\n" +
+                            "\t\t\t\t\t\t\t\t\t<g:link controller=\"index\" action=\"post_detail\" class=\"read-btn\">Read More <i class=\"fa fa-angle-double-right\"></i></g:link>\n" +
+                            "\t\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\t\t<!-- end read-btn-container -->\n" +
+                            "\t\t\t\t\t\t\t</div>\n" +
+                            "\t\t\t\t\t\t\t<!-- end post-content -->\n" +
+                            "\t\t\t\t\t\t</li>")
+                    }else {
+                        if (imgLength===2){
+                            list.append("<li>\n" +
+                                "\t\t\t\t\t\t\t<!-- begin post-left-info -->\n" +
+                                "\t\t\t\t\t\t\t<div class=\"post-left-info\">\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"post-date\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<span class=\"day\">"+ date[2].substring(0,2) +"</span>\n" +
+                                "\t\t\t\t\t\t\t\t\t<span class=\"month\">"+ month(date[1]) + date[0] +"</span>\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
+                                "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t<!-- end post-left-info -->\n" +
+                                "\t\t\t\t\t\t\t<!-- begin post-content -->\n" +
+                                "\t\t\t\t\t\t\t<div class=\"post-content\">\n" +
+                                "\t\t\t\t\t\t\t\t<!-- begin post-image -->\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"post-image post-image-with-carousel\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<!-- begin carousel -->\n" +
+                                "\t\t\t\t\t\t\t\t\t<div id=\"carousel"+ i +"\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-indicators -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<ol class=\"carousel-indicators\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<li data-target=\"#carousel"+ i +"\" data-slide-to=\"0\" class=\"active\"></li>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<li data-target=\"#carousel"+ i +"\" data-slide-to=\"1\"></li>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t</ol>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-indicators -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-inner -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-inner\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item active\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-inner -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-control -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-chevron-left\" aria-hidden=\"true\"></span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t</a>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<a class=\"carousel-control-next\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"next\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-chevron-right\" aria-hidden=\"true\"></span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t</a>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-control -->\n" +
+                                "\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t<!-- end carousel -->\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t<!-- end post-image -->\n" +
+                                "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"post-info\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<h4 class=\"post-title\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<a>"+ data[i].wzm +"</a>\n" +
+                                "\t\t\t\t\t\t\t\t\t</h4>\n" +
+                                "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\tPost By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
+                                "\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t<div class=\"post-desc\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t"+ data[i].gy +"\n" +
+                                "\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t<!-- end post-info -->\n" +
+                                "\t\t\t\t\t\t\t\t<!-- begin read-btn-container -->\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"read-btn-container\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<g:link controller=\"index\" action=\"post_detail\" class=\"read-btn\">Read More <i class=\"fa fa-angle-double-right\"></i></g:link>\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t<!-- end read-btn-container -->\n" +
+                                "\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t<!-- end post-content -->\n" +
+                                "\t\t\t\t\t\t</li>")
+                        }else{
+                            list.append("<li>\n" +
+                                "\t\t\t\t\t\t\t<!-- begin post-left-info -->\n" +
+                                "\t\t\t\t\t\t\t<div class=\"post-left-info\">\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"post-date\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<span class=\"day\">"+ date[2].substring(0,2) +"</span>\n" +
+                                "\t\t\t\t\t\t\t\t\t<span class=\"month\">"+ month(date[1]) + date[0] +"</span>\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
+                                "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t<!-- end post-left-info -->\n" +
+                                "\t\t\t\t\t\t\t<!-- begin post-content -->\n" +
+                                "\t\t\t\t\t\t\t<div class=\"post-content\">\n" +
+                                "\t\t\t\t\t\t\t\t<!-- begin post-image -->\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"post-image post-image-with-carousel\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<!-- begin carousel -->\n" +
+                                "\t\t\t\t\t\t\t\t\t<div id=\"carousel"+ i +"\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-indicators -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<ol class=\"carousel-indicators\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<li data-target=\"#carousel"+ i +"\" data-slide-to=\"0\" class=\"active\"></li>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<li data-target=\"#carousel"+ i +"\" data-slide-to=\"1\"></li>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<li data-target=\"#carousel"+ i +"\" data-slide-to=\"2\"></li>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t</ol>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-indicators -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-inner -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-inner\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item active\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-inner -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-control -->\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-chevron-left\" aria-hidden=\"true\"></span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t</a>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<a class=\"carousel-control-next\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"next\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<span class=\"fa fa-chevron-right\" aria-hidden=\"true\"></span>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t</a>\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-control -->\n" +
+                                "\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t<!-- end carousel -->\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t<!-- end post-image -->\n" +
+                                "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"post-info\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<h4 class=\"post-title\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t<a>"+ data[i].wzm +"</a>\n" +
+                                "\t\t\t\t\t\t\t\t\t</h4>\n" +
+                                "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\tPost By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
+                                "\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t\t<div class=\"post-desc\">\n" +
+                                "\t\t\t\t\t\t\t\t\t\t"+ data[i].gy +"\n" +
+                                "\t\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t<!-- end post-info -->\n" +
+                                "\t\t\t\t\t\t\t\t<!-- begin read-btn-container -->\n" +
+                                "\t\t\t\t\t\t\t\t<div class=\"read-btn-container\">\n" +
+                                "\t\t\t\t\t\t\t\t\t<g:link controller=\"index\" action=\"post_detail\" class=\"read-btn\">Read More <i class=\"fa fa-angle-double-right\"></i></g:link>\n" +
+                                "\t\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t\t<!-- end read-btn-container -->\n" +
+                                "\t\t\t\t\t\t\t</div>\n" +
+                                "\t\t\t\t\t\t\t<!-- end post-content -->\n" +
+                                "\t\t\t\t\t\t</li>")
+                        }
                     }
                 }
             }, 'json'

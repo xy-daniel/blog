@@ -51,79 +51,79 @@
 				<div class="col-md-9">
 					<!-- begin post-list -->
 					<ul class="post-list">
-						<li>
-							<!-- begin post-left-info -->
-							<div class="post-left-info">
-								<div class="post-date">
-									<span class="day">03</span>
-									<span class="month">SEPT</span>
-								</div>
-								<div class="post-likes">
-									<i class="fa fa-heart"></i>
-									<span class="number">520</span>
-								</div>
-							</div>
-							<!-- end post-left-info -->
-							<!-- begin post-content -->
-							<div class="post-content">
-								<!-- begin post-image -->
-								<div class="post-image post-image-with-carousel">
-									<!-- begin carousel -->
-									<div id="carousel-post" class="carousel slide" data-ride="carousel">
-										<!-- begin carousel-indicators -->
-										<ol class="carousel-indicators">
-											<li data-target="#carousel-post" data-slide-to="0" class="active"></li>
-											<li data-target="#carousel-post" data-slide-to="1"></li>
-											<li data-target="#carousel-post" data-slide-to="2"></li>
-										</ol>
-										<!-- end carousel-indicators -->
-										<!-- begin carousel-inner -->
-										<div class="carousel-inner">
-											<div class="carousel-item active">
-												<a href="post_detail.gsp"><img class="d-block w-100" src='<asset:assetPath src="post/post-1.jpg"/>' alt="" /></a>
-											</div>
-											<div class="carousel-item">
-												<a href="post_detail.gsp"><img class="d-block w-100" src='<asset:assetPath src="post/post-2.jpg"/>' alt="" /></a>
-											</div>
-											<div class="carousel-item">
-												<a href="post_detail.gsp"><img class="d-block w-100" src='<asset:assetPath src="post/post-4.jpg"/>' alt="" /></a>
-											</div>
-										</div>
-										<!-- end carousel-inner -->
-										<!-- begin carousel-control -->
-										<a class="carousel-control-prev" href="#carousel-post" role="button" data-slide="prev">
-										<span class="fa fa-chevron-left" aria-hidden="true"></span>
-										</a>
-										<a class="carousel-control-next" href="#carousel-post" role="button" data-slide="next">
-										<span class="fa fa-chevron-right" aria-hidden="true"></span>
-										</a>
-										<!-- end carousel-control -->
-									</div>
-									<!-- end carousel -->
-								</div>
-								<!-- end post-image -->
-								<!-- begin post-info -->
-								<div class="post-info">
-									<h4 class="post-title">
-										<g:link controller="index" action="post_detail">鵩鸟赋</g:link>
-									</h4>
-									<div class="post-by">
-										作者 <a href="#">贾谊</a> <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 评论
-									</div>
-									<div class="post-desc">
-										单阏之岁兮，四月孟夏，庚子日斜兮，鵩集予舍。止于坐隅兮，貌甚闲暇。异物来萃兮，私怪其故。发书占之兮，谶言其度，曰：“野鸟入室兮，主人将去。”请问于鵩兮：“予去何之？吉乎告我，凶言其灾。淹速之度兮，语予其期。”鵩乃叹息，举首奋翼；口不能言，请对以臆：
-										“万物变化兮，固无休息。斡流而迁兮，或推而还。形气转续兮，变化而蟺。沕穆无穷兮，胡可胜言！祸兮福所倚，福兮祸所伏；优喜聚门兮，吉凶同域。彼吴强大兮，夫差以败；越栖会稽兮， [...]
-									</div>
-								</div>
-								<!-- end post-info -->
-								<!-- begin read-btn-container -->
-								<div class="read-btn-container">
-									<g:link controller="index" action="post_detail" class="read-btn">Read More <i class="fa fa-angle-double-right"></i></g:link>
-								</div>
-								<!-- end read-btn-container -->
-							</div>
-							<!-- end post-content -->
-						</li>
+%{--						<li>--}%
+%{--							<!-- begin post-left-info -->--}%
+%{--							<div class="post-left-info">--}%
+%{--								<div class="post-date">--}%
+%{--									<span class="day">03</span>--}%
+%{--									<span class="month">SEPT</span>--}%
+%{--								</div>--}%
+%{--								<div class="post-likes">--}%
+%{--									<i class="fa fa-heart"></i>--}%
+%{--									<span class="number">520</span>--}%
+%{--								</div>--}%
+%{--							</div>--}%
+%{--							<!-- end post-left-info -->--}%
+%{--							<!-- begin post-content -->--}%
+%{--							<div class="post-content">--}%
+%{--								<!-- begin post-image -->--}%
+%{--								<div class="post-image post-image-with-carousel">--}%
+%{--									<!-- begin carousel -->--}%
+%{--									<div id="carousel-post" class="carousel slide" data-ride="carousel">--}%
+%{--										<!-- begin carousel-indicators -->--}%
+%{--										<ol class="carousel-indicators">--}%
+%{--											<li data-target="#carousel-post" data-slide-to="0" class="active"></li>--}%
+%{--											<li data-target="#carousel-post" data-slide-to="1"></li>--}%
+%{--											<li data-target="#carousel-post" data-slide-to="2"></li>--}%
+%{--										</ol>--}%
+%{--										<!-- end carousel-indicators -->--}%
+%{--										<!-- begin carousel-inner -->--}%
+%{--										<div class="carousel-inner">--}%
+%{--											<div class="carousel-item active">--}%
+%{--												<a href="post_detail.gsp"><img class="d-block w-100" src='<asset:assetPath src="post/post-1.jpg"/>' alt="" /></a>--}%
+%{--											</div>--}%
+%{--											<div class="carousel-item">--}%
+%{--												<a href="post_detail.gsp"><img class="d-block w-100" src='<asset:assetPath src="post/post-2.jpg"/>' alt="" /></a>--}%
+%{--											</div>--}%
+%{--											<div class="carousel-item">--}%
+%{--												<a href="post_detail.gsp"><img class="d-block w-100" src='<asset:assetPath src="post/post-4.jpg"/>' alt="" /></a>--}%
+%{--											</div>--}%
+%{--										</div>--}%
+%{--										<!-- end carousel-inner -->--}%
+%{--										<!-- begin carousel-control -->--}%
+%{--										<a class="carousel-control-prev" href="#carousel-post" role="button" data-slide="prev">--}%
+%{--										<span class="fa fa-chevron-left" aria-hidden="true"></span>--}%
+%{--										</a>--}%
+%{--										<a class="carousel-control-next" href="#carousel-post" role="button" data-slide="next">--}%
+%{--										<span class="fa fa-chevron-right" aria-hidden="true"></span>--}%
+%{--										</a>--}%
+%{--										<!-- end carousel-control -->--}%
+%{--									</div>--}%
+%{--									<!-- end carousel -->--}%
+%{--								</div>--}%
+%{--								<!-- end post-image -->--}%
+%{--								<!-- begin post-info -->--}%
+%{--								<div class="post-info">--}%
+%{--									<h4 class="post-title">--}%
+%{--										<g:link controller="index" action="post_detail">鵩鸟赋</g:link>--}%
+%{--									</h4>--}%
+%{--									<div class="post-by">--}%
+%{--										作者 <a href="#">贾谊</a> <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 评论--}%
+%{--									</div>--}%
+%{--									<div class="post-desc">--}%
+%{--										单阏之岁兮，四月孟夏，庚子日斜兮，鵩集予舍。止于坐隅兮，貌甚闲暇。异物来萃兮，私怪其故。发书占之兮，谶言其度，曰：“野鸟入室兮，主人将去。”请问于鵩兮：“予去何之？吉乎告我，凶言其灾。淹速之度兮，语予其期。”鵩乃叹息，举首奋翼；口不能言，请对以臆：--}%
+%{--										“万物变化兮，固无休息。斡流而迁兮，或推而还。形气转续兮，变化而蟺。沕穆无穷兮，胡可胜言！祸兮福所倚，福兮祸所伏；优喜聚门兮，吉凶同域。彼吴强大兮，夫差以败；越栖会稽兮， [...]--}%
+%{--									</div>--}%
+%{--								</div>--}%
+%{--								<!-- end post-info -->--}%
+%{--								<!-- begin read-btn-container -->--}%
+%{--								<div class="read-btn-container">--}%
+%{--									<g:link controller="index" action="post_detail" class="read-btn">Read More <i class="fa fa-angle-double-right"></i></g:link>--}%
+%{--								</div>--}%
+%{--								<!-- end read-btn-container -->--}%
+%{--							</div>--}%
+%{--							<!-- end post-content -->--}%
+%{--						</li>--}%
 						<li>
 							<!-- begin post-left-info -->
 							<div class="post-left-info">
@@ -170,50 +170,6 @@
 							</div>
 							<!-- end post-content -->
 						</li>
-%{--						<li>--}%
-%{--							<!-- begin post-left-info -->--}%
-%{--							<div class="post-left-info">--}%
-%{--								<div class="post-date">--}%
-%{--									<span class="day">12</span>--}%
-%{--									<span class="month">OCT</span>--}%
-%{--								</div>--}%
-%{--								<div class="post-likes">--}%
-%{--									<i class="fa fa-heart"></i>--}%
-%{--									<span class="number">3,673</span>--}%
-%{--								</div>--}%
-%{--							</div>--}%
-%{--							<!-- end post-left-info -->--}%
-%{--							<!-- begin post-content -->--}%
-%{--							<div class="post-content">--}%
-%{--								<!-- begin blockquote -->--}%
-%{--								<blockquote>--}%
-%{--									"What is design? It's where you stand with a foot in two worlds - the world of technology and the world of people and human purposes - and you try to bring the two together."--}%
-%{--								</blockquote>--}%
-%{--								<!-- end blockquote -->--}%
-%{--								<!-- begin post-info -->--}%
-%{--								<div class="post-info">--}%
-%{--									<h4 class="post-title">--}%
-%{--										<a href="post_detail.gsp">Blockquote Post</a>--}%
-%{--									</h4>--}%
-%{--									<div class="post-by">--}%
-%{--										Posted By <a href="#">admin</a> <span class="divider">|</span> <a href="#">Animals</a>, <a href="#">Mountain</a>, <a href="#">Natural</a> <span class="divider">|</span> 2 Comments--}%
-%{--									</div>--}%
-%{--									<div class="post-desc">--}%
-%{--										Ut vulputate sem id egestas faucibus. Phasellus volutpat malesuada lacus, eu semper enim hendrerit a. --}%
-%{--										Mauris vehicula sapien sit amet eros pharetra dignissim. Quisque sed elit hendrerit, tempor sem ut, faucibus massa. --}%
-%{--										Aliquam rutrum id massa interdum dapibus. Proin augue massa, feugiat eu velit vitae, vulputate ullamcorper turpis. --}%
-%{--										Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.  [...]--}%
-%{--									</div>--}%
-%{--								</div>--}%
-%{--								<!-- end post-info -->--}%
-%{--								<!-- begin read-btn-container -->--}%
-%{--								<div class="read-btn-container">--}%
-%{--									<g:link controller="index" action="post_detail" class="read-btn">Read More <i class="fa fa-angle-double-right"></i></g:link>--}%
-%{--								</div>--}%
-%{--								<!-- begin read-btn-container -->--}%
-%{--							</div>--}%
-%{--							<!-- end post-content -->--}%
-%{--						</li>--}%
 					</ul>
 					<!-- end post-list -->
 					<div class="section-container">
