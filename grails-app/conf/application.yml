@@ -97,8 +97,8 @@ dataSource:
     driverClassName: com.mysql.jdbc.Driver
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     username: root
-#    password: 123456
-    password: root
+    password: 123456
+#    password: root
 dataSources:
     mem:
         pooled: true
@@ -110,8 +110,8 @@ environments:
     development:
         dataSource:
             dbCreate: update
-#            url: jdbc:mysql://139.9.119.104:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
-            url: jdbc:mysql://192.168.25.128:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+            url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+#            url: jdbc:mysql://192.168.25.128:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
         dataSources:
             mem:
                 dbCreate: update
@@ -119,8 +119,8 @@ environments:
     test:
         dataSource:
             dbCreate: update
-#            url: jdbc:mysql://139.9.119.104:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
-        url: jdbc:mysql://192.168.25.128:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+            url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+#        url: jdbc:mysql://192.168.25.128:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
         dataSources:
             mem:
                 dbCreate: update
@@ -128,8 +128,8 @@ environments:
     production:
         dataSource:
             dbCreate: update
-#            url: jdbc:mysql://139.9.119.104:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
-            url: jdbc:mysql://192.168.25.128:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+            url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+#            url: jdbc:mysql://192.168.25.128:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
             properties:
                 jmxEnabled: true
                 initialSize: 5
