@@ -55,7 +55,7 @@
                 //数据
                 const data = result.data;
                 //分页插件
-                pageNum(Math.ceil(result.recordsTotal / 3), result.currentPage);
+                pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
                 handleData(data);
             }, 'json'
         )
@@ -89,7 +89,7 @@ function toPage(elem,i) {
             const data = result.data;
             console.log(data);
             //分页插件
-            pageNum(Math.ceil(result.recordsTotal / 3), result.currentPage);
+            pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
             handleData(data);
         }, 'json'
     )
@@ -119,7 +119,7 @@ function up() {
             const data = result.data;
             console.log(data);
             //分页插件
-            pageNum(Math.ceil(result.recordsTotal / 3), result.currentPage);
+            pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
             handleData(data);
         }, 'json'
     )
@@ -149,7 +149,7 @@ function down() {
             const data = result.data;
             console.log(data);
             //分页插件
-            pageNum(Math.ceil(result.recordsTotal / 3), result.currentPage);
+            pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
             handleData(data);
         }, 'json'
     )
@@ -182,7 +182,7 @@ function handleValue(elem) {
             const data = result.data;
             console.log(data);
             //分页插件
-            pageNum(Math.ceil(result.recordsTotal / 3), result.currentPage);
+            pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
             handleData(data);
         }, 'json'
     )

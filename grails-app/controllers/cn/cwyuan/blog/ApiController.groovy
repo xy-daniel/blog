@@ -41,7 +41,7 @@ class ApiController {
                 }
             }
             count = hts.size()
-            def htData = hts.subList((currentPage - 1) * 3, currentPage * 3 > hts.size() ? hts.size() : currentPage * 3)
+            def htData = hts.subList((currentPage - 1) * 6, currentPage * 6 > hts.size() ? hts.size() : currentPage * 6)
             for (HeartTags ht : htData) {
                 def heart = ht.heart
                 def data = [:]
@@ -69,7 +69,7 @@ class ApiController {
             }
         }else{
             count = Heart.findAllByGjcLikeOrGyLikeOrWzmLike("%${search}%", "%${search}%", "%${search}%").size()
-            def dataList = Heart.findAllByGjcLikeOrGyLikeOrWzmLike("%${search}%", "%${search}%", "%${search}%",[max:3,offset:(currentPage-1)*3,sort:"lastUpdated",order:"desc"])
+            def dataList = Heart.findAllByGjcLikeOrGyLikeOrWzmLike("%${search}%", "%${search}%", "%${search}%",[max:6,offset:(currentPage-1)*6,sort:"lastUpdated",order:"desc"])
             for (def heart : dataList) {
                 def data = [:]
                 //id
