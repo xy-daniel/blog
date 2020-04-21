@@ -21,14 +21,6 @@
 			<div class="collapse navbar-collapse" id="header-navbar">
 				<ul class="nav navbar-nav navbar-right">
 					<li><g:link controller="index" action="index">主页</g:link></li>
-					<li class="dropdown">
-						<a href="#" data-toggle="dropdown">帖子 <b class="caret"></b></a>
-						<div class="dropdown-menu">
-							<g:link class="dropdown-item" controller="index" action="algorithm" id="1">学习笔记</g:link>
-							<g:link class="dropdown-item" controller="index" action="algorithm" id="2">技术文章</g:link>
-							<g:link class="dropdown-item" controller="index" action="algorithm" id="3">算法文章</g:link>
-						</div>
-					</li>
 					<li><g:link controller="index" action="file">时光轴</g:link></li>
 					<li><g:link controller="index" action="about_me">关于我</g:link></li>
 					<li><g:link controller="index" action="contact_us">联系我</g:link></li>
