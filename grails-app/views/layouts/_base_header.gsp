@@ -24,8 +24,9 @@
 					<li class="dropdown">
 						<a href="#" data-toggle="dropdown">帖子 <b class="caret"></b></a>
 						<div class="dropdown-menu">
-							<g:link class="dropdown-item" controller="index" action="grid">技文</g:link>
-							<g:link class="dropdown-item" controller="index" action="algorithm">算法</g:link>
+							<g:link class="dropdown-item" controller="index" action="algorithm" id="1">学习笔记</g:link>
+							<g:link class="dropdown-item" controller="index" action="algorithm" id="2">技术文章</g:link>
+							<g:link class="dropdown-item" controller="index" action="algorithm" id="3">算法文章</g:link>
 						</div>
 					</li>
 					<li><g:link controller="index" action="file">时光轴</g:link></li>
