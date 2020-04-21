@@ -97,8 +97,8 @@ dataSource:
     driverClassName: com.mysql.jdbc.Driver
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     username: root
-    password: 123456
-#    password: root
+#    password: 123456
+    password: root
 dataSources:
     mem:
         pooled: true

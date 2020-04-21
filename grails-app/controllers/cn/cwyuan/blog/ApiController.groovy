@@ -41,14 +41,30 @@ class ApiController {
                 }
             }
             count = hts.size()
-            def htData = hts.subList((currentPage - 1) * 6, currentPage * 6 > hts.size() ? hts.size() : currentPage * 6)
+            def htData = hts.subList((currentPage - 1) * 3, currentPage * 3 > hts.size() ? hts.size() : currentPage * 3)
             for (HeartTags ht : htData) {
                 def heart = ht.heart
                 def data = [:]
+                //id
                 data.put("id", heart.id)
+                //文章名
                 data.put("wzm", heart.wzm)
+                //作者
                 data.put("zz", "Cruder拯救者")
+                //概要
                 data.put("gy", heart.gy)
+                //关键词
+                data.put("gjc", heart.gjc)
+                //评论数
+                data.put("pls", heart.comment_count)
+                //点赞数
+                data.put("dzs", heart.poll_count)
+                //文章类型
+                data.put("img", heart.img)
+                //问题情境
+                data.put("origin", heart.origin)
+                //最后更新时间
+                data.put("date", heart.dateCreated)
                 modelDataList.add(data)
             }
         }else{

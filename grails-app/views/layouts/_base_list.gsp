@@ -74,7 +74,7 @@
                         if(result.code===0){
                             for (let i=0; i<result.data.length; i++){
                                 $("#tags").append("<input type=\"hidden\" value=\""+ result.data[i].id +"\"/>\n" +
-                                    "            <li><a href=\"javascript(0)\">"+ result.data[i].name +" ("+ result.data[i].uid +")</a></li>")
+                                    "            <li><a class='' href=\"javascript:void(0);\" onclick='handleValue(this); return false'>"+ result.data[i].name +" ("+ result.data[i].uid +")</a></li>")
                             }
                         }
                     },'json'
@@ -84,3 +84,8 @@
     </div>
     <!-- end section-container -->
 </div>
+<style>
+    .checked{
+        font-weight: bold;
+    }
+</style>
