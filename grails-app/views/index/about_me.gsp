@@ -7,7 +7,7 @@
 	<!-- begin #page-loader -->
 	<g:render template="/layouts/base_loader"/>
 	<!-- end #page-loader -->
-	<title>关于我</title>
+	<title>自述</title>
 
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<asset:stylesheet rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>

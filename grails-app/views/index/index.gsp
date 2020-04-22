@@ -77,5 +77,6 @@
 	<g:render template="/layouts/base_copyright"/>
 	<!-- end #page-copyright -->
 	<asset:javascript src="index/index.js"/>
+	<asset:javascript src="index/month.js"/>
 </body>
 </html>

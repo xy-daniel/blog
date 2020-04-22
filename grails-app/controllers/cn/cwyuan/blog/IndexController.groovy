@@ -30,14 +30,14 @@ class IndexController {
      * 关于我页面
      */
     def about_me(){
-
+        //从数据库获取自述信息填充到页面
     }
 
     /**
      * 联系我页面
      */
     def contact_us(){
-
+        //没有什么数据直接写死在页面上就行了
     }
 
     /**
@@ -50,7 +50,7 @@ class IndexController {
     /**
      * 文章页面
      */
-    def post_detail(){
+    def detail(){
 
     }
 }

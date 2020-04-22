@@ -87,7 +87,6 @@ function toPage(elem,i) {
         function (result) {
             //数据
             const data = result.data;
-            console.log(data);
             //分页插件
             pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
             handleData(data);
@@ -117,7 +116,6 @@ function up() {
         function (result) {
             //数据
             const data = result.data;
-            console.log(data);
             //分页插件
             pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
             handleData(data);
@@ -147,7 +145,6 @@ function down() {
         function (result) {
             //数据
             const data = result.data;
-            console.log(data);
             //分页插件
             pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
             handleData(data);
@@ -180,7 +177,6 @@ function handleValue(elem) {
         function (result) {
             //数据
             const data = result.data;
-            console.log(data);
             //分页插件
             pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
             handleData(data);
@@ -189,7 +185,6 @@ function handleValue(elem) {
 }
 //总数据处理
 function handleData(data) {
-    console.log(data);
     const list = $(".post-list");
     list.empty();
     //数据处理
@@ -220,7 +215,7 @@ function handleData(data) {
                 "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
                 "\t\t\t\t\t\t\t\t<div class=\"post-info\">\n" +
                 "\t\t\t\t\t\t\t\t\t<h4 class=\"post-title\">\n" +
-                "\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\">"+ data[i].wzm +"</a>\n" +
+                "\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\">"+ data[i].wzm +"</a>\n" +
                 "\t\t\t\t\t\t\t\t\t</h4>\n" +
                 "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
                 "\t\t\t\t\t\t\t\t\t\tPosted By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a> <span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
@@ -259,7 +254,7 @@ function handleData(data) {
                     "\t\t\t\t\t\t\t<div class=\"post-content\">\n" +
                     "\t\t\t\t\t\t\t\t<!-- begin post-image -->\n" +
                     "\t\t\t\t\t\t\t\t<div class=\"post-image\">\n" +
-                    "\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\">\n" +
+                    "\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\">\n" +
                     "\t\t\t\t\t\t\t\t\t\t<div class=\"post-image-cover\" style=\"background-image: url("+ img[0].replace(/\s/g,"%20") +");\"></div>\n" +
                     "\t\t\t\t\t\t\t\t\t</a>\n" +
                     "\t\t\t\t\t\t\t\t</div>\n" +
@@ -267,7 +262,7 @@ function handleData(data) {
                     "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
                     "\t\t\t\t\t\t\t\t<div class=\"post-info\">\n" +
                     "\t\t\t\t\t\t\t\t\t<h4 class=\"post-title\">\n" +
-                    "\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\">"+ data[i].wzm +"</a>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\">"+ data[i].wzm +"</a>\n" +
                     "\t\t\t\t\t\t\t\t\t</h4>\n" +
                     "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
                     "\t\t\t\t\t\t\t\t\t\tPosted By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
@@ -315,10 +310,10 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-inner -->\n" +
                         "\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-inner\">\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item active\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-inner -->\n" +
@@ -385,13 +380,13 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-inner -->\n" +
                         "\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-inner\">\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item active\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"post_detail.gsp\"><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-inner -->\n" +
@@ -492,44 +487,5 @@ function pageNum(totalPage, currentPage) {
     }
     if (currentPage===totalPage){
         $(".downPage").addClass("disabled");
-    }
-}
-//月份插件
-function month(monthNum) {
-    if (monthNum==="01"){
-        return "Jan."
-    }
-    if (monthNum==="02"){
-        return "Feb."
-    }
-    if (monthNum==="03"){
-        return "Mar."
-    }
-    if (monthNum==="04"){
-        return "Apr."
-    }
-    if (monthNum==="05"){
-        return "May."
-    }
-    if (monthNum==="06"){
-        return "Jun."
-    }
-    if (monthNum==="07"){
-        return "Jul."
-    }
-    if (monthNum==="08"){
-        return "Aug."
-    }
-    if (monthNum==="09"){
-        return "Sept."
-    }
-    if (monthNum==="10"){
-        return "Oct."
-    }
-    if (monthNum==="11"){
-        return "Nov."
-    }
-    if (monthNum==="12"){
-        return "Dec."
     }
 }

@@ -50,7 +50,7 @@
 							<li class="breadcrumb-item active">鵩鸟赋</li>
 						</ul>
 						<h4 class="post-title">
-							<a href="post_detail.gsp">鵩鸟赋</a>
+							<a href="detail.gsp">鵩鸟赋</a>
 						</h4>
 						<div class="post-by">
 							作者 <a href="#">贾谊</a> <span class="divider">|</span> 10 June 2018 <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 评论

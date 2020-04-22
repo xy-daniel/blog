@@ -22,6 +22,26 @@ class ApiController {
         render Resp.toJson(RespType.SUCCESS, tags)
     }
 
+    //最近文章
+    def currentWZ(){
+        def model = [:]
+        def modelDataList = []
+        def dataList = Heart.findAll([max:5,offset:0,sort:"lastUpdated",order:"desc"])
+        for (def heart : dataList) {
+            def data = [:]
+            //id
+            data.put("id", heart.id)
+            //文章名
+            data.put("wzm", heart.wzm)
+
+            //最后更新时间
+            data.put("date", heart.lastUpdated)
+            modelDataList.add(data)
+        }
+        model.put("data", modelDataList)
+        render model as JSON
+    }
+
     def heartData(){
         def currentPage = params.int("currentPage")
         def search = params.get("search") as String

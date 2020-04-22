@@ -98,11 +98,6 @@
 							<!-- begin col-4 -->
 							<div class="col-md-4">
 								<p>
-									<strong>联系电话</strong><br>
-									如非重要事情希望您忽略这不值一提的11位数,下面有更好的16个字符<br>
-									PN：(+86) 17865814986<br>
-								</p>
-								<p>
 									<strong>邮箱</strong><br>
 									<a>myarctic@163.com</a>
 								</p>
