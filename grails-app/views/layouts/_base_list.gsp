@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-3 order-2">
     <!-- begin section-container -->
     <div class="section-container">
         <div class="input-group sidebar-search">

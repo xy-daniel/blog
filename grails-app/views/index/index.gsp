@@ -10,7 +10,7 @@
 	<!-- end #page-loader -->
 	<title>主页</title>
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
-	<asset:stylesheet rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+	<asset:stylesheet rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
 	<asset:stylesheet rel="stylesheet" href="font-awesome/css/all.min.css"/>
 	<asset:stylesheet rel="stylesheet" href="animate/animate.css"/>
 	<asset:stylesheet rel="stylesheet" href="blog/style.css"/>
@@ -26,6 +26,20 @@
 	<asset:javascript src="blog/apps.js"/>
 	<asset:javascript src="pace/pace.min.js" />
 	<!-- ================== END BASE JS ================== -->
+	<style>
+		@media (max-width: 576px) {
+			.order-0 {
+				-ms-flex-order: 1;
+				order: 1;
+			}
+
+			.order-1 {
+				-ms-flex-order: 0;
+				order: 0;
+			}
+
+		}
+	</style>
 </head>
 <body>
 	<!-- begin #page-header -->
@@ -42,13 +56,26 @@
 	<!-- end #page-title -->
 	
 	<!-- begin #content -->
-	<div id="content" class="content">
+	<div id="content" class="content row" style="margin: 100px 10% 0">
 		<!-- begin container -->
-		<div class="container">
+		<div>
 			<!-- begin row -->
 			<div class="row row-space-30">
-				<!-- begin col-9 -->
-				<div class="col-md-9">
+				<!-- 左边显示个人信息、归档、关键词 -->
+				<div class="col-md-3 order-0">
+					<!-- begin card -->
+					<div class="card card-inverse">
+						<img class="card-img" src="<asset:assetPath src="cover/gallery-1.jpg"/>" alt="" />
+						<div class="card-block">
+							<h5 class="card-title text-lg-center">Cruder拯救者</h5>
+							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							<p class="card-text"><small>Last updated 3 mins ago</small></p>
+						</div>
+					</div>
+					<!-- end card -->
+				</div>
+				<!-- begin col-6 -->
+				<div class="col-md-6 order-1">
 					<!-- begin post-list -->
 					<ul class="post-list">
 					</ul>
@@ -62,7 +89,7 @@
 						<!-- end pagination -->
 					</div>
 				</div>
-				<!-- end col-9 -->
+				<!-- end col-6 -->
 				<!-- begin col-3 -->
 				<g:render template="/layouts/base_list"/>
 				<!-- end col-3 -->
