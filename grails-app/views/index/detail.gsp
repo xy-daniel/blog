@@ -7,8 +7,7 @@
 	<!-- begin #page-loader -->
 	<g:render template="/layouts/base_loader"/>
 	<!-- end #page-loader -->
-	<title>文章</title>
-	
+
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<asset:stylesheet rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
 	<asset:stylesheet rel="stylesheet" href="font-awesome/css/all.min.css"/>
