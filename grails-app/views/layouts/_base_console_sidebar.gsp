@@ -21,7 +21,7 @@
         <!-- begin sidebar nav -->
         <ul class="nav">
             <!-- 系统信息 -->
-            <li><a href="/blog"><i class="fas fa-cog fa-fw"></i> <span>系统信息</span></a></li>
+            <li><a href="/console"><i class="fas fa-cog fa-fw"></i> <span>系统信息</span></a></li>
             <!-- 文章管理 -->
             <li class="has-sub">
                 <a href="javascript:void(0);">
@@ -37,11 +37,11 @@
                 </ul>
             </li>
             <!-- 评论用户管理 -->
-            <li><a href="/blog"><i class="fas fa-user"></i> <span>用户管理</span></a></li>
+            <li><a href="/console"><i class="fas fa-user"></i> <span>用户管理</span></a></li>
             <!-- 标签管理 -->
             <li><g:link controller="tags" action="list"><i class="fas fa-tags"></i> <span>标签管理</span></g:link></li>
             <!-- 留言管理 -->
-            <li><a href="/blog"><i class="fas fa-microphone"></i> <span>留言管理</span></a></li>
+            <li><a href="/console"><i class="fas fa-microphone"></i> <span>留言管理</span></a></li>
             <!-- 友链管理 -->
             <li><g:link controller="friend" action="list"><i class="fas fa-address-card"></i> <span>友链管理</span></g:link></li>
             <!-- begin sidebar minify button -->

@@ -222,7 +222,7 @@ blog:
     editormd:
         filePath: /usr/local/blog/
 #        filePath: D://blog/
-        serverPath: http://139.9.119.104:8080/images/
+        serverPath: http://139.9.119.104/images/
 jwt:
     info:
         secret: XXXXX
