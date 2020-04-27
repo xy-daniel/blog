@@ -46,8 +46,8 @@
 		<div class="container">
 			<!-- begin row -->
 			<div class="row row-space-30">
-				<!-- begin col-9 -->
-				<div class="col-md-9">
+				<!-- begin col-12 -->
+				<div class="col-md-12">
 					<!-- begin section-container -->
 					<div class="section-container">
 						<div class="post-image">
@@ -75,10 +75,7 @@
 					</div>
 					<!-- end section-container -->
 				</div>
-				<!-- end col-9 -->
-				<!-- begin col-3 -->
-				<g:render template="/layouts/base_list"/>
-				<!-- end col-3 -->
+				<!-- end col-12 -->
 			</div>
 			<!-- end row -->
 		</div>

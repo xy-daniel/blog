@@ -21,8 +21,8 @@
 			<div class="collapse navbar-collapse" id="header-navbar">
 				<ul class="nav navbar-nav navbar-right">
 					<li><g:link controller="index" action="index">主页</g:link></li>
-					<li><g:link controller="index" action="file">时光轴</g:link></li>
-					<li><g:link controller="index" action="about_me">自述</g:link></li>
+					<li><g:link controller="index" action="file">总归档</g:link></li>
+					<li><g:link controller="index" action="about_me">关于我</g:link></li>
 					<li><g:link controller="index" action="contact_us">联系我</g:link></li>
 				</ul>
 			</div>

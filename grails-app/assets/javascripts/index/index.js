@@ -218,7 +218,7 @@ function handleData(data) {
                 "\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\">"+ data[i].wzm +"</a>\n" +
                 "\t\t\t\t\t\t\t\t\t</h4>\n" +
                 "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
-                "\t\t\t\t\t\t\t\t\t\tPosted By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a> <span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
+                "\t\t\t\t\t\t\t\t\t\t作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a> <span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
                 "\t\t\t\t\t\t\t\t\t</div>\n" +
                 "\t\t\t\t\t\t\t\t\t<div class=\"post-desc\">\n" +
                 "\t\t\t\t\t\t\t\t\t\t"+ data[i].gy +"\n" +
@@ -265,7 +265,7 @@ function handleData(data) {
                     "\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\">"+ data[i].wzm +"</a>\n" +
                     "\t\t\t\t\t\t\t\t\t</h4>\n" +
                     "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
-                    "\t\t\t\t\t\t\t\t\t\tPosted By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
+                    "\t\t\t\t\t\t\t\t\t\t作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
                     "\t\t\t\t\t\t\t\t\t</div>\n" +
                     "\t\t\t\t\t\t\t\t\t<div class=\"post-desc\">\n" +
                     "\t\t\t\t\t\t\t\t\t\t"+ data[i].gy +"\n" +
@@ -335,7 +335,7 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t\t\t<a>"+ data[i].wzm +"</a>\n" +
                         "\t\t\t\t\t\t\t\t\t</h4>\n" +
                         "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\tPost By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
+                        "\t\t\t\t\t\t\t\t\t\t作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
                         "\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t<div class=\"post-desc\">\n" +
                         "\t\t\t\t\t\t\t\t\t\t"+ data[i].gy +"\n" +
@@ -408,7 +408,7 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t\t\t<a>"+ data[i].wzm +"</a>\n" +
                         "\t\t\t\t\t\t\t\t\t</h4>\n" +
                         "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\tPost By <a href=\"#\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"#\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
+                        "\t\t\t\t\t\t\t\t\t\t作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
                         "\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t<div class=\"post-desc\">\n" +
                         "\t\t\t\t\t\t\t\t\t\t"+ data[i].gy +"\n" +

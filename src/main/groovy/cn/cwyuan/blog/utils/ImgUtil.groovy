@@ -13,7 +13,7 @@ class ImgUtil {
     static String getImgAddress(String s){
         String regex
         List<String> list = new ArrayList<String>()
-        regex = "src=\"(.*?)\""
+        regex = "img src=\"(.*?)\""
         Pattern pa = Pattern.compile(regex, Pattern.DOTALL)
         Matcher ma = pa.matcher(s)
         while (ma.find()){
@@ -21,12 +21,13 @@ class ImgUtil {
         }
         def data = ""
         for (String str:list){
-            str = str.split("=").last().substring(1,str.split("=").last().size()-1)
+            def strArr = str.split(" src=")
+            def getData = strArr.last().substring(1,strArr.last().size()-1)
             if (!data){
-                data = str
+                data = getData
                 continue
             }
-            data += (","+str)
+            data += (","+getData)
         }
         data
     }
