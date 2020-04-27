@@ -39,57 +39,25 @@
 		<div class="container">
 			<!-- begin row -->
 			<div class="row row-space-30">
-				<!-- begin col-9 -->
-				<div class="col-md-9">
+				<!-- begin col-12 -->
+				<div class="col-md-12">
 					<!-- begin post-detail -->
 					<div class="post-detail section-container">
-						<ul class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">主页</a></li>
-							<li class="breadcrumb-item"><a href="#">文言文</a></li>
-							<li class="breadcrumb-item active">鵩鸟赋</li>
-						</ul>
-						<h4 class="post-title">
-							<a href="detail.gsp">鵩鸟赋</a>
-						</h4>
-						<div class="post-by">
-							作者 <a href="#">贾谊</a> <span class="divider">|</span> 10 June 2018 <span class="divider">|</span> <a href="#">Sports</a>, <a href="#">Mountain</a>, <a href="#">Bike</a> <span class="divider">|</span> 2 评论
+						<h4 class="post-title"></h4>
+						<input type="hidden" id="contentId" value="${id}">
+						<div id="html">
+							<script>
+								$.get(
+										"/index/getHtml",
+										{id:$("#contentId").val()},
+										function (result) {
+											$(".post-title").append(result.data.title);
+											$("#html").append(result.data.html);
+											document.body.scrollTop = document.documentElement.scrollTop = 0;
+										},'json'
+								)
+							</script>
 						</div>
-						<!-- begin post-image -->
-						<div class="post-image">
-							<div class="post-image-cover" style="background-image: url('<asset:assetPath src="post/post-1.jpg"/>')"></div>
-						</div>
-						<!-- end post-image -->
-						<!-- begin post-desc -->
-						<div class="post-desc">
-							<p>
-								单阏之岁兮，四月孟夏，庚子日斜兮，鵩集予舍。止于坐隅兮，貌甚闲暇。异物来萃兮，私怪其故。发书占之兮，谶言其度，曰：“野鸟入室兮，主人将去。”请问于鵩兮：“予去何之？吉乎告我，凶言其灾。淹速之度兮，语予其期。”鵩乃叹息，举首奋翼；口不能言，请对以臆：
-							</p>
-						</div>
-						<!-- end post-desc -->
-						<!-- begin post-image -->
-						<div class="post-image">
-							<div class="post-image-cover" style="background-image: url('<asset:assetPath src="post/post-2.jpg"/>')"></div>
-						</div>
-						<!-- end post-image -->
-						<!-- begin post-desc -->
-						<div class="post-desc">
-							<p>
-								“万物变化兮，固无休息。斡流而迁兮，或推而还。形气转续兮，变化而蟺。沕穆无穷兮，胡可胜言！祸兮福所倚，福兮祸所伏；优喜聚门兮，吉凶同域。彼吴强大兮，夫差以败；越栖会稽兮，勾践霸世。斯游遂成兮，卒被五刑；傅说胥靡兮，乃相武丁。夫祸之与福兮，何异纠纆；命不可说兮，孰知其极！水激则旱兮，矢激则远；万物回薄兮，振荡相转。云蒸雨降兮，纠错相纷；大钧播物兮，坱圠无垠。天不可预虑兮，道不可预谋；迟速有命兮，焉识其时。
-							</p>
-						</div>
-						<!-- end post-desc -->
-						<!-- begin post-image -->
-						<div class="post-image">
-							<div class="post-image-cover" style="background-image: url('<asset:assetPath src="post/post-3.jpg"/>')"></div>
-						</div>
-						<!-- end post-image -->
-						<!-- begin post-desc -->
-						<div class="post-desc">
-							<p>
-								且夫天地为炉兮，造化为工；阴阳为炭兮，万物为铜。合散消息兮，安有常则？千变万化兮，未始有极，忽然为人兮，何足控抟；化为异物兮，又何足患！小智自私兮，贱彼贵我；达人大观兮，物无不可。贪夫殉财兮，烈士殉名。夸者死权兮，品庶每生。怵迫之徒兮，或趋西东；大人不曲兮，意变齐同。愚士系俗兮，窘若囚拘；至人遗物兮，独与道俱。众人惑惑兮，好恶积亿；真人恬漠兮，独与道息。释智遗形兮，超然自丧；寥廓忽荒兮，与道翱翔。乘流则逝兮，得坻则止；纵躯委命兮，不私与己。其生兮若浮，其死兮若休；澹乎若深渊止之静，泛乎若不系之舟。不以生故自宝兮，养空而浮；德人无累兮，知命不忧。细故蒂芥兮，何足以疑！”
-							</p>
-						</div>
-						<!-- end post-desc -->
 					</div>
 					<!-- end post-detail -->
 					<!-- begin section-container -->
@@ -231,10 +199,7 @@
 					</div>
 					<!-- end section-container -->
 				</div>
-				<!-- end col-9 -->
-				<!-- begin col-3 -->
-				<g:render template="/layouts/base_list"/>
-				<!-- end col-3 -->
+				<!-- end col-12 -->
 			</div>
 			<!-- end row -->
 		</div>

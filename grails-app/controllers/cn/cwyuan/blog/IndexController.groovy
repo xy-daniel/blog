@@ -1,5 +1,7 @@
 package cn.cwyuan.blog
 
+import cn.cwyuan.blog.enums.RespType
+
 /**
  * 首页面---->任何用户都可以进入
  * Created by daniel in 2020.04.10
@@ -10,20 +12,6 @@ class IndexController {
      * 主页
      */
     def index() {
-    }
-
-    /**
-     * 技术文章页面
-     */
-    def grid(){
-
-    }
-
-    /**
-     * 算法文章页面
-     */
-    def algorithm(){
-
     }
 
     /**
@@ -51,6 +39,13 @@ class IndexController {
      * 文章页面
      */
     def detail(){
+        [id: params.get("id")]
+    }
 
+    def getHtml(){
+        def model = [:]
+        model.put("title", Heart.get(params.int("id")).wzm)
+        model.put("html", Content.findByHeartId(params.int("id")).html)
+        render Resp.toJson(RespType.SUCCESS, model)
     }
 }
