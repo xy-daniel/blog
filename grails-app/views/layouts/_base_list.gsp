@@ -20,36 +20,6 @@
     <div class="section-container">
         <h4 class="section-title"><span>最近的文章</span></h4>
         <ul class="sidebar-recent-post" id="currentWZ">
-%{--            <li>--}%
-%{--                <div class="info">--}%
-%{--                    <h4 class="title"><a href="#">岳阳楼记. </a></h4>--}%
-%{--                    <div class="date">23 December 2020</div>--}%
-%{--                </div>--}%
-%{--            </li>--}%
-%{--            <li>--}%
-%{--                <div class="info">--}%
-%{--                    <h4 class="title"><a href="#">劝学. </a></h4>--}%
-%{--                    <div class="date">16 December 2018</div>--}%
-%{--                </div>--}%
-%{--            </li>--}%
-%{--            <li>--}%
-%{--                <div class="info">--}%
-%{--                    <h4 class="title"><a href="#">过秦论. </a></h4>--}%
-%{--                    <div class="date">7 December 2018</div>--}%
-%{--                </div>--}%
-%{--            </li>--}%
-%{--            <li>--}%
-%{--                <div class="info">--}%
-%{--                    <h4 class="title"><a href="#">项脊轩志. </a></h4>--}%
-%{--                    <div class="date">20 November 2018</div>--}%
-%{--                </div>--}%
-%{--            </li>--}%
-%{--            <li>--}%
-%{--                <div class="info">--}%
-%{--                    <h4 class="title"><a href="#">六国论.</a></h4>--}%
-%{--                    <div class="date">5 November 2018</div>--}%
-%{--                </div>--}%
-%{--            </li>--}%
         </ul>
     </div>
     <!-- end section-container -->
@@ -76,7 +46,7 @@
                         if(result.code===0){
                             for (let i=0; i<result.data.length; i++){
                                 $("#tags").append("<input type=\"hidden\" value=\""+ result.data[i].id +"\"/>\n" +
-                                    "            <li><a class='' href=\"javascript:void(0);\" onclick='handleValue(this); return false'>"+ result.data[i].name +" ("+ result.data[i].uid +")</a></li>")
+                                    "            <li><a class='' href=\"javascript:void(0);\" onclick='handleValue(this); return false'>"+ result.data[i].name +" （"+ result.data[i].uid +"）</a></li>")
                             }
                         }
                     },'json'

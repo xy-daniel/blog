@@ -199,10 +199,10 @@ function handleData(data) {
                 "\t\t\t\t\t\t\t\t\t<span class=\"day\">"+ date[2].substring(0,2) +"</span>\n" +
                 "\t\t\t\t\t\t\t\t\t<span class=\"month\">"+ month(date[1]) + date[0] +"</span>\n" +
                 "\t\t\t\t\t\t\t\t</div>\n" +
-                "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
-                "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
-                "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
-                "\t\t\t\t\t\t\t\t</div>\n" +
+                // "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
+                // "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
+                // "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
+                // "\t\t\t\t\t\t\t\t</div>\n" +
                 "\t\t\t\t\t\t\t</div>\n" +
                 "\t\t\t\t\t\t\t<!-- end post-left-info -->\n" +
                 "\t\t\t\t\t\t\t<!-- begin post-content -->\n" +
@@ -244,10 +244,10 @@ function handleData(data) {
                     "\t\t\t\t\t\t\t\t\t<span class=\"day\">"+ date[2].substring(0,2) +"</span>\n" +
                     "\t\t\t\t\t\t\t\t\t<span class=\"month\">"+ month(date[1]) + date[0] +"</span>\n" +
                     "\t\t\t\t\t\t\t\t</div>\n" +
-                    "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
-                    "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
-                    "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
-                    "\t\t\t\t\t\t\t\t</div>\n" +
+                    // "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
+                    // "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
+                    // "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
+                    // "\t\t\t\t\t\t\t\t</div>\n" +
                     "\t\t\t\t\t\t\t</div>\n" +
                     "\t\t\t\t\t\t\t<!-- end post-left-info -->\n" +
                     "\t\t\t\t\t\t\t<!-- begin post-content -->\n" +
@@ -289,10 +289,10 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t\t<span class=\"day\">"+ date[2].substring(0,2) +"</span>\n" +
                         "\t\t\t\t\t\t\t\t\t<span class=\"month\">"+ month(date[1]) + date[0] +"</span>\n" +
                         "\t\t\t\t\t\t\t\t</div>\n" +
-                        "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
-                        "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
-                        "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
-                        "\t\t\t\t\t\t\t\t</div>\n" +
+                        // "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
+                        // "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
+                        // "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
+                        // "\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t<!-- end post-left-info -->\n" +
                         "\t\t\t\t\t\t\t<!-- begin post-content -->\n" +
@@ -358,10 +358,10 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t\t<span class=\"day\">"+ date[2].substring(0,2) +"</span>\n" +
                         "\t\t\t\t\t\t\t\t\t<span class=\"month\">"+ month(date[1]) + date[0] +"</span>\n" +
                         "\t\t\t\t\t\t\t\t</div>\n" +
-                        "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
-                        "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
-                        "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
-                        "\t\t\t\t\t\t\t\t</div>\n" +
+                        // "\t\t\t\t\t\t\t\t<div class=\"post-likes\">\n" +
+                        // "\t\t\t\t\t\t\t\t\t<i class=\"fa fa-heart\"></i>\n" +
+                        // "\t\t\t\t\t\t\t\t\t<span class=\"number\">"+ data[i].dzs +"</span>\n" +
+                        // "\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t<!-- end post-left-info -->\n" +
                         "\t\t\t\t\t\t\t<!-- begin post-content -->\n" +
