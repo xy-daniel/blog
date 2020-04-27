@@ -1,5 +1,5 @@
 server:
-    port: 8888
+    port: 80
 ---
 grails:
     profile: web
@@ -194,6 +194,7 @@ grails:
                 - rememberMeAuthenticationProvider
             securityConfigType: InterceptUrlMap
             interceptUrlMap: [
+                {pattern: '/',                          access: ['permitAll']},
                 #index相关的博客地址不需要任何权限
                 {pattern: '/index/**',                  access: ['permitAll']},
                 # 前台接口不需要登录的数据
@@ -216,7 +217,7 @@ server:
     servlet:
         session:
             timeout: 7200
-    contextPath: '/blog'
+    contextPath: '/'
 blog:
     editormd:
         filePath: /usr/local/blog/

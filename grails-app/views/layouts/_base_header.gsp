@@ -12,7 +12,7 @@
 				<g:link controller="index" action="index" class="navbar-brand">
 					<span class="brand-logo"></span>
 					<span class="brand-text">
-						Daniel's Blog
+						Cruder拯救者
 					</span>
 				</g:link>
 			</div>

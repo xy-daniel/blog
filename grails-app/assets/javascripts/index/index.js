@@ -42,7 +42,7 @@
     window.p = page;
     function getData(toPage, search, tag) {
         $.get(
-            "/blog/api/heartData",
+            "/api/heartData",
             {
                 //当前页数据
                 currentPage: toPage,
@@ -75,7 +75,7 @@ function toPage(elem,i) {
         tag = checked.parent().prev().val()
     }
     $.get(
-        "/blog/api/heartData",
+        "/api/heartData",
         {
             //前往的页数
             currentPage: i,
@@ -104,7 +104,7 @@ function up() {
         tag = checked.parent().prev().val()
     }
     $.get(
-        "/blog/api/heartData",
+        "/api/heartData",
         {
             //前往的页数
             currentPage: parseInt($("li.active").children().text())-1,
@@ -133,7 +133,7 @@ function down() {
         tag = checked.parent().prev().val()
     }
     $.get(
-        "/blog/api/heartData",
+        "/api/heartData",
         {
             //前往的页数
             currentPage: parseInt($("li.active").children().text())+1,
@@ -165,7 +165,7 @@ function handleValue(elem) {
     $(".checked").attr("class", "");
     $(elem).attr("class", "checked");
     $.get(
-        "/blog/api/heartData",
+        "/api/heartData",
         {
             //当前页数据
             currentPage: 1,

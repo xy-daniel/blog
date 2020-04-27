@@ -14,7 +14,7 @@ class UrlMappings {
 
         "/plan/connect?/$id?(.$format)?"(controller: "plan", action: "connect")
 
-        "/"(controller: "console")
+        "/"(controller: "index")
         "500"(controller: "error")
         "404"(controller: "error")
         "405"(controller: "error")

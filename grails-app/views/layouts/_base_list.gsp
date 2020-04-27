@@ -62,7 +62,7 @@
             $(function () {
                 //友链列表
                 $.get(
-                    "/blog/api/friendData",{},function (result) {
+                    "/api/friendData",{},function (result) {
                         if(result.code===0){
                             for (let i=0; i<result.data.length; i++){
                                 $(".friendData").append("<li><a target=\"_blank\" href=\""+ result.data[i].url +"\">"+ result.data[i].name +"</a></li>");
@@ -72,7 +72,7 @@
                 );
                 //分类列表
                 $.get(
-                    "/blog/api/tagData",{},function (result) {
+                    "/api/tagData",{},function (result) {
                         if(result.code===0){
                             for (let i=0; i<result.data.length; i++){
                                 $("#tags").append("<input type=\"hidden\" value=\""+ result.data[i].id +"\"/>\n" +
@@ -83,7 +83,7 @@
                 );
                 //最近文章
                 $.get(
-                    "/blog/api/currentWZ",{},function (result) {
+                    "/api/currentWZ",{},function (result) {
                         for (let i=0; i<result.data.length; i++){
                             const date = result.data[i].date.split("-");
                             const time = date[2].substring(0,2) + " " + month(date[1]) + " " + date[0];

@@ -135,7 +135,7 @@
 			editor = editormd("editormd", {
 				width: "100%",
 				height: 800,
-				path : '../../blog/assets/md/lib/',
+				path : '../../assets/md/lib/',
 				theme : "dark",
 				previewTheme : "white",
 				editorTheme : "pastel-on-dark",
