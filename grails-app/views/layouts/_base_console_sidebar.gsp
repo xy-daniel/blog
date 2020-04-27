@@ -8,7 +8,7 @@
                 <a data-toggle="nav-profile">
                     <div class="cover with-shadow"></div>
                     <div class="image">
-                        <img src="<blog:photo/>" onerror="this.src='<asset:assetPath src="user/user-13.jpg" />'" alt="" />
+                        <img src="<blog:photo/>" onerror="this.src='<asset:assetPath src="user.jpg" />'" alt="" />
                     </div>
                     <div class="info">
                         <blog:realName/>

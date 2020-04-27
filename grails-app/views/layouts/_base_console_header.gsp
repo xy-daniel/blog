@@ -34,7 +34,7 @@
                 <li class="media">
                     <a href="javascript:void(0);">
                         <div class="media-left">
-                            <img src="<asset:assetPath src="user/user-1.jpg"/>" class="media-object" alt="" />
+                            <img src="<asset:assetPath src="user.jpg"/>" class="media-object" alt="" />
                             <i class="fab fa-facebook-messenger text-primary media-object-icon"></i>
                         </div>
                         <div class="media-body">
@@ -47,7 +47,7 @@
                 <li class="media">
                     <a href="javascript:void(0);">
                         <div class="media-left">
-                            <img src="<asset:assetPath src="user/user-2.jpg"/>" class="media-object" alt="" />
+                            <img src="<asset:assetPath src="user.jpg"/>" class="media-object" alt="" />
                             <i class="fab fa-facebook-messenger text-primary media-object-icon"></i>
                         </div>
                         <div class="media-body">
@@ -87,7 +87,7 @@
         </li>
         <li class="dropdown navbar-user">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src="<blog:photo/>" onerror="this.src='<asset:assetPath src="user/user-13.jpg" />'" alt="" />
+                <img src="<blog:photo/>" onerror="this.src='<asset:assetPath src="user.jpg" />'" alt="" />
                 <span class="d-none d-md-inline"><blog:realName/></span> <b class="caret"></b>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
