@@ -215,7 +215,7 @@ function handleData(data) {
                 "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
                 "\t\t\t\t\t\t\t\t<div class=\"post-info\">\n" +
                 "\t\t\t\t\t\t\t\t\t<h4 class=\"post-title\">\n" +
-                "\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\">"+ data[i].wzm +"</a>\n" +
+                "\t\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>\n" +
                 "\t\t\t\t\t\t\t\t\t</h4>\n" +
                 "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
                 "\t\t\t\t\t\t\t\t\t\t作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a> <span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
@@ -227,7 +227,7 @@ function handleData(data) {
                 "\t\t\t\t\t\t\t\t<!-- end post-info -->\n" +
                 "\t\t\t\t\t\t\t\t<!-- begin read-btn-container -->\n" +
                 "\t\t\t\t\t\t\t\t<div class=\"read-btn-container\">\n" +
-                "\t\t\t\t\t\t\t\t\t<g:link controller=\"index\" action=\"post_detail\" class=\"read-btn\">Read More <i class=\"fa fa-angle-double-right\"></i></g:link>\n" +
+                "\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>\n" +
                 "\t\t\t\t\t\t\t\t</div>\n" +
                 "\t\t\t\t\t\t\t\t<!-- begin read-btn-container -->\n" +
                 "\t\t\t\t\t\t\t</div>\n" +
@@ -254,7 +254,7 @@ function handleData(data) {
                     "\t\t\t\t\t\t\t<div class=\"post-content\">\n" +
                     "\t\t\t\t\t\t\t\t<!-- begin post-image -->\n" +
                     "\t\t\t\t\t\t\t\t<div class=\"post-image\">\n" +
-                    "\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\">\n" +
+                    "\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'>\n" +
                     "\t\t\t\t\t\t\t\t\t\t<div class=\"post-image-cover\" style=\"background-image: url("+ img[0].replace(/\s/g,"%20") +");\"></div>\n" +
                     "\t\t\t\t\t\t\t\t\t</a>\n" +
                     "\t\t\t\t\t\t\t\t</div>\n" +
@@ -262,7 +262,7 @@ function handleData(data) {
                     "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
                     "\t\t\t\t\t\t\t\t<div class=\"post-info\">\n" +
                     "\t\t\t\t\t\t\t\t\t<h4 class=\"post-title\">\n" +
-                    "\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\">"+ data[i].wzm +"</a>\n" +
+                    "\t\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>\n" +
                     "\t\t\t\t\t\t\t\t\t</h4>\n" +
                     "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
                     "\t\t\t\t\t\t\t\t\t\t作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
@@ -274,7 +274,7 @@ function handleData(data) {
                     "\t\t\t\t\t\t\t\t<!-- end post-info -->\n" +
                     "\t\t\t\t\t\t\t\t<!-- begin read-btn-container -->\n" +
                     "\t\t\t\t\t\t\t\t<div class=\"read-btn-container\">\n" +
-                    "\t\t\t\t\t\t\t\t\t<g:link controller=\"index\" action=\"post_detail\" class=\"read-btn\">Read More <i class=\"fa fa-angle-double-right\"></i></g:link>\n" +
+                    "\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>\n" +
                     "\t\t\t\t\t\t\t\t</div>\n" +
                     "\t\t\t\t\t\t\t\t<!-- end read-btn-container -->\n" +
                     "\t\t\t\t\t\t\t</div>\n" +
@@ -310,10 +310,10 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-inner -->\n" +
                         "\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-inner\">\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item active\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-inner -->\n" +
@@ -332,7 +332,7 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
                         "\t\t\t\t\t\t\t\t<div class=\"post-info\">\n" +
                         "\t\t\t\t\t\t\t\t\t<h4 class=\"post-title\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t<a>"+ data[i].wzm +"</a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>\n" +
                         "\t\t\t\t\t\t\t\t\t</h4>\n" +
                         "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
                         "\t\t\t\t\t\t\t\t\t\t作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
@@ -344,7 +344,7 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t<!-- end post-info -->\n" +
                         "\t\t\t\t\t\t\t\t<!-- begin read-btn-container -->\n" +
                         "\t\t\t\t\t\t\t\t<div class=\"read-btn-container\">\n" +
-                        "\t\t\t\t\t\t\t\t\t<g:link controller=\"index\" action=\"post_detail\" class=\"read-btn\">Read More <i class=\"fa fa-angle-double-right\"></i></g:link>\n" +
+                        "\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>\n" +
                         "\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t<!-- end read-btn-container -->\n" +
                         "\t\t\t\t\t\t\t</div>\n" +
@@ -380,13 +380,13 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t\t\t<!-- begin carousel-inner -->\n" +
                         "\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-inner\">\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item active\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-item\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"detail.gsp\"><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t<!-- end carousel-inner -->\n" +
@@ -405,7 +405,7 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t<!-- begin post-info -->\n" +
                         "\t\t\t\t\t\t\t\t<div class=\"post-info\">\n" +
                         "\t\t\t\t\t\t\t\t\t<h4 class=\"post-title\">\n" +
-                        "\t\t\t\t\t\t\t\t\t\t<a>"+ data[i].wzm +"</a>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>\n" +
                         "\t\t\t\t\t\t\t\t\t</h4>\n" +
                         "\t\t\t\t\t\t\t\t\t<div class=\"post-by\">\n" +
                         "\t\t\t\t\t\t\t\t\t\t作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a><span class=\"divider\">|</span> "+ data[i].pls +" 评论\n" +
@@ -417,7 +417,7 @@ function handleData(data) {
                         "\t\t\t\t\t\t\t\t<!-- end post-info -->\n" +
                         "\t\t\t\t\t\t\t\t<!-- begin read-btn-container -->\n" +
                         "\t\t\t\t\t\t\t\t<div class=\"read-btn-container\">\n" +
-                        "\t\t\t\t\t\t\t\t\t<g:link controller=\"index\" action=\"post_detail\" class=\"read-btn\">Read More <i class=\"fa fa-angle-double-right\"></i></g:link>\n" +
+                        "\t\t\t\t\t\t\t\t\t<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>\n" +
                         "\t\t\t\t\t\t\t\t</div>\n" +
                         "\t\t\t\t\t\t\t\t<!-- end read-btn-container -->\n" +
                         "\t\t\t\t\t\t\t</div>\n" +
