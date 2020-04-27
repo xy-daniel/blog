@@ -7,11 +7,8 @@
 <asset:javascript src="respond.min.js"/>
 <asset:javascript src="excanvas.min.js"/>
 <![endif]-->
+<link rel="shortcut icon" href="${createLinkTo(dir:'images',file:'favicon.ico')}" type="image/x-icon" />
 <title>Cruder拯救者</title>
-
-<!-- ================== BEGIN BASE CSS STYLE ================== -->
-%{--<asset:stylesheet rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"/>--}%
-<!-- ================== END BASE CSS STYLE ================== -->
 
 <script>
     const contextPath = "${createLink(uri: '/')}";
