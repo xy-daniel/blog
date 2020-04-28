@@ -137,16 +137,13 @@
 				width: "100%",
 				height: 800,
 				path : '../../assets/md/lib/',
-				theme : "dark",
+				theme : "white",
 				previewTheme : "white",
-				editorTheme : "pastel-on-dark",
+				editorTheme : "pastel-on-white",
 				codeFold : true,
-				// syncScrolling : false,
 				saveHTMLToTextarea : true,    // 保存 HTML 到 Textarea
 				searchReplace : true,
 				htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启
-				//toolbar  : false,             //关闭工具栏
-				previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
 				emoji : true,
 				taskList : true,
 				tocm            : true,         // Using [TOCM]

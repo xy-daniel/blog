@@ -96,7 +96,7 @@ class IndexController {
     def getHtml(){
         def model = [:]
         model.put("title", Heart.get(params.int("id")).wzm)
-        model.put("html", Content.findByHeartId(params.int("id")).html)
+        model.put("md", Content.findByHeartId(params.int("id")).content)
         render Resp.toJson(RespType.SUCCESS, model)
     }
 }

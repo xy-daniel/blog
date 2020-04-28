@@ -26,6 +26,19 @@
 	<asset:javascript src="paroller/jquery.paroller.min.js"/>
 	<asset:javascript src="blog/apps.js"/>
 	<!-- ================== END BASE JS ================== -->
+
+	<!-- ========================MD===================== -->
+	<asset:stylesheet rel="stylesheet" href="md/css/style.css"/>
+	<asset:stylesheet rel="stylesheet" href="md/css/editormd.preview.css"/>
+
+	<asset:javascript src="md/lib/marked.min.js"/>
+	<asset:javascript src="md/lib/prettify.min.js"/>
+	<asset:javascript src="md/lib/raphael.min.js"/>
+	<asset:javascript src="md/lib/underscore.min.js"/>
+	<asset:javascript src="md/lib/sequence-diagram.min.js"/>
+	<asset:javascript src="md/lib/flowchart.min.js"/>
+	<asset:javascript src="md/lib/jquery.flowchart.min.js"/>
+	<asset:javascript src="md/js/editormd.js"/>
 </head>
 <body>
 
@@ -45,17 +58,30 @@
 					<div class="post-detail section-container">
 						<h4 class="post-title"></h4>
 						<input type="hidden" id="contentId" value="${id}">
-						<div id="html"></div>
+						<div id="editormd-view">
+							<textarea style="display:none;"></textarea>
+						</div>
 						<script>
-							$.get(
-								"/index/getHtml",
-								{id:$("#contentId").val()},
-								function (result) {
-									$(".post-title").append(result.data.title);
-									$("#html").append(result.data.html);
-									document.body.scrollTop = document.documentElement.scrollTop = 0;
-								},'json'
-							)
+							$(function () {
+								let editormdView;
+								$.get(
+									"/index/getHtml",
+									{id:$("#contentId").val()},
+									function (result) {
+										$(".post-title").text(result.data.title);
+										editormdView = editormd.markdownToHTML("editormd-view", {
+											markdown        : result.data.md ,
+											htmlDecode      : "style,script,iframe",
+											tocm            : true,
+											emoji           : true,
+											taskList        : true,
+											tex             : true,
+											flowChart       : true,
+											sequenceDiagram : true,
+										});
+									},'json'
+								)
+							})
 						</script>
 					</div>
 				</div>
