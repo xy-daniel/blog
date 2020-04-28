@@ -68,21 +68,14 @@
     <!-- end section-container -->
     <!-- 去后台读取数据然后 -->
     <script>
-        var myDate = new Date();
-        var tYear = myDate.getFullYear();
-        var tMonth = myDate.getMonth()+1;
-        for (var i=tMonth;i>0;i--){
+        const myDate = new Date();
+        const tYear = myDate.getFullYear();
+        const tMonth = myDate.getMonth() + 1;
+        for (let i = tMonth; i>0; i--){
             $("#file").append("<li><a class='gd' href=\"javascript:void(0);\" >"+ tYear +"年"+ i +"月</a></li>")
         }
-        for (var i=0;i<13-tMonth;i++){
+        for (let i = 0; i<13-tMonth; i++){
             $("#file").append("<li><a class='gd' href=\"javascript:void(0);\" >"+ (tYear-1) +"年"+ (12-i) +"月</a></li>")
         }
-        $(".gd").bind('click',function () {
-            const list = $(".post-list");
-            list.empty();
-            const pagination = $(".pagination");
-            pagination.empty();
-            list.append("")
-        })
     </script>
 </div>

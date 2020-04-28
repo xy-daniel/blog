@@ -59,7 +59,7 @@
                             const time = date[2].substring(0,2) + " " + month(date[1]) + " " + date[0];
                             $("#currentWZ").append("<li>\n" +
                                 "                <div class=\"info\">\n" +
-                                "                    <h4 class=\"title\"><a href=\"/blog/index/detail/"+ result.data[i].id +"\">"+ result.data[i].wzm +"</a></h4>\n" +
+                                "                    <h4 class=\"title\"><a href=\"/index/detail/"+ result.data[i].id +"\">"+ result.data[i].wzm +"</a></h4>\n" +
                                 "                    <div class=\"date\">"+ time +"</div>\n" +
                                 "                </div>\n" +
                                 "            </li>")

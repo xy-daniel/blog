@@ -20,6 +20,7 @@
 	<!-- ================== BEGIN BASE JS ================== -->
 	<asset:javascript src="jquery/jquery-3.3.1.min.js"/>
 	<asset:javascript src="bootstrap/js/bootstrap.bundle.min.js"/>
+	<asset:javascript src="slimscroll/jquery.slimscroll.min.js" />
 	<asset:javascript src="js-cookie/js.cookie.js"/>
 	<asset:javascript src="paroller/jquery.paroller.min.js"/>
 	<asset:javascript src="blog/apps.js"/>
@@ -31,12 +32,10 @@
 				-ms-flex-order: 1;
 				order: 1;
 			}
-
 			.order-1 {
 				-ms-flex-order: 0;
 				order: 0;
 			}
-
 		}
 	</style>
 </head>
@@ -60,7 +59,8 @@
 	<div class="row row-space-30">
 		<g:render template="/layouts/base_left"/>
 		<!-- begin col-6 -->
-		<div class="col-md-6 order-1">
+		<div class="col-md-6 order-1 data">
+			<div class="lines content"></div>
 			<!-- begin post-list -->
 			<ul class="post-list">
 			</ul>
@@ -88,12 +88,5 @@
 	<!-- end #page-copyright -->
 	<asset:javascript src="index/index.js"/>
 	<asset:javascript src="index/month.js"/>
-
-	<asset:javascript src="index/demo/timeline.demo.js"/>
-	<script>
-		$(document).ready(function() {
-			Timeline.init();
-		});
-	</script>
 </body>
 </html>
