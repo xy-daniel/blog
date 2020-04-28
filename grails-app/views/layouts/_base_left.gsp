@@ -72,10 +72,10 @@
         const tYear = myDate.getFullYear();
         const tMonth = myDate.getMonth() + 1;
         for (let i = tMonth; i>0; i--){
-            $("#file").append("<li><a class='gd' href=\"javascript:void(0);\" >"+ tYear +"年"+ i +"月</a></li>")
+            $("#file").append("<li><a class='gd' href=\"/index/file?date="+ tYear +"年"+ i +"月\" >"+ tYear +"年"+ i +"月</a></li>")
         }
         for (let i = 0; i<13-tMonth; i++){
-            $("#file").append("<li><a class='gd' href=\"javascript:void(0);\" >"+ (tYear-1) +"年"+ (12-i) +"月</a></li>")
+            $("#file").append("<li><a class='gd' href=\"/index/file?date="+ (tYear-1) +"年"+ (12-i) +"月\" >"+ (tYear-1) +"年"+ (12-i) +"月</a></li>")
         }
     </script>
 </div>
