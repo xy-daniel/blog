@@ -46,7 +46,7 @@
 
 	<!-- begin #page-title -->
 	<div id="page-title" class="page-title has-bg">
-		<div class="bg-cover" data-paroller="true" data-paroller-factor="0.5" data-paroller-factor-xs="0.2" style="background: url(<asset:assetPath src="cover/cover-4.jpg"/>) center 0 / cover no-repeat"></div>
+		<div class="bg-cover" data-paroller="true" data-paroller-factor="0.5" data-paroller-factor-xs="0.2" style="background: url(<asset:assetPath src="cover/cover-3.jpg"/>) center 0 / cover no-repeat"></div>
 		<!-- begin #page-container -->
 		<g:render template="/layouts/base_container"/>
 		<!-- end #page-container -->
