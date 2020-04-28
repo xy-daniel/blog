@@ -8,13 +8,13 @@
             <hr/>
             <div class="row">
                 <div class="col-md-4">
-                    文章<br/><b>20</b>
+                    文章<br/><b>${hearts}</b>
                 </div>
                 <div class="col-md-4">
-                    分类<br/><b>20</b>
+                    分类<br/><b>${tags}</b>
                 </div>
                 <div class="col-md-4">
-                    标签<br/><b>20</b>
+                    关键词<br/><b>${gjcs}</b>
                 </div>
             </div>
             <!-- 扫码关注微信公众号到一个单独的页面显示公众号图片 -->
@@ -66,6 +66,13 @@
         </ul>
     </div>
     <!-- end section-container -->
+    <!-- begin section-container -->
+    <div class="section-container" style="margin-top: 10%">
+        <h4 class="section-title"><span>关键词</span></h4>
+        <div class="gjcs" style="color: #0a6aa1">
+        </div>
+    </div>
+    <!-- end section-container -->
     <!-- 去后台读取数据然后 -->
     <script>
         const myDate = new Date();
@@ -77,5 +84,10 @@
         for (let i = 0; i<13-tMonth; i++){
             $("#file").append("<li><a class='gd' href=\"/index/file?date="+ (tYear-1) +"年"+ (12-i) +"月\" >"+ (tYear-1) +"年"+ (12-i) +"月</a></li>")
         }
+        $.get("/api/getGjc",{},function (result) {
+            for (let i=0; i<result.length; i++){
+                $(".gjcs").append("<span style=\"font-size: "+ parseInt(Math.random()*15+5) +"px\">"+ result[i] +"</span>&nbsp;")
+            }
+        },'json')
     </script>
 </div>

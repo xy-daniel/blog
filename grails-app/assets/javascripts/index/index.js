@@ -186,6 +186,9 @@ function handleValue(elem) {
 //总数据处理
 function handleData(data) {
     const list = $(".post-list");
+    if (data.length===0){
+        return
+    }
     list.empty();
     //数据处理
     for (let i=0; i<data.length; i++){
@@ -359,6 +362,10 @@ function handleData(data) {
 //分页插件
 function pageNum(totalPage, currentPage) {
     const pagination = $(".pagination");
+    if (totalPage===0){
+        alert("没有数据");
+        return
+    }
     pagination.empty();
     pagination.append("<li class=\"page-item upPage\"><a class=\"page-link\" href=\"javascript:void(0);\" onclick='up(); return false'>上页</a></li>");
     if (totalPage<=7){

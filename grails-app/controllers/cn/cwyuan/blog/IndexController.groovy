@@ -17,6 +17,19 @@ class IndexController {
      * 主页
      */
     def index() {
+        def hearts = Heart.findAll()
+        List<String> gjcs = new ArrayList<>()
+        for (Heart heart:hearts){
+            def gjcArr = heart.gjc.split(",")
+            for (String gjc:gjcArr){
+                gjcs.add(gjc)
+            }
+        }
+        Set set = new HashSet()
+        List<String> newList = new ArrayList()
+        set.addAll(gjcs)
+        newList.addAll(set)
+        [hearts:Heart.findAll().size(),tags:Tags.findAll().size(),gjcs:newList.size()]
     }
 
     /**
