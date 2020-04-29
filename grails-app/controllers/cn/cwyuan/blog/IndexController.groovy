@@ -118,4 +118,11 @@ class IndexController {
         model.put("md", Content.findByHeartId(params.int("id")).content)
         render Resp.toJson(RespType.SUCCESS, model)
     }
+
+    //查询关于我的信息
+    def getAboutMe(){
+        def model = [:]
+        model.put("md", AboutMe.findAll().get(0).data)
+        render Resp.toJson(RespType.SUCCESS, model)
+    }
 }
