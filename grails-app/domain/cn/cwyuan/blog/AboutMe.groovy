@@ -6,7 +6,7 @@ class AboutMe implements Serializable {
     String data
 
     static constraints = {
-        data nullable: false
+        data nullable: true
     }
 
     static mapping = {

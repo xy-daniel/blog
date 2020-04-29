@@ -36,6 +36,8 @@
                     <li><g:link controller="heart" action="list">文章列表</g:link></li>
                 </ul>
             </li>
+            <!-- 关于我 -->
+            <li><g:link controller="aboutMe" action="data"><i class="fas fa-user"></i> <span>关于我</span></g:link></li>
             <!-- 联系人管理 -->
             <li><g:link controller="contacts" action="list"><i class="fas fa-user"></i> <span>联系人管理</span></g:link></li>
             <!-- 标签管理 -->
