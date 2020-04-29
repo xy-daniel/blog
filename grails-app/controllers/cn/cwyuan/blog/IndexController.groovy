@@ -2,7 +2,7 @@ package cn.cwyuan.blog
 
 import cn.cwyuan.blog.enums.RespType
 import cn.cwyuan.blog.utils.DateUtil
-import com.ctc.wstx.util.DataUtil
+import cn.cwyuan.blog.utils.UUIDGenerator
 import grails.converters.JSON
 
 import java.text.SimpleDateFormat
@@ -12,6 +12,25 @@ import java.text.SimpleDateFormat
  * Created by daniel in 2020.04.10
  */
 class IndexController {
+
+    def contact(){
+        def name = params.get("name")
+        def eorp = params.get("eorp")
+        def gy = params.get("gy")
+        if (!(name && eorp && gy)){
+            //你他妈的不写信息就联系我，你是傻逼吗？滚回去给我写信息
+            redirect(controller: "index", action: "contact_us")
+            return
+        }
+        new Contacts(
+                uid: UUIDGenerator.nextUUID(),
+                name: name,
+                eOrP: eorp,
+                gy: gy,
+                isTrue: 0
+        ).save(flush: true)
+        redirect(controller: "index")
+    }
 
     /**
      * 主页

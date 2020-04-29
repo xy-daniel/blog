@@ -66,23 +66,26 @@
 						<div class="row row-space-30 f-s-12 text-inverse">
 							<!-- begin col-8 -->
 							<div class="col-md-8">
-								<form class="form-horizontal">
+								<g:form controller="index" action="contact" class="form-horizontal" data-parsley-validate="true">
 									<div class="form-group row">
 										<label class="col-form-label col-md-3 text-md-right">姓名(昵称) <span class="text-danger">*</span></label>
 										<div class="col-md-9">
-											<input type="text" class="form-control">
+											<input name="name" type="text" class="form-control" data-parsley-required="true"
+												   data-parsley-required-message="此项不能为空">
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-form-label col-md-3 text-md-right">邮箱(手机号) <span class="text-danger">*</span></label>
 										<div class="col-md-9">
-											<input type="text" class="form-control">
+											<input name="eorp" type="text" class="form-control" data-parsley-required="true"
+												   data-parsley-required-message="此项不能为空">
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-form-label col-md-3 text-md-right">简述概要 <span class="text-danger">*</span></label>
 										<div class="col-md-9">
-											<textarea class="form-control" rows="10"></textarea>
+											<textarea name="gy" class="form-control" rows="10" data-parsley-required="true"
+													  data-parsley-required-message="此项不能为空"></textarea>
 										</div>
 									</div>
 									<div class="form-group row">
@@ -91,7 +94,7 @@
 											<button type="submit" class="btn btn-inverse btn-lg btn-block">提交</button>
 										</div>
 									</div>
-								</form>
+								</g:form>
 							</div>
 							<!-- end col-8 -->
 							<!-- begin col-4 -->
@@ -115,7 +118,9 @@
 		<!-- end container -->
 	</div>
 	<!-- end #content -->
-	
+	<!-- begin parsley -->
+	<g:render template="/layouts/base_parsley"/>
+	<!-- end parsley -->
 	<script>
 		$(document).ready(function() {
 			App.init();

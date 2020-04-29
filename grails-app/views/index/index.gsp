@@ -54,7 +54,7 @@
 	<!-- end #page-title -->
 	
 	<!-- begin #content -->
-	<div id="content" class="content row" style="margin: 100px 10% 0">
+	<div id="content" class="content row" style="margin: 100px 10%">
 	<!-- begin row -->
 	<div class="row row-space-30">
 		<g:render template="/layouts/base_left"/>
