@@ -86,7 +86,7 @@
 				dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
 				imageUpload : true,
 				imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-				imageUploadURL : "./upload"
+				imageUploadURL : "/heart/upload"
 			});
 			//现在设置一个定时器定时器每隔1分钟往服务器推送已经编写的数据
 			setInterval(update,60*1000);
