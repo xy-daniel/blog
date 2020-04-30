@@ -1,2 +1,44 @@
 # blog
-基于Groovy语言Grails框架编写的个人博客
+基于Groovy语言Grails框架编写的个人博客网站,是使用非常非常简单的代码来编写的，主要的用途就是文章的存储而不是秀技术。
+## 技术介绍
+### 工具
+- IDEA
+- GitHub
+- WinSCP
+### 后端
+- groovy
+- spring-security
+- hibernate5
+- mysql5.7.49
+### 前端
+- jquery
+- bootstrap
+## 项目效果
+### 前台您可以访问网站查看
+### 控制台
+#### 登陆页
+![](https://s1.ax1x.com/2020/04/30/JquJW4.png)
+#### 首页
+![](https://s1.ax1x.com/2020/04/30/JqKwcj.png)
+#### 文章发布
+![](https://s1.ax1x.com/2020/04/30/JqK6EV.png)
+#### 文章列表
+![](https://s1.ax1x.com/2020/04/30/JqKfgJ.png)
+#### 文章修改
+![](https://s1.ax1x.com/2020/04/30/JqK7E6.png)
+#### 关于我
+![](https://s1.ax1x.com/2020/04/30/JqMCUf.png)
+#### 联系人列表
+![](https://s1.ax1x.com/2020/04/30/JqMFPS.png)
+#### 联系人信息
+![](https://s1.ax1x.com/2020/04/30/JqMern.png)
+#### 标签管理
+![](https://s1.ax1x.com/2020/04/30/JqMKaV.png)
+#### 友链管理
+![](https://s1.ax1x.com/2020/04/30/JqM324.png)
+#### 新消息提醒
+![](https://s1.ax1x.com/2020/04/30/JqMBGD.png)
+#### 登出
+![](https://s1.ax1x.com/2020/04/30/JqM6sA.png)
+#### 个人信息
+![](https://s1.ax1x.com/2020/04/30/JqM2Zt.png)
