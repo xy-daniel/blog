@@ -6,13 +6,17 @@
 - GitHub
 - WinSCP
 ### 后端
-- groovy
-- spring-security
+- groovy+grails(相当于java+springboot)
+- spring-security(不仅这个只举个例子)
 - hibernate5
 - mysql5.7.49
 ### 前端
 - jquery
 - bootstrap
+  + tagit
+  + datatables
+  + select
+  + ...
 ## 项目效果
 ### 前台您可以访问网站查看
 ### 控制台
