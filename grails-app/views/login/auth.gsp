@@ -18,7 +18,7 @@
 	
 	<!-- begin login-cover -->
 	<div class="login-cover">
-		<div class="login-cover-image" style="background-image: url(<asset:assetPath src="login-bg/login-bg-17.jpg"/>)" data-id="login-cover-image"></div>
+		<div class="login-cover-image" style="background-image: url(<asset:assetPath src="login-bg/login-bg-1.jpg"/>)" data-id="login-cover-image"></div>
 		<div class="login-cover-bg"></div>
 	</div>
 	<!-- end login-cover -->
@@ -69,12 +69,12 @@
 		
 		<!-- begin login-bg -->
 		<ul class="login-bg-list clearfix">
-			<li class="active"><a href="javascript:void(0);" data-click="change-bg" data-img="/blog/assets/login-bg/login-bg-17.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-17.jpg"/>)"></a></li>
-			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/blog/assets/login-bg/login-bg-16.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-16.jpg"/>)"></a></li>
-			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/blog/assets/login-bg/login-bg-15.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-15.jpg"/>)"></a></li>
-			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/blog/assets/login-bg/login-bg-14.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-14.jpg"/>)"></a></li>
-			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/blog/assets/login-bg/login-bg-12.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-12.jpg"/>)"></a></li>
-			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/blog/assets/login-bg/login-bg-11.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-11.jpg"/>)"></a></li>
+			<li class="active"><a href="javascript:void(0);" data-click="change-bg" data-img="/assets/login-bg/login-bg-1.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-1.jpg"/>)"></a></li>
+			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/assets/login-bg/login-bg-2.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-2.jpg"/>)"></a></li>
+			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/assets/login-bg/login-bg-3.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-3.jpg"/>)"></a></li>
+			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/assets/login-bg/login-bg-4.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-4.jpg"/>)"></a></li>
+			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/assets/login-bg/login-bg-5.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-5.jpg"/>)"></a></li>
+			<li><a href="javascript:void(0);" data-click="change-bg" data-img="/assets/login-bg/login-bg-6.jpg" style="background-image: url(<asset:assetPath src="login-bg/login-bg-6.jpg"/>)"></a></li>
 		</ul>
 		<!-- end login-bg -->
 	</div>
