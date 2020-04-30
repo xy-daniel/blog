@@ -49,20 +49,12 @@ dependencies {
 
     compile group: 'org.codehaus.groovy', name: 'groovy-dateutil', version: '3.0.0-beta-3'//groovy附加包
     compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
-    compile "org.grails.plugins:grails-spring-websocket:2.4.1"
     compile 'org.grails.plugins:spring-security-core:3.2.1'
     compile 'org.grails.plugins:grails-console:2.1.1'
     compile 'domurtag.plugins:runtime-datasources:0.2-grails3'//运行时数据库连接
     compile "org.apache.tomcat:tomcat-jdbc"
     compile 'org.grails:grails-datastore-rest-client'
-    compile group: 'org.apache.poi', name: 'poi', version: '4.1.1'
-    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.1'
-    compile group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.1.1'
-    compile group: 'org.apache.poi', name: 'poi-scratchpad', version: '4.1.1'
     compile group: 'fr.opensagres.xdocreport', name: 'fr.opensagres.poi.xwpf.converter.xhtml', version: '2.0.2'
-    compile 'org.grails.plugins:quartz:2.0.13'   //定时器
-    compile 'org.grails.plugins:cxf:3.1.2'  //cxf
-//    compile group: 'ws.schild', name: 'jave-all-deps', version: '2.7.1'//视频
 
 
     profile "org.grails.profiles:web"
