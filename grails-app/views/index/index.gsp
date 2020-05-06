@@ -60,7 +60,6 @@
 		<g:render template="/layouts/base_left"/>
 		<!-- begin col-6 -->
 		<div class="col-md-6 order-1 data">
-			<div class="lines content"></div>
 			<!-- begin post-list -->
 			<ul class="post-list">
 			</ul>
