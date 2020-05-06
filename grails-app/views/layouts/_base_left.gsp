@@ -3,17 +3,17 @@
     <!-- begin card -->
     <div class="card card-inverse">
         <img class="card-img" src="<asset:assetPath src="cover/gzh.jpg"/>" alt="" />
-        <div class="card-block text-lg-center" style="color: black">
+        <div class="card-block text-lg-center" style="color: black;text-align: center">
             <h5 class="card-title">Cruder拯救者</h5>
             <hr/>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-4">
                     文章<br/><b>${hearts}</b>
                 </div>
-                <div class="col-md-4">
+                <div class="col-4">
                     分类<br/><b>${tags}</b>
                 </div>
-                <div class="col-md-4">
+                <div class="col-4">
                     关键词<br/><b>${gjcs}</b>
                 </div>
             </div>
@@ -23,17 +23,17 @@
             </div>
             <!-- github地址 -->
             <div class="row" style="margin: 10px 0">
-                <div class="col-md-4">
+                <div class="col-4">
                     <a class="black" href="https://github.com/xy-daniel" title="GitHub" target="_blank">
                         <i class="fab fa-lg fa-fw fa-github"></i>
                     </a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-4">
                     <a class="black" href="mailto:myarctic@163.com" title="envelope" target="_blank">
                         <i class="fas fa-lg fa-fw fa-envelope"></i>
                     </a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-4">
                     <a class="black" href="javascript:void(0);" title="rss">
                         <i class="fas fa-lg fa-fw fa-rss"></i>
                     </a>
