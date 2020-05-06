@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: org.apache.poi:poi-ooxml-schemas:4.1.1">
-    <CLASSES>
-      <root url="jar://D:/grails-3.3.9/caches/modules-2/files-2.1/org.apache.poi/poi-ooxml-schemas/4.1.1/7bb506f074a5bffce6b367f40ee0535fa7f73003/poi-ooxml-schemas-4.1.1.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
