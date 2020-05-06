@@ -10,6 +10,7 @@
       <w>arcu</w>
       <w>auctor</w>
       <w>augue</w>
+      <w>authfail</w>
       <w>bibendum</w>
       <w>biubiubiu</w>
       <w>clearfix</w>
@@ -27,6 +28,7 @@
       <w>dignissim</w>
       <w>donec</w>
       <w>duis</w>
+      <w>editormd</w>
       <w>efficitur</w>
       <w>egestas</w>
       <w>eget</w>
@@ -41,12 +43,17 @@
       <w>fames</w>
       <w>faucibus</w>
       <w>feugiat</w>
+      <w>flexslider</w>
+      <w>gjcs</w>
+      <w>gorm</w>
       <w>gravida</w>
       <w>habitant</w>
       <w>hendrerit</w>
       <w>instagram</w>
       <w>interdum</w>
+      <w>lacinia</w>
       <w>lacus</w>
+      <w>laoreet</w>
       <w>lectus</w>
       <w>ligula</w>
       <w>lobortis</w>
@@ -59,6 +66,7 @@
       <w>maximus</w>
       <w>metus</w>
       <w>molestie</w>
+      <w>mollis</w>
       <w>morbi</w>
       <w>navbar</w>
       <w>netus</w>
@@ -79,6 +87,7 @@
       <w>praesent</w>
       <w>proin</w>
       <w>pulvinar</w>
+      <w>qswl</w>
       <w>quisque</w>
       <w>rhoncus</w>
       <w>risus</w>
@@ -89,15 +98,19 @@
       <w>semper</w>
       <w>senectus</w>
       <w>sfile</w>
+      <w>slimscroll</w>
       <w>sociosqu</w>
       <w>sockjs</w>
       <w>suspendisse</w>
       <w>sweetalert</w>
+      <w>swiper</w>
       <w>taciti</w>
+      <w>tagit</w>
       <w>tellus</w>
       <w>tempor</w>
       <w>tempus</w>
       <w>tincidunt</w>
+      <w>tocm</w>
       <w>todaytrial</w>
       <w>topbtn</w>
       <w>tortor</w>
@@ -116,6 +129,7 @@
       <w>viverra</w>
       <w>volutpat</w>
       <w>vulputate</w>
+      <w>xmlhttp</w>
     </words>
   </dictionary>
 </component>
