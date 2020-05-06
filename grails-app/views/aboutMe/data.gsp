@@ -67,7 +67,7 @@
 				path : '../../assets/md/lib/',
 				theme : "white",
 				previewTheme : "white",
-				editorTheme : "pastel-on-white",
+				editorTheme : "pastel-on-dark",
 				codeFold : true,
 				saveHTMLToTextarea : true,    // 保存 HTML 到 Textarea
 				searchReplace : true,
@@ -88,20 +88,6 @@
 				imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
 				imageUploadURL : "/heart/upload"
 			});
-			//现在设置一个定时器定时器每隔1分钟往服务器推送已经编写的数据
-			setInterval(update,60*1000);
-			function update() {
-				//获取markdown数据
-				const mdc = editor.getMarkdown();
-				$.get("./update",{
-					mdc: mdc
-				},function (result) {
-					if(result.code===0){
-						console.log("推送成功")
-					}
-				}, 'json')
-			}
-
 		});
 	</script>
 	<!-- =========================  END PAGE LEVEL JS========================= -->

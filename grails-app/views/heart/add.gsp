@@ -67,7 +67,7 @@
 					</div>
 					<!-- end form-group row 分类 -->
 					<!-- begin form-group row 文章类型 -->
-					<div class="form-group text-md-right row m-b-8">
+					<div hidden class="form-group text-md-right row m-b-8">
 						<label id="wzlx" class="col-md-1 col-form-label">文章类型 </label>
 						<div class="col-md-10 text-md-left">
 							<div class="form-check form-check-inline">
