@@ -10,6 +10,9 @@ class Visit {
     //友链地址
     String cname
 
+    //ua值
+    String cua
+
     //状态
     Integer status
 
@@ -22,6 +25,7 @@ class Visit {
     static constraints = {
         cip nullable: false
         cname nullable: false
+        cua nullable: false
         status nullable: false
     }
 
@@ -29,6 +33,7 @@ class Visit {
         autoTimestamp(true)
         cip comment: "访问ip"
         cname comment: "访问地址"
+        cua comment: "用户信息"
         status comment : "状态"
         comment "访问数据表"
     }

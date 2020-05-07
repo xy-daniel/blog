@@ -190,7 +190,8 @@
 			"/api/visit",
 			{
 				cip:returnCitySN["cip"],
-				cname:returnCitySN["cname"]
+				cname:returnCitySN["cname"],
+				cua:navigator.userAgent
 			},function (result) {
 				$("#from").append(result.address);
 				$("#position").append(result.position);

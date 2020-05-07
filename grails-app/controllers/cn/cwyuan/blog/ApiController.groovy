@@ -133,16 +133,18 @@ class ApiController {
     def visit(){
         def cip = params.get("cip") as String
         def cname = params.get("cname") as String
-        def visit = Visit.findByCipAndCname(cip, cname)
+        def cua = params.get("cua") as String
+        def visit = Visit.findByCipAndCnameAndCua(cip, cname, cua)
         if (!visit){
             new Visit(
                     cip: cip,
                     cname: cname,
+                    cua: cua,
                     status: 1
             ).save(flush: true)
         }
         def visited = Visit.findAll([sort: "id", order: "esc"])
-        def position = visited.indexOf(Visit.findByCipAndCname(cip, cname))+1
+        def position = visited.indexOf(Visit.findByCipAndCnameAndCua(cip, cname, cua))+1
         def model = [:]
         model.put("total",visited.size())
         model.put("position",position)
