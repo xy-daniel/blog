@@ -2,7 +2,6 @@ package cn.cwyuan.blog
 
 import cn.cwyuan.blog.enums.RespType
 import grails.converters.JSON
-import org.hibernate.Criteria
 
 class ApiController {
 
@@ -75,10 +74,6 @@ class ApiController {
                 data.put("gy", heart.gy)
                 //关键词
                 data.put("gjc", heart.gjc)
-                //评论数
-                data.put("pls", heart.comment_count)
-                //点赞数
-                data.put("dzs", heart.poll_count)
                 //文章类型
                 data.put("img", heart.img)
                 //问题情境
@@ -102,10 +97,6 @@ class ApiController {
                 data.put("gy", heart.gy)
                 //关键词
                 data.put("gjc", heart.gjc)
-                //评论数
-                data.put("pls", heart.comment_count)
-                //点赞数
-                data.put("dzs", heart.poll_count)
                 //文章类型
                 data.put("img", heart.img)
                 //问题情境

@@ -52,9 +52,7 @@
 						<tr>
 							<th class="text-nowrap">标题</th>
 							<th class="text-nowrap">关键词</th>
-							<th class="text-nowrap">点赞数</th>
 							<th class="text-nowrap">阅读数</th>
-							<th class="text-nowrap">评论数</th>
 							<th class="text-nowrap">操作</th>
 						</tr>
 						</thead>

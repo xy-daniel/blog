@@ -67,9 +67,7 @@ class HeartService {
             def data = [:]
             data.put("wzm", heart.wzm)
             data.put("gjc", heart.gjc)
-            data.put("poll", heart.poll_count)
             data.put("read", heart.read_count)
-            data.put("comment", heart.comment_count)
             data.put("id_isTop", heart.id + "_" + heart.is_top)
             modelDataList.add(data)
         }

@@ -66,25 +66,6 @@
 						</div>
 					</div>
 					<!-- end form-group row 分类 -->
-					<!-- begin form-group row 文章类型 -->
-					<div hidden class="form-group text-md-right row m-b-8">
-						<label id="wzlx" class="col-md-1 col-form-label">文章类型 </label>
-						<div class="col-md-10 text-md-left">
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="wzlx" id="defaultInlineRadio1" value="1" checked />
-								<label class="form-check-label" for="defaultInlineRadio1">学习笔记</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="wzlx" id="defaultInlineRadio2" value="2" />
-								<label class="form-check-label" for="defaultInlineRadio2">技术文章</label>
-							</div>
-							<div class="form-check form-check-inline">
-								<input class="form-check-input" type="radio" name="wzlx" id="defaultInlineRadio3" value="3" />
-								<label class="form-check-label" for="defaultInlineRadio3">算法文章</label>
-							</div>
-						</div>
-					</div>
-					<!-- end form-group row 文章类型 -->
 					<!-- begin form-group row 文章概要 -->
 					<div class="form-group row m-b-8">
 						<label id="summary" class="col-md-1 text-md-right col-form-label">文章概要 </label>

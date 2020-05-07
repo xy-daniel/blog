@@ -64,8 +64,7 @@ class HeartController {
         def tags = params.get("tags")
         def md = params.get("content")
         def html = params.get("editormd-html-code")
-        def wzlx = params.int("wzlx")
-        if (!(title && summary && keys && tags && md && html && wzlx)){
+        if (!(title && summary && keys && tags && md && html)){
             redirect(controller: "heart", action: "add")
             return
         }
@@ -76,10 +75,7 @@ class HeartController {
                 gy: summary,
                 gjc: keys,
                 origin: origin,
-                poll_count: 0,
                 read_count: 0,
-                comment_count: 0,
-                wzlx: wzlx
         )
         heartService.addSave(heart, md, html, tags)
         def last = Memorandum.findAll()
@@ -156,8 +152,7 @@ class HeartController {
         def tags = params.get("tags")
         def md = params.get("content")
         def html = params.get("editormd-html-code")
-        def wzlx = params.int("wzlx")
-        if (!(title && summary && keys && tags && md && html && wzlx)){
+        if (!(title && summary && keys && tags && md && html)){
             redirect(controller: "heart", action: "edit", id: id)
             return
         }
@@ -167,7 +162,6 @@ class HeartController {
         heart.gy = summary
         heart.gjc = keys
         heart.origin = origin
-        heart.wzlx = wzlx
         heartService.editSave(heart, md, html, tags)
         redirect(controller: "heart", action: "list")
     }

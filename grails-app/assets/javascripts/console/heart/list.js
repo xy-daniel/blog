@@ -52,19 +52,7 @@
                         }
                     },
                     {
-                        "mDataProp": "poll",
-                        "mRender": function (data, type, full) {
-                            return data
-                        }
-                    },
-                    {
                         "mDataProp": "read",
-                        "mRender": function (data, type, full) {
-                            return data
-                        }
-                    },
-                    {
-                        "mDataProp": "comment",
                         "mRender": function (data, type, full) {
                             return data
                         }
