@@ -128,4 +128,25 @@ class ApiController {
         newList.addAll(set)
         render newList as JSON
     }
+
+    //访问
+    def visit(){
+        def cip = params.get("cip") as String
+        def cname = params.get("cname") as String
+        def visit = Visit.findByCipAndCname(cip, cname)
+        if (!visit){
+            new Visit(
+                    cip: cip,
+                    cname: cname,
+                    status: 1
+            ).save(flush: true)
+        }
+        def visited = Visit.findAll([sort: "id", order: "esc"])
+        def position = visited.indexOf(Visit.findByCipAndCname(cip, cname))+1
+        def model = [:]
+        model.put("total",visited.size())
+        model.put("position",position)
+        model.put("address",cname)
+        render model as JSON
+    }
 }
