@@ -268,10 +268,10 @@ function handleData(data) {
                         "                       </ol>" +
                         "                       <div class=\"carousel-inner\">" +
                         "                           <div class=\"carousel-item active\">" +
-                        "                               <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                               <a style='height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
                         "                           </div>" +
                         "                           <div class=\"carousel-item\">" +
-                        "                               <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                               <a style='height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
                         "                           </div>" +
                         "                       </div>" +
                         "                       <a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">" +
@@ -314,13 +314,13 @@ function handleData(data) {
                         "                     </ol>" +
                         "                      <div class=\"carousel-inner\">" +
                         "                          <div class=\"carousel-item active\">" +
-                        "                             <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                             <a style='height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
                         "                          </div>" +
                         "                          <div class=\"carousel-item\">" +
-                        "                             <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                             <a style='height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
                         "                          </div>" +
                         "                          <div class=\"carousel-item\">" +
-                        "                             <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                             <a style='height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
                         "                          </div>" +
                         "                      </div>" +
                         "                     <a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">" +
