@@ -210,7 +210,7 @@ function handleData(data) {
                 "<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
                 "</h4>" +
                 "<div class=\"post-by\">" +
-                "作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc + "</a>" +
+                "<a href=\"javascript:void(0)\">"+ data[i].gjc + "</a>" +
                 "</div>" +
                 "<div class=\"post-desc\">" +
                 ""+ data[i].gy +"" +
@@ -243,7 +243,7 @@ function handleData(data) {
                     "<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
                     "</h4>" +
                     "<div class=\"post-by\">" +
-                    "作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
+                    "<a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
                     "</div>" +
                     "<div class=\"post-desc\">" +
                     ""+ data[i].gy +"" +
@@ -291,7 +291,7 @@ function handleData(data) {
                         "<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
                         "</h4>" +
                         "<div class=\"post-by\">" +
-                        "作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
+                        "<a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
                         "</div>" +
                         "<div class=\"post-desc\">" +
                         ""+ data[i].gy +"" +
@@ -342,7 +342,7 @@ function handleData(data) {
                         "<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
                         "</h4>" +
                         "<div class=\"post-by\">" +
-                        "作者 <a href=\"/index/about_me\">"+ data[i].zz +"</a> <span class=\"divider\">|</span> <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
+                        "<a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
                         "</div>" +
                         "<div class=\"post-desc\">" +
                         ""+ data[i].gy +"" +
