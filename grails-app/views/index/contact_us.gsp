@@ -49,13 +49,6 @@
 				<div class="col-md-12">
 					<!-- begin section-container -->
 					<div class="section-container">
-						<div class="post-image">
-							<div class="post-image-cover" style="background-image: url('<asset:assetPath src="work/work-img-2.jpg"/>')"></div>
-						</div>
-					</div>
-					<!-- end section-container -->
-					<!-- begin section-container -->
-					<div class="section-container">
 						<h4 class="section-title m-b-20"><span>联系我</span></h4>
 						<p class="m-b-30 f-s-13">
 							如果你有一个项目想要与我讨论共同创作或者您有更好的资源与我共享(包括但不限于推荐公司入职)，
