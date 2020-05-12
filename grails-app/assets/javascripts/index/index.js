@@ -203,7 +203,7 @@ function handleData(data) {
                 "</div>" +
                 "</div>" +
                 "<div class=\"post-content\">" +
-                "<blockquote>" +data[i].origin +"" +
+                "<blockquote>" +data[i].origin +
                 "</blockquote>" +
                 "<div class=\"post-info\">" +
                 "<h4 class=\"post-title\">" +
@@ -212,9 +212,7 @@ function handleData(data) {
                 "<div class=\"post-by\">" +
                 "<a href=\"javascript:void(0)\">"+ data[i].gjc + "</a>" +
                 "</div>" +
-                "<div class=\"post-desc\">" +
-                ""+ data[i].gy +"" +
-                "</div>" +
+                "   <div class=\"post-desc\">" + data[i].gy + "</div>" +
                 "</div>" +
                 "<div class=\"read-btn-container\">" +
                 "<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
@@ -245,9 +243,7 @@ function handleData(data) {
                     "<div class=\"post-by\">" +
                     "<a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
                     "</div>" +
-                    "<div class=\"post-desc\">" +
-                    ""+ data[i].gy +"" +
-                    "</div>" +
+                    "<div class=\"post-desc\">" + data[i].gy + "</div>" +
                     "</div>" +
                     "<div class=\"read-btn-container\">" +
                     "<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
@@ -293,9 +289,7 @@ function handleData(data) {
                         "<div class=\"post-by\">" +
                         "<a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
                         "</div>" +
-                        "<div class=\"post-desc\">" +
-                        ""+ data[i].gy +"" +
-                        "</div>" +
+                        "<div class=\"post-desc\">" + data[i].gy + "</div>" +
                         "</div>" +
                         "<div class=\"read-btn-container\">" +
                         "<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
@@ -344,9 +338,7 @@ function handleData(data) {
                         "<div class=\"post-by\">" +
                         "<a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
                         "</div>" +
-                        "<div class=\"post-desc\">" +
-                        ""+ data[i].gy +"" +
-                        "</div>" +
+                        "<div class=\"post-desc\">" + data[i].gy + "</div>" +
                         "</div>" +
                         "<div class=\"read-btn-container\">" +
                         "<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
