@@ -196,155 +196,155 @@ function handleData(data) {
         const imgStr = data[i].img;
         if (imgStr === "" || imgStr === null){
             list.append("<li>" +
-                "<div class=\"post-left-info\">" +
-                "<div class=\"post-date\">" +
-                "<span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
-                "<span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
-                "</div>" +
-                "</div>" +
-                "<div class=\"post-content\">" +
-                "<blockquote>" +data[i].origin +
-                "</blockquote>" +
-                "<div class=\"post-info\">" +
-                "<h4 class=\"post-title\">" +
-                "<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
-                "</h4>" +
-                "<div class=\"post-by\">" +
-                "<a href=\"javascript:void(0)\">"+ data[i].gjc + "</a>" +
-                "</div>" +
-                "   <div class=\"post-desc\">" + data[i].gy + "</div>" +
-                "</div>" +
-                "<div class=\"read-btn-container\">" +
-                "<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
-                "</div>" +
-                "</div>" +
-                "</li>")
+                "            <div class=\"post-left-info\">" +
+                "               <div class=\"post-date\">" +
+                "                   <span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
+                "                   <span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
+                "               </div>" +
+                "            </div>" +
+                "            <div class=\"post-content\">" +
+                "               <blockquote>" +data[i].origin +
+                "               </blockquote>" +
+                "               <div class=\"post-info\">" +
+                "                   <h4 class=\"post-title\">" +
+                "                       <a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
+                "                   </h4>" +
+                "                   <div class=\"post-by\">" +
+                "                       <a href=\"javascript:void(0)\">"+ data[i].gjc + "</a>" +
+                "                   </div>" +
+                "                   <div class=\"post-desc\">" + data[i].gy + "</div>" +
+                "               </div>" +
+                "               <div class=\"read-btn-container\">" +
+                "                   <a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
+                "               </div>" +
+                "            </div>" +
+                "        </li>")
         }else {
             const img = imgStr.split(",");
             const imgLength = img.length;
             if (imgLength===1){
                 list.append("<li>" +
-                    "<div class=\"post-left-info\">" +
-                    "<div class=\"post-date\">" +
-                    "<span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
-                    "<span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
-                    "</div>" +
-                    "</div>" +
-                    "<div class=\"post-content\">" +
-                    "<div class=\"post-image\">" +
-                    "<a href='/index/detail/"+ data[i].id +"'>" +
-                    "<div class=\"post-image-cover\" style=\"background-image: url("+ img[0].replace(/\s/g,"%20") +");\"></div>" +
-                    "</a>" +
-                    "</div>" +
-                    "<div class=\"post-info\">" +
-                    "<h4 class=\"post-title\">" +
-                    "<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
-                    "</h4>" +
-                    "<div class=\"post-by\">" +
-                    "<a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
-                    "</div>" +
-                    "<div class=\"post-desc\">" + data[i].gy + "</div>" +
-                    "</div>" +
-                    "<div class=\"read-btn-container\">" +
-                    "<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
-                    "</div>" +
-                    "</div>" +
-                    "</li>")
+                    "            <div class=\"post-left-info\">" +
+                    "               <div class=\"post-date\">" +
+                    "                   <span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
+                    "                   <span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
+                    "               </div>" +
+                    "            </div>" +
+                    "            <div class=\"post-content\">" +
+                    "               <div class=\"post-image\">" +
+                    "                   <a href='/index/detail/"+ data[i].id +"'>" +
+                    "                       <div class=\"post-image-cover\" style=\"background-image: url("+ img[0].replace(/\s/g,"%20") +");\"></div>" +
+                    "                   </a>" +
+                    "               </div>" +
+                    "               <div class=\"post-info\">" +
+                    "                   <h4 class=\"post-title\">" +
+                    "                       <a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
+                    "                   </h4>" +
+                    "                   <div class=\"post-by\">" +
+                    "                       <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
+                    "                   </div>" +
+                    "                   <div class=\"post-desc\">" + data[i].gy + "</div>" +
+                    "               </div>" +
+                    "               <div class=\"read-btn-container\">" +
+                    "                   <a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
+                    "               </div>" +
+                    "            </div>" +
+                    "        </li>")
             }else {
                 if (imgLength===2){
                     list.append("<li>" +
-                        "<div class=\"post-left-info\">" +
-                        "<div class=\"post-date\">" +
-                        "<span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
-                        "<span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
-                        "</div>" +
-                        "</div>" +
-                        "<div class=\"post-content\">" +
-                        "<div class=\"post-image post-image-with-carousel\">" +
-                        "<div id=\"carousel"+ i +"\" class=\"carousel slide\" data-ride=\"carousel\">" +
-                        "<ol class=\"carousel-indicators\">" +
-                        "<li data-target=\"#carousel"+ i +"\" data-slide-to=\"0\" class=\"active\"></li>" +
-                        "<li data-target=\"#carousel"+ i +"\" data-slide-to=\"1\"></li>" +
-                        "</ol>" +
-                        "<div class=\"carousel-inner\">" +
-                        "<div class=\"carousel-item active\">" +
-                        "<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "</div>" +
-                        "<div class=\"carousel-item\">" +
-                        "<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "</div>" +
-                        "</div>" +
-                        "<a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">" +
-                        "<span class=\"fa fa-chevron-left\" aria-hidden=\"true\"></span>" +
-                        "</a>" +
-                        "<a class=\"carousel-control-next\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"next\">" +
-                        "<span class=\"fa fa-chevron-right\" aria-hidden=\"true\"></span>" +
-                        "</a>" +
-                        "</div>" +
-                        "</div>" +
-                        "<div class=\"post-info\">" +
-                        "<h4 class=\"post-title\">" +
-                        "<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
-                        "</h4>" +
-                        "<div class=\"post-by\">" +
-                        "<a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
-                        "</div>" +
-                        "<div class=\"post-desc\">" + data[i].gy + "</div>" +
-                        "</div>" +
-                        "<div class=\"read-btn-container\">" +
-                        "<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
-                        "</div>" +
-                        "</div>" +
-                        "</li>")
+                        "            <div class=\"post-left-info\">" +
+                        "               <div class=\"post-date\">" +
+                        "                   <span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
+                        "                   <span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
+                        "               </div>" +
+                        "            </div>" +
+                        "            <div class=\"post-content\">" +
+                        "               <div class=\"post-image post-image-with-carousel\">" +
+                        "                   <div id=\"carousel"+ i +"\" class=\"carousel slide\" data-ride=\"carousel\">" +
+                        "                       <ol class=\"carousel-indicators\">" +
+                        "                           <li data-target=\"#carousel"+ i +"\" data-slide-to=\"0\" class=\"active\"></li>" +
+                        "                           <li data-target=\"#carousel"+ i +"\" data-slide-to=\"1\"></li>" +
+                        "                       </ol>" +
+                        "                       <div class=\"carousel-inner\">" +
+                        "                           <div class=\"carousel-item active\">" +
+                        "                               <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                           </div>" +
+                        "                           <div class=\"carousel-item\">" +
+                        "                               <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                           </div>" +
+                        "                       </div>" +
+                        "                       <a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">" +
+                        "                           <span class=\"fa fa-chevron-left\" aria-hidden=\"true\"></span>" +
+                        "                       </a>" +
+                        "                       <a class=\"carousel-control-next\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"next\">" +
+                        "                           <span class=\"fa fa-chevron-right\" aria-hidden=\"true\"></span>" +
+                        "                       </a>" +
+                        "                   </div>" +
+                        "               </div>" +
+                        "               <div class=\"post-info\">" +
+                        "                   <h4 class=\"post-title\">" +
+                        "                       <a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
+                        "                   </h4>" +
+                        "                   <div class=\"post-by\">" +
+                        "                       <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
+                        "                   </div>" +
+                        "                   <div class=\"post-desc\">" + data[i].gy + "</div>" +
+                        "               </div>" +
+                        "               <div class=\"read-btn-container\">" +
+                        "                   <a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
+                        "               </div>" +
+                        "            </div>" +
+                        "        </li>")
                 }else{
                     list.append("<li>" +
-                        "<div class=\"post-left-info\">" +
-                        "<div class=\"post-date\">" +
-                        "<span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
-                        "<span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
-                        "</div>" +
-                        "</div>" +
-                        "<div class=\"post-content\">" +
-                        "<div class=\"post-image post-image-with-carousel\">" +
-                        "<div id=\"carousel"+ i +"\" class=\"carousel slide\" data-ride=\"carousel\">" +
-                        "<ol class=\"carousel-indicators\">" +
-                        "<li data-target=\"#carousel"+ i +"\" data-slide-to=\"0\" class=\"active\"></li>" +
-                        "<li data-target=\"#carousel"+ i +"\" data-slide-to=\"1\"></li>" +
-                        "<li data-target=\"#carousel"+ i +"\" data-slide-to=\"2\"></li>" +
-                        "</ol>" +
-                        "<div class=\"carousel-inner\">" +
-                        "<div class=\"carousel-item active\">" +
-                        "<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "</div>" +
-                        "<div class=\"carousel-item\">" +
-                        "<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "</div>" +
-                        "<div class=\"carousel-item\">" +
-                        "<a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "</div>" +
-                        "</div>" +
-                        "<a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">" +
-                        "<span class=\"fa fa-chevron-left\" aria-hidden=\"true\"></span>" +
-                        "</a>" +
-                        "<a class=\"carousel-control-next\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"next\">" +
-                        "<span class=\"fa fa-chevron-right\" aria-hidden=\"true\"></span>" +
-                        "</a>" +
-                        "</div>" +
-                        "</div>" +
-                        "<div class=\"post-info\">" +
-                        "<h4 class=\"post-title\">" +
-                        "<a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
-                        "</h4>" +
-                        "<div class=\"post-by\">" +
-                        "<a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
-                        "</div>" +
-                        "<div class=\"post-desc\">" + data[i].gy + "</div>" +
-                        "</div>" +
-                        "<div class=\"read-btn-container\">" +
-                        "<a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
-                        "</div>" +
-                        "</div>" +
-                        "</li>")
+                        "            <div class=\"post-left-info\">" +
+                        "               <div class=\"post-date\">" +
+                        "                  <span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
+                        "                  <span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
+                        "               </div>" +
+                        "            </div>" +
+                        "            <div class=\"post-content\">" +
+                        "               <div class=\"post-image post-image-with-carousel\">" +
+                        "                  <div id=\"carousel"+ i +"\" class=\"carousel slide\" data-ride=\"carousel\">" +
+                        "                     <ol class=\"carousel-indicators\">" +
+                        "                        <li data-target=\"#carousel"+ i +"\" data-slide-to=\"0\" class=\"active\"></li>" +
+                        "                        <li data-target=\"#carousel"+ i +"\" data-slide-to=\"1\"></li>" +
+                        "                        <li data-target=\"#carousel"+ i +"\" data-slide-to=\"2\"></li>" +
+                        "                     </ol>" +
+                        "                      <div class=\"carousel-inner\">" +
+                        "                          <div class=\"carousel-item active\">" +
+                        "                             <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                          </div>" +
+                        "                          <div class=\"carousel-item\">" +
+                        "                             <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                          </div>" +
+                        "                          <div class=\"carousel-item\">" +
+                        "                             <a href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
+                        "                          </div>" +
+                        "                      </div>" +
+                        "                     <a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">" +
+                        "                         <span class=\"fa fa-chevron-left\" aria-hidden=\"true\"></span>" +
+                        "                     </a>" +
+                        "                     <a class=\"carousel-control-next\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"next\">" +
+                        "                         <span class=\"fa fa-chevron-right\" aria-hidden=\"true\"></span>" +
+                        "                     </a>" +
+                        "                  </div>" +
+                        "               </div>" +
+                        "               <div class=\"post-info\">" +
+                        "                  <h4 class=\"post-title\">" +
+                        "                      <a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
+                        "                  </h4>" +
+                        "                  <div class=\"post-by\">" +
+                        "                      <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
+                        "                  </div>" +
+                        "                  <div class=\"post-desc\">" + data[i].gy + "</div>" +
+                        "               </div>" +
+                        "               <div class=\"read-btn-container\">" +
+                        "                  <a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
+                        "               </div>" +
+                        "            </div>" +
+                        "        </li>")
                 }
             }
 
