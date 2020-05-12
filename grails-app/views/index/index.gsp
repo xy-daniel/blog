@@ -98,10 +98,10 @@
 
 	<div id="ad" class="card card-outline-danger text-left bg-white">
 		<div class="card-block">
-			<blockquote class="card-blockquote">
+			<blockquote class="card-blockquote" style="margin-bottom: 0">
 				<p class="f-s-14 text-inverse f-w-600">来自<span id="from"></span>的用户您好：</p>
 				<p class="f-s-14 text-inverse f-w-600">欢迎您访问本站，您是本站的第<span id="position"></span>个用户</p>
-				<p class="f-s-14 text-inverse f-w-600">用户量：<span id="total"></span></p>
+				<p class="f-s-14 text-inverse f-w-600" style="margin-bottom: 0">用户量：<span id="total"></span></p>
 			</blockquote>
 		</div>
 	</div>
