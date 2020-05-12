@@ -1,6 +1,7 @@
 package cn.cwyuan.blog
 
 import cn.cwyuan.blog.enums.RespType
+import cn.cwyuan.blog.utils.FileUtil
 import grails.converters.JSON
 
 class ApiController {
@@ -132,5 +133,32 @@ class ApiController {
         model.put("position",position)
         model.put("address",cname)
         render model as JSON
+    }
+
+    def download(){
+        try {
+            def heartId = params.long("heartId")
+            File file = new File("D:\\${Heart.get(heartId).wzm}.md")
+            if (!file.exists()){
+                FileUtil.generateFile(heartId)
+                file = new File("D:\\${Heart.get(heartId).wzm}.md")
+            }
+            String filename = file.getName()
+            String ext = filename.substring(filename.lastIndexOf(".") + 1).toUpperCase()
+            InputStream fis = new BufferedInputStream(new FileInputStream("D:\\${Heart.get(heartId).wzm}.md"))
+            byte[] buffer = new byte[fis.available()]
+            fis.read(buffer)
+            fis.close()
+            OutputStream toClient = new BufferedOutputStream(response.getOutputStream())
+            response.reset()
+            response.addHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode(filename,"UTF-8"))
+            response.addHeader("Content-Length", "" + file.length())
+            response.setContentType("application/octet-stream")
+            toClient.write(buffer)
+            toClient.flush()
+            toClient.close()
+        } catch (IOException ex) {
+            ex.printStackTrace()
+        }
     }
 }

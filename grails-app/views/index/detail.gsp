@@ -84,6 +84,7 @@
 							})
 						</script>
 					</div>
+					<a href="/api/download?heartId=${id}" class="btn" style="margin: 10px;width: 70%;border-radius: 30px;background-color: #348FE2">点击下载本文MarkDown文档</a>
 				</div>
 				<!-- end col-12 -->
 			</div>
