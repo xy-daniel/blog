@@ -350,6 +350,16 @@ function handleData(data) {
 
         }
     }
+    list.append("<li>" +
+        "           <div class=\"card card-inverse\">" +
+        "               <img class=\"card-img\" src=\"http://139.9.119.104/images/2020/05/12/58e6464f36d64962a76edaa0fa70710d_1.jpg\" alt=\"Card image\">" +
+        "               <div class=\"card-img-overlay\">" +
+        "                   <h4 class=\"card-title\" ><a href='/login'>胡编乱造</a></h4>" +
+        "                   <p hidden class=\"card-text\">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>" +
+        "                   <p hidden class=\"card-text\"><small>Last updated 3 mins ago</small></p>" +
+        "               </div>" +
+        "           </div>" +
+        "        </li>")
 }
 //分页插件
 function pageNum(totalPage, currentPage) {
