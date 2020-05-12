@@ -86,7 +86,7 @@
         }
         $.get("/api/getGjc",{},function (result) {
             for (let i=0; i<result.length; i++){
-                $(".gjcs").append("<span style=\"font-size: "+ parseInt(Math.random()*15+5) +"px\">"+ result[i] +"</span>&nbsp;")
+                $(".gjcs").append("<span class='gjcName' style=\"font-size: "+ parseInt(Math.random()*15+7) +"px;display: inline-block\">"+ result[i] +"</span>&nbsp;&nbsp;")
             }
         },'json')
     </script>
