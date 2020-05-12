@@ -49,7 +49,7 @@ class ApiController {
         def model = [:]
         def modelDataList = []
         if (tag != 0){
-            def hts = HeartTags.findAllByTags(Tags.get(tag))
+            def hts = HeartTags.findAllByTags(Tags.get(tag),[sort:"id",order:"desc"])
             if (search) {
                 //remove必须倒着进行删除
                 for (int i=hts.size()-1; i>=0; i--){
