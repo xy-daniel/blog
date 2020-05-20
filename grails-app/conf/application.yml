@@ -98,38 +98,19 @@ dataSource:
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     username: root
     password: 123456
-#    password: root
-dataSources:
-    mem:
-        pooled: true
-        jmxExport: true
-        driverClassName: org.h2.Driver
-        username: sa
-        password: ''
 environments:
     development:
         dataSource:
             dbCreate: update
             url: jdbc:mysql://139.9.119.104:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
-#            url: jdbc:mysql://192.168.25.128:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
-        dataSources:
-            mem:
-                dbCreate: update
-                url: jdbc:h2:file:../blog/db.h2;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     test:
         dataSource:
             dbCreate: update
             url: jdbc:mysql://139.9.119.104:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
-#        url: jdbc:mysql://192.168.25.128:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
-        dataSources:
-            mem:
-                dbCreate: update
-                url: jdbc:h2:file:/usr/local/blog/db.h2;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     production:
         dataSource:
             dbCreate: update
             url: jdbc:mysql://139.9.119.104:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
-#            url: jdbc:mysql://192.168.25.128:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
             properties:
                 jmxEnabled: true
                 initialSize: 5
@@ -148,28 +129,6 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
-        dataSources:
-            mem:
-                dbCreate: update
-                url: jdbc:h2:file:/usr/local/blog/db.h2;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
-                properties:
-                    jmxEnabled: true
-                    initialSize: 5
-                    maxActive: 50
-                    minIdle: 5
-                    maxIdle: 25
-                    maxWait: 10000
-                    maxAge: 600000
-                    timeBetweenEvictionRunsMillis: 5000
-                    minEvictableIdleTimeMillis: 60000
-                    validationQuery: SELECT 1
-                    validationQueryTimeout: 3
-                    validationInterval: 15000
-                    testOnBorrow: true
-                    testWhileIdle: true
-                    testOnReturn: false
-                    jdbcInterceptors: ConnectionState
-                    defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
 ---
 grails:
     corss:
