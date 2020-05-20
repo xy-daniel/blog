@@ -15,6 +15,7 @@
 	<asset:stylesheet rel="stylesheet" href="blog/style.css"/>
 	<asset:stylesheet rel="stylesheet" href="blog/style-responsive.css"/>
 	<asset:stylesheet id="theme" rel="stylesheet" href="blog/theme/default.css"/>
+	<asset:stylesheet id="theme" rel="stylesheet" href="index/trans.css"/>
 	<!-- ================== END BASE CS	S STYLE ================== -->
 
 	<!-- ================== BEGIN BASE JS ================== -->
@@ -67,10 +68,62 @@
 	<!-- begin #content -->
 	<div id="content" class="content row" style="margin: 100px 10%">
 	<!-- begin row -->
-	<div class="row row-space-30">
+	<div class="row row-space-30" style="width: 100%">
 		<g:render template="/layouts/base_left"/>
 		<!-- begin col-6 -->
-		<div class="col-md-6 order-1 data">
+		<div class="col-md-6 order-1 data" style="width: 80%">
+			<div class="post-content">
+				<div class="wrapper4trans" style="margin: 20px 0 50px 0">
+					<div class="col4trans aaa" ontouchstart="this.classList.toggle('hover');" style="width: 100%">
+						<div class="container4trans">
+							<div class="front" style="background-image: url(<asset:assetPath src="cover/cover-3.jpg"/>)">
+								<div class="inner">
+									<p>Java零基础之标识符与关键词</p>
+									<span>Java、基础、标识符、关键词</span>
+									<hr/>
+									<span>2020年5月20日</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍
+										介绍介绍介绍介绍介绍介绍介绍介介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr/>
+				<div class="wrapper4trans" style="margin: 20px 0 50px 0">
+					<div class="col4trans" ontouchstart="this.classList.toggle('hover');" style="width: 100%">
+						<div class="container4trans">
+							<div class="front" style="background-image: url(<asset:assetPath src="cover/cover-3.jpg"/>)">
+								<div class="inner">
+									<p>Java零基础之标识符与关键词</p>
+									<span>Java、基础、标识符、关键词</span>
+									<hr/>
+									<span>2020年5月20日</span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍
+										介绍介绍介绍介绍介绍介绍介绍介介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍介绍
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					$(".aaa").click(function () {
+						alert(123);
+					})
+				</script>
+			</div>
 			<!-- begin post-list -->
 			<ul class="post-list">
 			</ul>
@@ -105,8 +158,6 @@
 			</blockquote>
 		</div>
 	</div>
-
-
 	<!-- end #page-copyright -->
 	<asset:javascript src="index/index.js"/>
 	<asset:javascript src="index/month.js"/>
