@@ -114,6 +114,9 @@
 	<!-- begin parsley -->
 	<g:render template="/layouts/base_parsley"/>
 	<!-- end parsley -->
+	<!-- begin #page-copyright -->
+	<g:render template="/layouts/base_copyright"/>
+	<!-- end #page-copyright -->
 	<script>
 		$(document).ready(function() {
 			App.init();

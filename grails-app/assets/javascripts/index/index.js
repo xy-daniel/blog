@@ -212,9 +212,10 @@ function handleData(data) {
             "                                   </div>" +
             "                               </div>" +
             "                           </div>" +
-            "                       </div>" +
-            "                       <hr/>" +
-            "                       <hr/>")
+            "                       </div>")
+        if (i!==data.length-1){
+            $(".post-content").append( "<hr/><hr/>")
+        }
     }
 }
 //分页插件
