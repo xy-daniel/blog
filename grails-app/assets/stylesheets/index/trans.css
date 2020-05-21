@@ -4,9 +4,9 @@
     max-width: 80rem;
 }
 .col4trans{
-    width: calc(25% - 2rem);
-    margin: 1rem;
+    margin: 1rem auto;
     cursor: pointer;
+    width: 100%;
 }
 
 .container4trans{

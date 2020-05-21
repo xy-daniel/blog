@@ -3,10 +3,19 @@
     <!-- begin container -->
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <span class="copyright">&copy; 2020 Daniel版权所有,授权可用,侵权必究</span>
+            <div class="col-md-4">
+                <span>
+                    <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278922781'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D1278922781%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+                </span>
+                <br/>
+                <span>
+                    <a href="http://beian.miit.gov.cn/" target="_blank"> 京ICP备20017963号</a>
+
+                </span>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-8" style="text-align: right">
+                <span class="copyright">&copy; 2020 Daniel版权所有,授权可用,侵权必究</span>
+                <br/>
                 <span id="siteTime"></span>
             </div>
         </div>

@@ -185,170 +185,36 @@ function handleValue(elem) {
 }
 //总数据处理
 function handleData(data) {
-    const list = $(".post-list");
+    const list = $(".post-content");
     if (data.length===0){
         return
     }
-    // list.empty();
+    list.empty();
     //数据处理
     for (let i=0; i<data.length; i++){
         const date = data[i].date.split("-");
         const imgStr = data[i].img;
-        if (imgStr === "" || imgStr === null){
-            list.append("<li>" +
-                "            <div class=\"post-left-info\">" +
-                "               <div class=\"post-date\">" +
-                "                   <span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
-                "                   <span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
-                "               </div>" +
-                "            </div>" +
-                "            <div class=\"post-content\">" +
-                "               <blockquote>" +data[i].origin +
-                "               </blockquote>" +
-                "               <div class=\"post-info\">" +
-                "                   <h4 class=\"post-title\">" +
-                "                       <a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
-                "                   </h4>" +
-                "                   <div class=\"post-by\">" +
-                "                       <a href=\"javascript:void(0)\">"+ data[i].gjc + "</a>" +
-                "                   </div>" +
-                "                   <div class=\"post-desc\">" + data[i].gy + "</div>" +
-                "               </div>" +
-                "               <div class=\"read-btn-container\">" +
-                "                   <a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
-                "               </div>" +
-                "            </div>" +
-                "        </li>")
-        }else {
-            const img = imgStr.split(",");
-            const imgLength = img.length;
-            if (imgLength===1){
-                list.append("<li>" +
-                    "            <div class=\"post-left-info\">" +
-                    "               <div class=\"post-date\">" +
-                    "                   <span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
-                    "                   <span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
-                    "               </div>" +
-                    "            </div>" +
-                    "            <div class=\"post-content\">" +
-                    "               <div class=\"post-image\">" +
-                    "                   <a href='/index/detail/"+ data[i].id +"'>" +
-                    "                       <div class=\"post-image-cover\" style=\"background-image: url("+ img[0].replace(/\s/g,"%20") +");\"></div>" +
-                    "                   </a>" +
-                    "               </div>" +
-                    "               <div class=\"post-info\">" +
-                    "                   <h4 class=\"post-title\">" +
-                    "                       <a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
-                    "                   </h4>" +
-                    "                   <div class=\"post-by\">" +
-                    "                       <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
-                    "                   </div>" +
-                    "                   <div class=\"post-desc\">" + data[i].gy + "</div>" +
-                    "               </div>" +
-                    "               <div class=\"read-btn-container\">" +
-                    "                   <a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
-                    "               </div>" +
-                    "            </div>" +
-                    "        </li>")
-            }else {
-                if (imgLength===2){
-                    list.append("<li>" +
-                        "            <div class=\"post-left-info\">" +
-                        "               <div class=\"post-date\">" +
-                        "                   <span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
-                        "                   <span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
-                        "               </div>" +
-                        "            </div>" +
-                        "            <div class=\"post-content\">" +
-                        "               <div class=\"post-image post-image-with-carousel\">" +
-                        "                   <div id=\"carousel"+ i +"\" class=\"carousel slide\" data-ride=\"carousel\">" +
-                        "                       <ol class=\"carousel-indicators\">" +
-                        "                           <li data-target=\"#carousel"+ i +"\" data-slide-to=\"0\" class=\"active\"></li>" +
-                        "                           <li data-target=\"#carousel"+ i +"\" data-slide-to=\"1\"></li>" +
-                        "                       </ol>" +
-                        "                       <div class=\"carousel-inner\">" +
-                        "                           <div class=\"carousel-item active\">" +
-                        "                               <a style='display:inline-block;height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "                           </div>" +
-                        "                           <div class=\"carousel-item\">" +
-                        "                               <a style='display:inline-block;height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "                           </div>" +
-                        "                       </div>" +
-                        "                       <a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">" +
-                        "                           <span class=\"fa fa-chevron-left\" aria-hidden=\"true\"></span>" +
-                        "                       </a>" +
-                        "                       <a class=\"carousel-control-next\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"next\">" +
-                        "                           <span class=\"fa fa-chevron-right\" aria-hidden=\"true\"></span>" +
-                        "                       </a>" +
-                        "                   </div>" +
-                        "               </div>" +
-                        "               <div class=\"post-info\">" +
-                        "                   <h4 class=\"post-title\">" +
-                        "                       <a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
-                        "                   </h4>" +
-                        "                   <div class=\"post-by\">" +
-                        "                       <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
-                        "                   </div>" +
-                        "                   <div class=\"post-desc\">" + data[i].gy + "</div>" +
-                        "               </div>" +
-                        "               <div class=\"read-btn-container\">" +
-                        "                   <a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
-                        "               </div>" +
-                        "            </div>" +
-                        "        </li>")
-                }else{
-                    list.append("<li>" +
-                        "            <div class=\"post-left-info\">" +
-                        "               <div class=\"post-date\">" +
-                        "                  <span class=\"day\">"+ date[2].substring(0,2) +"</span>" +
-                        "                  <span class=\"month\">"+ month(date[1]) + date[0] +"</span>" +
-                        "               </div>" +
-                        "            </div>" +
-                        "            <div class=\"post-content\">" +
-                        "               <div class=\"post-image post-image-with-carousel\">" +
-                        "                  <div id=\"carousel"+ i +"\" class=\"carousel slide\" data-ride=\"carousel\">" +
-                        "                     <ol class=\"carousel-indicators\">" +
-                        "                        <li data-target=\"#carousel"+ i +"\" data-slide-to=\"0\" class=\"active\"></li>" +
-                        "                        <li data-target=\"#carousel"+ i +"\" data-slide-to=\"1\"></li>" +
-                        "                        <li data-target=\"#carousel"+ i +"\" data-slide-to=\"2\"></li>" +
-                        "                     </ol>" +
-                        "                      <div class=\"carousel-inner\">" +
-                        "                          <div class=\"carousel-item active\">" +
-                        "                             <a style='display:inline-block;height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[0].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "                          </div>" +
-                        "                          <div class=\"carousel-item\">" +
-                        "                             <a style='display:inline-block;height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[1].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "                          </div>" +
-                        "                          <div class=\"carousel-item\">" +
-                        "                             <a style='display:inline-block;height: 200px' href='/index/detail/"+ data[i].id +"'><img class=\"d-block w-100\" src='"+ img[2].replace(/\s/g,"%20") +"' alt=\"\" /></a>" +
-                        "                          </div>" +
-                        "                      </div>" +
-                        "                     <a class=\"carousel-control-prev\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"prev\">" +
-                        "                         <span class=\"fa fa-chevron-left\" aria-hidden=\"true\"></span>" +
-                        "                     </a>" +
-                        "                     <a class=\"carousel-control-next\" href=\"#carousel"+ i +"\" role=\"button\" data-slide=\"next\">" +
-                        "                         <span class=\"fa fa-chevron-right\" aria-hidden=\"true\"></span>" +
-                        "                     </a>" +
-                        "                  </div>" +
-                        "               </div>" +
-                        "               <div class=\"post-info\">" +
-                        "                  <h4 class=\"post-title\">" +
-                        "                      <a href='/index/detail/"+ data[i].id +"'>"+ data[i].wzm +"</a>" +
-                        "                  </h4>" +
-                        "                  <div class=\"post-by\">" +
-                        "                      <a href=\"javascript:void(0)\">"+ data[i].gjc +"</a>" +
-                        "                  </div>" +
-                        "                  <div class=\"post-desc\">" + data[i].gy + "</div>" +
-                        "               </div>" +
-                        "               <div class=\"read-btn-container\">" +
-                        "                  <a href='/index/detail/"+ data[i].id +"' class=\"read-btn\">更多 <i class=\"fa fa-angle-double-right\"></i></a>" +
-                        "               </div>" +
-                        "            </div>" +
-                        "        </li>")
-                }
-            }
-
-        }
+        $(".post-content").append("<div class=\"wrapper4trans\" style=\"margin-left: auto;margin-right: auto\">" +
+            "                           <div class=\"col4trans\" ontouchstart=\"this.classList.toggle('hover');\" onclick='toDetail("+ data[i].id +")'>" +
+            "                               <div class=\"container4trans\">" +
+            "                                   <div class=\"front\" style=\"background-image: url(http://pic1.win4000.com/wallpaper/7/56e389b179a94.jpg)\">" +
+            "                                       <div class=\"inner\">" +
+            "                                           <p>"+ data[i].wzm +"</p>" +
+            "                                           <span>"+ data[i].gjc +"</span>" +
+            "                                           <hr/>" +
+            "                                           <span>"+ data[i].date +"</span>" +
+            "                                       </div>" +
+            "                                   </div>" +
+            "                                   <div class=\"back\">" +
+            "                                       <div class=\"inner\">" +
+            "                                           <p>"+ data[i].gy +"</p>" +
+            "                                       </div>" +
+            "                                   </div>" +
+            "                               </div>" +
+            "                           </div>" +
+            "                       </div>" +
+            "                       <hr/>" +
+            "                       <hr/>")
     }
 }
 //分页插件
@@ -414,4 +280,8 @@ function pageNum(totalPage, currentPage) {
     if (currentPage===totalPage){
         $(".downPage").addClass("disabled");
     }
+}
+
+function toDetail(id) {
+    window.location.href = "/index/detail/" + id
 }
