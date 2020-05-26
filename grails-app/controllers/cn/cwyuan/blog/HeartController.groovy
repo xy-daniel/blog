@@ -58,7 +58,6 @@ class HeartController {
 
     def addSave(){
         def title = params.get("title")
-        def origin = params.get("origin")
         def summary = params.get("summary")
         def keys = params.get("keys")
         def tags = params.get("tags")
@@ -70,12 +69,11 @@ class HeartController {
         }
         def heart = new Heart(
                 uid: UUIDGenerator.nextUUID(),
-                img: ImgUtil.getImgAddress(html),
+//                img: ImgUtil.getImgAddress(html),
                 wzm: title,
                 gy: summary,
                 gjc: keys,
-                origin: origin,
-                read_count: 0,
+                read_count: 0
         )
         heartService.addSave(heart, md, html, tags)
         def last = Memorandum.findAll()
@@ -146,7 +144,6 @@ class HeartController {
     def editSave(){
         def id = params.long("id")
         def title = params.get("title")
-        def origin = params.get("origin")
         def summary = params.get("summary")
         def keys = params.get("keys")
         def tags = params.get("tags")
@@ -157,11 +154,10 @@ class HeartController {
             return
         }
         def heart = Heart.get(id)
-        heart.img = ImgUtil.getImgAddress(html)
+//        heart.img = ImgUtil.getImgAddress(html)
         heart.wzm = title
         heart.gy = summary
         heart.gjc = keys
-        heart.origin = origin
         heartService.editSave(heart, md, html, tags)
         redirect(controller: "heart", action: "list")
     }

@@ -69,8 +69,6 @@ class ApiController {
                 data.put("wzm", heart.wzm)
                 data.put("gy", heart.gy)
                 data.put("gjc", heart.gjc)
-                data.put("img", heart.img)
-                data.put("origin", heart.origin)
                 data.put("date", heart.dateCreated)
                 modelDataList.add(data)
             }
@@ -83,8 +81,6 @@ class ApiController {
                 data.put("wzm", heart.wzm)
                 data.put("gy", heart.gy)
                 data.put("gjc", heart.gjc)
-                data.put("img", heart.img)
-                data.put("origin", heart.origin)
                 data.put("date", heart.dateCreated)
                 modelDataList.add(data)
             }

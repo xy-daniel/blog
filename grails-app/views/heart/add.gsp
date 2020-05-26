@@ -74,15 +74,6 @@
 						</div>
 					</div>
 					<!-- end form-group row 文章概要 -->
-					<!-- begin form-group row 问题情景 -->
-					<div class="form-group row m-b-8">
-						<label id="origin" class="col-md-1 text-md-right col-form-label">问题情景 </label>
-						<div class="col-md-10">
-							<textarea class="form-control" name="origin" data-parsley-required="true" data-parsley-maxlength="200"
-									  data-parsley-required-message="此项不能为空" style="height: 100px"></textarea>
-						</div>
-					</div>
-					<!-- end form-group row 问题情景 -->
 					<!-- begin markdown -->
 					<div id="editormd">
 						<textarea name="content" data-parsley-required="true" data-parsley-required-message="此项不能为空">${memorandum}</textarea>
