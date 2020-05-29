@@ -102,15 +102,15 @@ environments:
     development:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://139.9.119.104:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+            url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
     test:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://139.9.119.104:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+            url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
     production:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://139.9.119.104:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+            url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
             properties:
                 jmxEnabled: true
                 initialSize: 5

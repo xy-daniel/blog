@@ -5,6 +5,7 @@
 <!--<![endif]-->
 
 <head>
+	<meta name="baidu-site-verification" content="ISoOtwVyda" />
 	<!-- begin #page-loader -->
 	<g:render template="/layouts/base_loader"/>
 	<!-- end #page-loader -->
