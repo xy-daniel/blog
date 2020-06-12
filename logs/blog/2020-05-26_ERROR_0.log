@@ -1,0 +1,100 @@
+12:34:10.869 [http-nio-80-exec-5] ERROR o.g.w.e.GrailsExceptionResolver (GrailsExceptionResolver.java:252) - MissingPropertyException occurred when processing request: [GET] /api/heartData - parameters:
+currentPage: 1
+search: 
+tag: 
+No such property: img for class: cn.cwyuan.blog.Heart
+Possible solutions: id, wzm, gy, all, gjc, uid. Stacktrace follows:
+java.lang.reflect.InvocationTargetException: null
+	at org.grails.core.DefaultGrailsControllerClass$ReflectionInvoker.invoke(DefaultGrailsControllerClass.java:211)
+	at org.grails.core.DefaultGrailsControllerClass.invoke(DefaultGrailsControllerClass.java:188)
+	at org.grails.web.mapping.mvc.UrlMappingsInfoHandlerAdapter.handle(UrlMappingsInfoHandlerAdapter.groovy:90)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at grails.plugin.springsecurity.web.UpdateRequestContextHolderExceptionTranslationFilter.doFilter(UpdateRequestContextHolderExceptionTranslationFilter.groovy:64)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.groovy:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:150)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter.doFilter(MutableLogoutFilter.groovy:64)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at grails.plugin.springsecurity.web.SecurityRequestHolderFilter.doFilter(SecurityRequestHolderFilter.groovy:58)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:77)
+	at org.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:67)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: groovy.lang.MissingPropertyException: No such property: img for class: cn.cwyuan.blog.Heart
+Possible solutions: id, wzm, gy, all, gjc, uid
+	at org.grails.datastore.gorm.GormInstanceApi.propertyMissing(GormInstanceApi.groovy:58)
+	at org.grails.datastore.gorm.GormEntity$Trait$Helper.propertyMissing(GormEntity.groovy:57)
+	at cn.cwyuan.blog.ApiController.heartData(ApiController.groovy:86)
+	... 37 common frames omitted
+12:34:59.968 [http-nio-80-exec-4] ERROR o.g.w.e.GrailsExceptionResolver (GrailsExceptionResolver.java:252) - MissingPropertyException occurred when processing request: [GET] /api/heartData - parameters:
+currentPage: 1
+search: 
+tag: 
+No such property: img for class: cn.cwyuan.blog.Heart
+Possible solutions: id, wzm, gy, all, gjc, uid. Stacktrace follows:
+java.lang.reflect.InvocationTargetException: null
+	at org.grails.core.DefaultGrailsControllerClass$ReflectionInvoker.invoke(DefaultGrailsControllerClass.java:211)
+	at org.grails.core.DefaultGrailsControllerClass.invoke(DefaultGrailsControllerClass.java:188)
+	at org.grails.web.mapping.mvc.UrlMappingsInfoHandlerAdapter.handle(UrlMappingsInfoHandlerAdapter.groovy:90)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:317)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:114)
+	at grails.plugin.springsecurity.web.UpdateRequestContextHolderExceptionTranslationFilter.doFilter(UpdateRequestContextHolderExceptionTranslationFilter.groovy:64)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.groovy:54)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter.doFilter(MutableLogoutFilter.groovy:64)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at grails.plugin.springsecurity.web.SecurityRequestHolderFilter.doFilter(SecurityRequestHolderFilter.groovy:58)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:331)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:214)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)
+	at org.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:77)
+	at org.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:67)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: groovy.lang.MissingPropertyException: No such property: img for class: cn.cwyuan.blog.Heart
+Possible solutions: id, wzm, gy, all, gjc, uid
+	at org.grails.datastore.gorm.GormInstanceApi.propertyMissing(GormInstanceApi.groovy:58)
+	at org.grails.datastore.gorm.GormEntity$Trait$Helper.propertyMissing(GormEntity.groovy:57)
+	at cn.cwyuan.blog.ApiController.heartData(ApiController.groovy:86)
+	... 37 common frames omitted
