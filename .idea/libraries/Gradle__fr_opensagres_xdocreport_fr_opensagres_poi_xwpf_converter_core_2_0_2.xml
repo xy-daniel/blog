@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: fr.opensagres.xdocreport:fr.opensagres.poi.xwpf.converter.core:2.0.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/fr/opensagres/xdocreport/fr.opensagres.poi.xwpf.converter.core/2.0.2/fr.opensagres.poi.xwpf.converter.core-2.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

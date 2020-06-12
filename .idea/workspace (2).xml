@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="106c9837-ab1c-415a-909b-4227597cc493" name="Default Changelist" comment="" />
+    <list id="e1ef8bbb-460b-4ad8-aec4-149eb279b4bb" name="UnNeedCommit" comment="">
+      <change afterPath="$PROJECT_DIR$/.asscache" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="IPA" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="IPA" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="E:\ws\IPA\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\86178\.m2\repository" />
+        <option name="userSettingsFile" value="C:\Users\86178\.m2\setting.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Ysf5TANaWpaGlu9YqnN8O0oyRa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dynamic.classpath" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hxht.techcrt" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.IPA [clean]">
+    <configuration name="IPA [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Grails: IPA" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="grailsApplicationRoot" value="$PROJECT_DIR$" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.IPA [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="106c9837-ab1c-415a-909b-4227597cc493" name="Default Changelist" comment="" />
+      <changelist id="e1ef8bbb-460b-4ad8-aec4-149eb279b4bb" name="UnNeedCommit" comment="" />
+      <created>1583736038380</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583736038380</updated>
+      <workItem from="1583736041215" duration="11398000" />
+      <workItem from="1583803776752" duration="5380000" />
+      <workItem from="1583813156625" duration="13208000" />
+      <workItem from="1583915693901" duration="3940000" />
+      <workItem from="1583977466407" duration="148000" />
+      <workItem from="1583977626881" duration="11288000" />
+      <workItem from="1584062252452" duration="6224000" />
+      <workItem from="1584070086776" duration="5442000" />
+      <workItem from="1584320304183" duration="1346000" />
+      <workItem from="1584322100900" duration="613000" />
+      <workItem from="1584343742123" duration="39000" />
+      <workItem from="1584346156557" duration="6090000" />
+      <workItem from="1584406304436" duration="39000" />
+      <workItem from="1584406398163" duration="475000" />
+      <workItem from="1584406896013" duration="4456000" />
+      <workItem from="1584501765671" duration="1251000" />
+      <workItem from="1584517999181" duration="12818000" />
+      <workItem from="1584588166136" duration="645000" />
+      <workItem from="1584771662983" duration="709000" />
+      <workItem from="1584925198872" duration="48000" />
+      <workItem from="1584925317818" duration="385000" />
+      <workItem from="1584925724952" duration="107000" />
+      <workItem from="1584926349563" duration="5474000" />
+      <workItem from="1585022544654" duration="18130000" />
+      <workItem from="1585211546803" duration="7880000" />
+      <workItem from="1586236179919" duration="6560000" />
+      <workItem from="1586243841930" duration="27000" />
+    </task>
+    <task id="LOCAL-00001" summary="修复添加审理庭的BUG">
+      <created>1583744454370</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583744454370</updated>
+    </task>
+    <task id="LOCAL-00002" summary="即时通讯时间显示">
+      <created>1583744787711</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583744787711</updated>
+    </task>
+    <task id="LOCAL-00003" summary="即时通讯:发送按钮与输入框增加间距">
+      <created>1583745617696</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583745617696</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改被管理员断开连接的提示">
+      <created>1583977096469</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583977096469</updated>
+    </task>
+    <task id="LOCAL-00005" summary="取消年份选择按钮选择即改变&#10;明确显示哪年的数据">
+      <created>1583981138391</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1583981138391</updated>
+    </task>
+    <task id="LOCAL-00006" summary="直播授权文字修改">
+      <created>1584063929877</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584063929877</updated>
+    </task>
+    <task id="LOCAL-00007" summary="书记员、法官接口">
+      <created>1584064345871</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584064345871</updated>
+    </task>
+    <task id="LOCAL-00008" summary="直播授权链接状态文字修改">
+      <created>1584064600661</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1584064600661</updated>
+    </task>
+    <task id="LOCAL-00009" summary="直播授权添加跳转到排期信息按钮">
+      <created>1584065568644</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1584065568644</updated>
+    </task>
+    <task id="LOCAL-00010" summary="添加直播授权列表页面时间信息与案件案号">
+      <created>1584066545846</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1584066545846</updated>
+    </task>
+    <task id="LOCAL-00011" summary="禁止管理员禁止管理员查看排期详情">
+      <created>1584067837929</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1584067837929</updated>
+    </task>
+    <task id="LOCAL-00012" summary="直播授权定时器修改为10分钟&#10;法官找不到数据返回失败">
+      <created>1584351679353</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1584351679353</updated>
+    </task>
+    <task id="LOCAL-00013" summary="删除法官上传批注的返回值&#10;提示书记员上传成功，ws返回上传的批注的文件地址">
+      <created>1584410811773</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1584410811773</updated>
+    </task>
+    <task id="LOCAL-00014" summary="法官上传批注图片&#10;书记员接收上传的批注图片">
+      <created>1584586620745</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1584586620745</updated>
+    </task>
+    <task id="LOCAL-00015" summary="删除一个无用service">
+      <created>1584586784445</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1584586784445</updated>
+    </task>
+    <task id="LOCAL-00016" summary="提升文件上传大小限制">
+      <created>1585034555104</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1585034555104</updated>
+    </task>
+    <task id="LOCAL-00017" summary="路径存在不再添加">
+      <created>1585110083263</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1585110083263</updated>
+    </task>
+    <task id="LOCAL-00018" summary="返回本次单条记录">
+      <created>1585111050009</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1585111050009</updated>
+    </task>
+    <task id="LOCAL-00019" summary="直播授权由只记录最新数据修改为记录所有数据">
+      <created>1586240191341</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1586240191341</updated>
+    </task>
+    <task id="LOCAL-00020" summary="第二次进入强制断掉第一次的数据">
+      <created>1586240919632</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1586240919632</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update">
+      <created>1586241555152</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1586241555152</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
+    <servers />
+  </component>
+  <component name="TraitInjectorService">
+    <option name="state">
+      <map>
+        <entry key="IPA.main">
+          <value>
+            <StateHolder>
+              <option name="knownFactories">
+                <list>
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-web-common/3.3.9/1ebb148a20659b7f22f247be74329eac328a1877/grails-web-common-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-taglib/3.3.2/75056cd2647d469cb2bc36dd7dbb7e708fe8583/grails-taglib-3.3.2.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails.plugins/gsp/3.3.2/f1e032675f2233c0b18f4de8e74d830197d11ac5/gsp-3.3.2.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-plugin-domain-class/3.3.9/3369ad0eafe93adf9fbb1aa961444517a67e454e/grails-plugin-domain-class-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-plugin-codecs/3.3.9/58aa360e70cb31b7e7c50ac8523e99be3386f142/grails-plugin-codecs-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-plugin-controllers/3.3.9/a81569a9a569b6489a6d81bb44d9c1f57cb43f1/grails-plugin-controllers-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.3.9/c276c557e7dfd6b003d36127c9a8887e1d06b911/grails-web-url-mappings-3.3.9.jar!/META-INF/services/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-plugin-rest/3.3.9/e81a338b50e2fe4e0ff094498ba3bf7404d99c94/grails-plugin-rest-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-web/3.3.9/b78f4f6569bd38f44aa70f17799fa098c2d695e5/grails-web-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-web-databinding/3.3.9/fffd881d62a9ce690f9c213172bf4e14fdc75465/grails-web-databinding-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-web-url-mappings/3.3.9/c276c557e7dfd6b003d36127c9a8887e1d06b911/grails-web-url-mappings-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails.plugins/quartz/2.0.13/9e0009792644c894ad8070d42dd53670018f98a6/quartz-2.0.13.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-plugin-interceptors/3.3.9/187c4c1ef95f8276bb60d1f56823433abf93eb00/grails-plugin-interceptors-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-core/3.3.9/51a086528025dc387f0d6ad37d1b1f32d2dd0315/grails-core-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-datastore-gorm-support/6.1.11.RELEASE/22bf5199a18407fecfbfb7d142f45fb42302e6a2/grails-datastore-gorm-support-6.1.11.RELEASE.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-web-taglib/3.3.2/ac756b51210375b92014a4a206a0443e93474491/grails-web-taglib-3.3.2.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails.plugins/converters/3.3.1/afc1ea5fa7d7d52e83017856fa5a651d38145048/converters-3.3.1.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails.plugins/hibernate5/6.1.11/11c3e1e0de56147fbadebec949203eb36208959c/hibernate5-6.1.11.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails.plugins/grails-spring-websocket/2.4.1/df9b379f9aa4e1a534e568c8364788f89452c036/grails-spring-websocket-2.4.1.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-validation/3.3.9/30fdfdfe072fd2fdec5f3777f13eda7b3eff24db/grails-validation-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails/grails-plugin-services/3.3.9/ff41527f65f42ca67ab9ef458d81b1e675745f1b/grails-plugin-services-3.3.9.jar!/META-INF/grails.factories" />
+                  <option value="D:/grails-3.3.9/caches/modules-2/files-2.1/org.grails.plugins/spring-security-core/3.2.1/787fbf150eed167b226be8cc3d7c84d0370a5eaa/spring-security-core-3.2.1.jar!/META-INF/grails.factories" />
+                </list>
+              </option>
+              <option name="traits">
+                <SerializableStringMultiMap>
+                  <option name="underlyingMap">
+                    <map>
+                      <entry key="Controller">
+                        <value>
+                          <list>
+                            <option value="grails.artefact.Controller" />
+                            <option value="grails.artefact.gsp.TagLibraryInvoker" />
+                            <option value="grails.artefact.controller.RestResponder" />
+                            <option value="grails.plugin.springsecurity.ControllerMixin" />
+                            <option value="org.grails.compiler.web.converters.RenderConverterTrait" />
+                          </list>
+                        </value>
+                      </entry>
+                      <entry key="Domain">
+                        <value>
+                          <list>
+                            <option value="grails.artefact.DomainClass" />
+                            <option value="grails.web.databinding.WebDataBinding" />
+                            <option value="grails.gorm.Entity" />
+                          </list>
+                        </value>
+                      </entry>
+                      <entry key="Interceptor">
+                        <value>
+                          <list>
+                            <option value="grails.artefact.Interceptor" />
+                            <option value="org.grails.compiler.web.converters.RenderConverterTrait" />
+                          </list>
+                        </value>
+                      </entry>
+                      <entry key="Job">
+                        <value>
+                          <list>
+                            <option value="grails.plugins.quartz.QuartzJob" />
+                          </list>
+                        </value>
+                      </entry>
+                      <entry key="TagLib">
+                        <value>
+                          <list>
+                            <option value="grails.artefact.TagLibrary" />
+                          </list>
+                        </value>
+                      </entry>
+                      <entry key="TagLibrary">
+                        <value>
+                          <list>
+                            <option value="grails.artefact.TagLibrary" />
+                          </list>
+                        </value>
+                      </entry>
+                      <entry key="WebSocket">
+                        <value>
+                          <list>
+                            <option value="grails.plugin.springwebsocket.WebSocket" />
+                          </list>
+                        </value>
+                      </entry>
+                    </map>
+                  </option>
+                </SerializableStringMultiMap>
+              </option>
+            </StateHolder>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="修复添加审理庭的BUG" />
+    <MESSAGE value="即时通讯时间显示" />
+    <MESSAGE value="即时通讯:发送按钮与输入框增加间距" />
+    <MESSAGE value="修改被管理员断开连接的提示" />
+    <MESSAGE value="取消年份选择按钮选择即改变&#10;明确显示哪年的数据" />
+    <MESSAGE value="直播授权文字修改" />
+    <MESSAGE value="书记员、法官接口" />
+    <MESSAGE value="直播授权链接状态文字修改" />
+    <MESSAGE value="直播授权添加跳转到排期信息按钮" />
+    <MESSAGE value="添加直播授权列表页面时间信息与案件案号" />
+    <MESSAGE value="禁止管理员禁止管理员查看排期详情" />
+    <MESSAGE value="直播授权定时器修改为10分钟&#10;法官找不到数据返回失败" />
+    <MESSAGE value="删除法官上传批注的返回值&#10;提示书记员上传成功，ws返回上传的批注的文件地址" />
+    <MESSAGE value="法官上传批注图片&#10;书记员接收上传的批注图片" />
+    <MESSAGE value="删除一个无用service" />
+    <MESSAGE value="提升文件上传大小限制" />
+    <MESSAGE value="路径存在不再添加" />
+    <MESSAGE value="返回本次单条记录" />
+    <MESSAGE value="直播授权由只记录最新数据修改为记录所有数据" />
+    <MESSAGE value="第二次进入强制断掉第一次的数据" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="614" y="15" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583890905739">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="614" y="15" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583890905739" />
+    <state x="715" y="238" key="#xdebugger.evaluate" timestamp="1584580102865">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="715" y="238" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1584580102865" />
+    <state x="566" y="109" key="CommitChangelistDialog2" timestamp="1586241553308">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="566" y="109" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586241553308" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1586239737230">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586239737230" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1584407344391">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584407344391" />
+    <state width="1877" height="408" key="GridCell.Tab.0.bottom" timestamp="1586242046771">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="408" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586242046771" />
+    <state width="1877" height="408" key="GridCell.Tab.0.center" timestamp="1586242046771">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="408" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586242046771" />
+    <state width="1877" height="408" key="GridCell.Tab.0.left" timestamp="1586242046771">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="408" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586242046771" />
+    <state width="1877" height="408" key="GridCell.Tab.0.right" timestamp="1586242046771">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="408" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586242046771" />
+    <state width="1877" height="260" key="GridCell.Tab.1.bottom" timestamp="1586241542792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586241542792" />
+    <state width="1877" height="260" key="GridCell.Tab.1.center" timestamp="1586241542792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586241542792" />
+    <state width="1877" height="260" key="GridCell.Tab.1.left" timestamp="1586241542792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586241542792" />
+    <state width="1877" height="260" key="GridCell.Tab.1.right" timestamp="1586241542792">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="260" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586241542792" />
+    <state x="388" y="151" key="SettingsEditor" timestamp="1584925426306">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="388" y="151" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584925426306" />
+    <state x="720" y="208" key="VCS.ChangeListViewerDialog" timestamp="1586239727996">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="720" y="208" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586239727996" />
+    <state x="790" y="389" key="VCS.EditChangelistDialog" timestamp="1583981190607">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="790" y="389" key="VCS.EditChangelistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583981190607" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1586241563250">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586241563250" />
+    <state x="846" y="274" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1583977021023">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="846" y="274" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583977021023" />
+    <state x="751" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586241620563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="751" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586241620563" />
+    <state x="617" y="362" key="git4idea.ui.GitUnstashDialog" timestamp="1586239729452">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="617" y="362" key="git4idea.ui.GitUnstashDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586239729452" />
+    <state x="381" y="252" width="1251" height="607" key="new project wizard" timestamp="1585038214301">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="381" y="252" width="1251" height="607" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585038214301" />
+    <state x="474" y="339" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1584407441868">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="474" y="339" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584407441868" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585033569463">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585033569463" />
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.springframework.boot:spring-boot-test:1.5.18.RELEASE">
+    <CLASSES>
+      <root url="jar://D:/grails-3.3.9/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/1.5.18.RELEASE/8ba0c21e70ee0f481eed17a28380fa0caf74f1d0/spring-boot-test-1.5.18.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/grails-3.3.9/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test/1.5.18.RELEASE/38534792b5ac6b35bbeb95246e4b35bb8fec473c/spring-boot-test-1.5.18.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
