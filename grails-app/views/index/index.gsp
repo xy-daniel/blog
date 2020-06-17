@@ -99,95 +99,10 @@
 
 	<!-- begin #page-copyright -->
 	<g:render template="/layouts/base_copyright"/>
-
-%{--	<div id="ad" class="card card-outline-danger text-left bg-white">--}%
-%{--		<div class="card-block">--}%
-%{--			<blockquote class="card-blockquote" style="margin-bottom: 0">--}%
-%{--				<p class="f-s-14 text-inverse f-w-600">来自<span id="from"></span>的用户您好：</p>--}%
-%{--				<p class="f-s-14 text-inverse f-w-600">欢迎您访问本站，您是本站的第<span id="position"></span>个用户</p>--}%
-%{--				<p class="f-s-14 text-inverse f-w-600" style="margin-bottom: 0">用户量：<span id="total"></span></p>--}%
-%{--			</blockquote>--}%
-%{--		</div>--}%
-%{--	</div>--}%
 	<!-- end #page-copyright -->
 	<asset:javascript src="index/index.js"/>
 	<asset:javascript src="index/month.js"/>
 	<script>
-		// window.onload=function(){
-		// 	ad=document.getElementById("ad");
-		// 	moveY=1;
-		// 	moveX=1;
-		// 	timer=null;
-		// 	startMove();
-		//
-		// };
-		// function startMove(){
-		// 	if(timer==null){
-		// 		timer=window.setInterval(moveImg,40);
-		// 	}
-		// }
-		// function moveImg(){
-		// 	let top;
-		// 	let left;
-		// 	if(moveY===1){
-		// 		top=getData.eleLT(ad).y+1;
-		// 	}
-		// 	if(moveY===-1){
-		// 		top=getData.eleLT(ad).y-1;
-		// 	}
-		//
-		// 	if(getData.eleLT(ad).y>getData.clientWH().y+getData.scrollLT().y-getData.eleWH(ad).y){
-		// 		moveY=-1;
-		// 	}
-		// 	if(getData.eleLT(ad).y<=getData.scrollLT().y){
-		// 		moveY=1;
-		// 	}
-		// 	ad.style.top=top+"px";
-		//
-		// 	/**
-		// 	 * 横坐标移动
-		// 	 */
-		// 	if(moveX===1){
-		// 		left=getData.eleLT(ad).x+1;
-		// 	}
-		// 	if(moveX===-1){
-		// 		left=getData.eleLT(ad).x-1;
-		// 	}
-		//
-		// 	if(getData.eleLT(ad).x>getData.clientWH().x+getData.scrollLT().x-getData.eleWH(ad).x){
-		// 		moveX=-1;
-		// 	}
-		// 	if(getData.eleLT(ad).x<=getData.scrollLT().x){
-		// 		moveX=1;
-		// 	}
-		// 	ad.style.left=left+"px";
-		// }
-		// getData={
-		// 	eleWH:function(obj){
-		// 		const eleW = obj.style.width || document.defaultView.getComputedStyle(obj, null).width;
-		// 		const eleH = obj.style.height || document.defaultView.getComputedStyle(obj, null).height;
-		// 		return new  this.result(parseInt(eleW),parseInt(eleH));
-		// 	},
-		// 	eleLT:function(obj){
-		// 		const eleL = obj.style.width || document.defaultView.getComputedStyle(obj, null).left;
-		// 		const eleT = obj.style.height || document.defaultView.getComputedStyle(obj, null).top;
-		// 		return new this.result(parseInt(eleL),parseInt(eleT));
-		// 	},
-		// 	scrollLT:function(){
-		// 		const scrollL = document.documentElement.scrollLeft || document.body.scrollLeft;
-		// 		const scrollT = document.documentElement.scrollTop || document.body.scrollTop;
-		// 		return new this.result(scrollL,scrollT);
-		// 	},
-		// 	clientWH:function(){
-		// 		const clientW = document.documentElement.clientWidth;
-		// 		const clientH = document.documentElement.clientHeight;
-		// 		return new this.result(clientW,clientH);
-		// 	},
-		// 	result:function(x,y){
-		// 		this.x=x;
-		// 		this.y=y;
-		// 	}
-		// };
 		$.get(
 			"/api/visit",
 			{

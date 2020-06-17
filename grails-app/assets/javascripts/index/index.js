@@ -197,7 +197,7 @@ function handleData(data) {
         $(".post-content").append("<div class=\"wrapper4trans\" style=\"margin-left: auto;margin-right: auto\">" +
             "                           <div class=\"col4trans\" ontouchstart=\"this.classList.toggle('hover');\" onclick='toDetail("+ data[i].id +")'>" +
             "                               <div class=\"container4trans\">" +
-            "                                   <div class=\"front\" style=\"background-image: url(http://pic1.win4000.com/wallpaper/7/56e389b179a94.jpg)\">" +
+            "                                   <div class=\"front\" style=\"background-image: url(https://s1.ax1x.com/2020/06/17/NANzOs.jpg)\">" +
             "                                       <div class=\"inner\">" +
             "                                           <p>"+ data[i].wzm +"</p>" +
             "                                           <span>"+ data[i].gjc +"</span>" +

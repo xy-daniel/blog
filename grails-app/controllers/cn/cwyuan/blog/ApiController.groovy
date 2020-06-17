@@ -4,15 +4,22 @@ import cn.cwyuan.blog.enums.RespType
 import cn.cwyuan.blog.utils.FileUtil
 import grails.converters.JSON
 
+import java.text.DateFormat
+
 class ApiController {
 
     /**
      * 友链数据
+     * @return List<Friend>
      */
     def friendData(){
         render Resp.toJson(RespType.SUCCESS, Friend.findAllByStatus(0))
     }
 
+    /**
+     * 标签数据List<Tag>
+     * @return
+     */
     def tagData(){
         //获取所有标签
         def tags = Tags.findAll()
@@ -22,7 +29,10 @@ class ApiController {
         render Resp.toJson(RespType.SUCCESS, tags)
     }
 
-    //最近文章
+    /**
+     * 最近文章
+     * @return List<Heart>
+     */
     def currentWZ(){
         def model = [:]
         def modelDataList = []
@@ -42,7 +52,12 @@ class ApiController {
         render model as JSON
     }
 
+    /**
+     * 文章列表
+     * @return List<Heart>
+     */
     def heartData(){
+        def datetimeFormat = DateFormat.getDateTimeInstance()
         def currentPage = params.int("currentPage")
         def search = params.get("search") as String
         def tag = params.long("tag") ?: 0
@@ -69,7 +84,7 @@ class ApiController {
                 data.put("wzm", heart.wzm)
                 data.put("gy", heart.gy)
                 data.put("gjc", heart.gjc)
-                data.put("date", heart.dateCreated)
+                data.put("date", )
                 modelDataList.add(data)
             }
         }else{
@@ -81,7 +96,7 @@ class ApiController {
                 data.put("wzm", heart.wzm)
                 data.put("gy", heart.gy)
                 data.put("gjc", heart.gjc)
-                data.put("date", heart.dateCreated)
+                data.put("date", datetimeFormat.format(heart.dateCreated))
                 modelDataList.add(data)
             }
         }
@@ -92,6 +107,9 @@ class ApiController {
         render model as JSON
     }
 
+    /**
+     * 关键词列表
+     */
     def getGjc(){
         def hearts = Heart.findAll()
         List<String> gjcs = new ArrayList<>()

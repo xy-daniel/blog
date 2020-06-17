@@ -24,6 +24,7 @@
 					<li><g:link controller="index" action="file">归档</g:link></li>
 					<li><g:link controller="index" action="about_me">关于我</g:link></li>
 					<li><g:link controller="index" action="contact_us">联系我</g:link></li>
+					<li><g:link controller="admin">管理</g:link></li>
 				</ul>
 			</div>
 			<!-- end navbar-collapse -->
