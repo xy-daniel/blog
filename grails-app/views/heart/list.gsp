@@ -30,7 +30,7 @@
 		<div id="content" class="content">
 			<!-- begin breadcrumb -->
 			<ol class="breadcrumb pull-right">
-				<li class="breadcrumb-item"><g:link controller="console">首页</g:link></li>
+				<li class="breadcrumb-item"><g:link controller="admin">首页</g:link></li>
 				<li class="breadcrumb-item active">文章管理</li>
 			</ol>
 			<!-- end breadcrumb -->

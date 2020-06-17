@@ -16,6 +16,6 @@ class AboutMeController {
         def me = AboutMe.findAll().get(0)
         me.data = data
         me.save(flush: true)
-        redirect(controller: "console")
+        redirect(controller: "admin")
     }
 }

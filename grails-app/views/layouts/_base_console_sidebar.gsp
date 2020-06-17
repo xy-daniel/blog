@@ -21,7 +21,7 @@
         <!-- begin sidebar nav -->
         <ul class="nav">
             <!-- 系统信息 -->
-            <li><a href="/console"><i class="fas fa-cog fa-fw"></i> <span>系统信息</span></a></li>
+            <li><a href="/admin"><i class="fas fa-cog fa-fw"></i> <span>系统信息</span></a></li>
             <!-- 文章管理 -->
             <li class="has-sub">
                 <a href="javascript:void(0);">

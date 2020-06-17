@@ -3,7 +3,7 @@ package cn.cwyuan.blog
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class ConsoleControllerSpec extends Specification implements ControllerUnitTest<ConsoleController> {
+class AdminControllerSpec extends Specification implements ControllerUnitTest<AdminController> {
 
     def setup() {
     }

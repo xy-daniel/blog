@@ -64,6 +64,6 @@ class SelfController {
         user.photo = photo
         user.save(flush: true)
         //重定向
-        redirect(controller: "console")
+        redirect(controller: "admin")
     }
 }

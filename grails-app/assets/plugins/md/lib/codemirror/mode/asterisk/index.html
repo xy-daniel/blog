@@ -81,7 +81,7 @@ exten => 3,n,Goto(s,restart)		; Start with the congratulations
 
 exten => 1000,1,Goto(default,s,1)
 ;
-; We also create an example user, 1234, who is on the console and has
+; We also create an example user, 1234, who is on the admin and has
 ; voicemail, etc.
 ;
 exten => 1234,1,Playback(transfer,skip)		; "Please hold while..."
