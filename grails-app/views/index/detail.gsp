@@ -84,7 +84,14 @@
 							})
 						</script>
 					</div>
-					<a href="/api/download?heartId=${id}" class="btn" style="margin: 10px;width: 70%;border-radius: 30px;background-color: #348FE2">点击下载本文MarkDown文档</a>
+					<div class="row">
+						<div class="col-md-6">
+							<a href="/api/download?heartId=${id}" class="btn download" style="margin: 10px;width: 70%;border-radius: 30px;background-color: #348FE2;color: black;">点击下载本文MarkDown文档</a>
+						</div>
+						<div>
+							浏览量
+						</div>
+					</div>
 				</div>
 				<!-- end col-12 -->
 			</div>

@@ -53,7 +53,7 @@
 						</p>
 					</g:if>
 					<div class="checkbox checkbox-css m-b-20">
-						<input type="checkbox" id="remember_checkbox" /> 
+						<input type="checkbox" id="remember_checkbox" />
 						<label for="remember_checkbox">
 							记住我
 						</label>
