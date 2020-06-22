@@ -57,39 +57,14 @@
 					<!-- begin post-detail -->
 					<div class="post-detail section-container">
 						<h4 class="post-title"></h4>
-						<input type="hidden" id="contentId" value="${id}">
+						<input type="hidden" id="heartId" value="${id}">
 						<div id="editormd-view">
 							<textarea style="display:none;"></textarea>
 						</div>
-						<script>
-							$(function () {
-								let editormdView;
-								$.get(
-									"/index/getHtml",
-									{id:$("#contentId").val()},
-									function (result) {
-										$(".post-title").text(result.data.title);
-										editormdView = editormd.markdownToHTML("editormd-view", {
-											markdown        : result.data.md ,
-											htmlDecode      : "style,script,iframe",
-											tocm            : true,
-											emoji           : true,
-											taskList        : true,
-											tex             : true,
-											flowChart       : true,
-											sequenceDiagram : true,
-										});
-									},'json'
-								)
-							})
-						</script>
 					</div>
 					<div class="row">
 						<div class="col-md-6">
 							<a href="/api/download?heartId=${id}" class="btn download" style="margin: 10px;width: 70%;border-radius: 30px;background-color: #348FE2;color: black;">点击下载本文MarkDown文档</a>
-						</div>
-						<div>
-							浏览量
 						</div>
 					</div>
 				</div>
@@ -104,11 +79,12 @@
 	<!-- begin #page-copyright -->
 	<g:render template="/layouts/base_copyright"/>
 	<!-- end #page-copyright -->
+	<asset:javascript src="index/detail.js"/>
 
-	<script>
-		$(document).ready(function() {
-			App.init();
-		});
-	</script>
+<script>
+	$(function () {
+
+	})
+</script>
 </body>
 </html>
