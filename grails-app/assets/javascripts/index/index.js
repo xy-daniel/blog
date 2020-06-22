@@ -31,6 +31,18 @@
     };
 
     function init_ready() {//初始化预设值
+        $.get(
+            "/api/visit",
+            {
+                cip:returnCitySN["cip"],
+                cname:returnCitySN["cname"],
+                cua:navigator.userAgent
+            },function (result) {
+                $("#from").append(result.address);
+                $("#position").append(result.position);
+                $("#total").append(result.total);
+            },'json'
+        );
     }
 
     function init_event() {//初始化页面事件

@@ -41,19 +41,6 @@
 				order: 0;
 			}
 		}
-
-
-		#ad{
-			position: absolute;
-			width: 250px;
-			top: 10px;
-			left: 10px;
-			z-index: 10000;
-		}
-
-		.wrapper4trans {
-			margin: 20px 0 40px;
-		}
 	</style>
 </head>
 <body>
@@ -102,19 +89,5 @@
 	<!-- end #page-copyright -->
 	<asset:javascript src="index/index.js"/>
 	<asset:javascript src="index/month.js"/>
-	<script>
-		$.get(
-			"/api/visit",
-			{
-				cip:returnCitySN["cip"],
-				cname:returnCitySN["cname"],
-				cua:navigator.userAgent
-			},function (result) {
-				$("#from").append(result.address);
-				$("#position").append(result.position);
-				$("#total").append(result.total);
-			},'json'
-		);
-	</script>
 </body>
 </html>

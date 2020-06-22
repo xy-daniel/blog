@@ -84,7 +84,7 @@ class ApiController {
                 data.put("wzm", heart.wzm)
                 data.put("gy", heart.gy)
                 data.put("gjc", heart.gjc)
-                data.put("date", )
+                data.put("date", datetimeFormat.format(heart.dateCreated))
                 modelDataList.add(data)
             }
         }else{
