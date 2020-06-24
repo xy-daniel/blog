@@ -89,5 +89,23 @@
 	<!-- end #page-copyright -->
 	<asset:javascript src="index/index.js"/>
 	<asset:javascript src="index/month.js"/>
+	<script>
+		$(document).ready(function () {
+			//初始化数据
+			getData(1,"", "");
+			//点击标签数据---->在下面处理永远返回第一页数据，不进行模糊搜索
+			//点击搜索数据---->应该确定在哪个标签下面---->永远返回第一页
+			$("#search").bind('click', function() {
+				const searchVal = $("#searchVal").val();
+				let tag = "";
+				const checked = $(".checked");
+				if (checked.length !== 0){
+					tag = checked.parent().prev().val()
+				}
+				getData(1, searchVal, tag);
+			});
+			//直接点击页码
+		})
+	</script>
 </body>
 </html>

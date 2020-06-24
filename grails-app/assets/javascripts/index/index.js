@@ -5,22 +5,6 @@
 
     //内部核心属性
     const core = {
-        data: function () {
-            //初始化数据
-            getData(1,"", "");
-            //点击标签数据---->在下面处理永远返回第一页数据，不进行模糊搜索
-            //点击搜索数据---->应该确定在哪个标签下面---->永远返回第一页
-            $("#search").bind('click', function() {
-                const searchVal = $("#searchVal").val();
-                let tag = "";
-                const checked = $(".checked");
-                if (checked.length !== 0){
-                    tag = checked.parent().prev().val()
-                }
-                getData(1, searchVal, tag);
-            });
-            //直接点击页码
-        }
     };
     'use strict';
     const ready = {};
@@ -46,32 +30,11 @@
     }
 
     function init_event() {//初始化页面事件
-        core.data();
     }
     //对外公开的方法
     const page = {};
     init();
     window.p = page;
-    function getData(toPage, search, tag) {
-        $.get(
-            "/api/heartData",
-            {
-                //当前页数据
-                currentPage: toPage,
-                //关键词搜索
-                search: search,
-                //点击的数据
-                tag: tag
-            },
-            function (result) {
-                //数据
-                const data = result.data;
-                //分页插件
-                pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
-                handleData(data);
-            }, 'json'
-        )
-    }
 }(window);
 //点击前往需要去的页面
 function toPage(elem,i) {
@@ -297,4 +260,25 @@ function pageNum(totalPage, currentPage) {
 
 function toDetail(id) {
     window.location.href = "/index/detail/" + id
+}
+
+function getData(toPage, search, tag) {
+    $.get(
+        "/api/heartData",
+        {
+            //当前页数据
+            currentPage: toPage,
+            //关键词搜索
+            search: search,
+            //点击的数据
+            tag: tag
+        },
+        function (result) {
+            //数据
+            const data = result.data;
+            //分页插件
+            pageNum(Math.ceil(result.recordsTotal / 6), result.currentPage);
+            handleData(data);
+        }, 'json'
+    )
 }
