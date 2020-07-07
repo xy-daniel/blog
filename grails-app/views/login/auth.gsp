@@ -88,6 +88,11 @@
 	<script>
 		$(document).ready(function() {
 			LoginV2.init();
+			const username = Cookies.get('username');
+			if(username != null && username !== ""){
+				$("#username").val(atob(username));
+				$("input[type='checkbox']").attr("checked", true);
+			}
 		});
 	</script>
 </body>
