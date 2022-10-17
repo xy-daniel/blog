@@ -44,6 +44,8 @@
             <li><g:link controller="tags" action="list"><i class="fas fa-tags"></i> <span>标签管理</span></g:link></li>
             <!-- 友链管理 -->
             <li><g:link controller="friend" action="list"><i class="fas fa-address-card"></i> <span>友链管理</span></g:link></li>
+            <!-- 项目管理 -->
+            <li><g:link controller="friend" action="list"><i class="fas fa-address-card"></i> <span>项目管理</span></g:link></li>
             <!-- begin sidebar minify button -->
             <li><a href="javascript:void(0);" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
             <!-- end sidebar minify button -->

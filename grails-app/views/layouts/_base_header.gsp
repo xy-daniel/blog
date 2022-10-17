@@ -11,9 +11,7 @@
 				</button>
 				<g:link controller="index" action="index" class="navbar-brand">
 					<span class="brand-logo"></span>
-					<span class="brand-text">
-						Cruder拯救者
-					</span>
+					<span class="brand-text">十一次方</span>
 				</g:link>
 			</div>
 			<!-- end navbar-header -->

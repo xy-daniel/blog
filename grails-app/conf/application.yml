@@ -15,14 +15,14 @@ info:
         grailsVersion: '@info.app.grailsVersion@'
 spring:
     main:
-        banner-mode: "off"
+        banner-mode: "console"
     groovy:
         template:
             check-template-location: false
 
 # Spring Actuator Endpoints are Disabled by Default
 endpoints:
-    enabled: false
+    enabled: true
     jmx:
         enabled: true
 ---
@@ -95,12 +95,12 @@ dataSource:
     driverClassName: com.mysql.jdbc.Driver
     dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     username: root
-    password: 123456
+    password: DdDdGg19970101..
 environments:
     development:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true
+            url: jdbc:mysql://175.24.172.160:3306/blog?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&autoReconnect=true
     test:
         dataSource:
             dbCreate: update
@@ -137,10 +137,10 @@ grails:
         springsecurity:
             userLookup:
                 usernamePropertyName: username
-                userDomainClassName: cn.cwyuan.blog.User
-                authorityJoinClassName: cn.cwyuan.blog.UserRole
+                userDomainClassName: com.daniel.blog.User
+                authorityJoinClassName: com.daniel.blog.UserRole
             authority:
-                className: cn.cwyuan.blog.Role
+                className: com.daniel.blog.Role
             logout:
                 postOnly: false
             auth:
@@ -178,8 +178,8 @@ server:
 blog:
     editormd:
         filePath: /usr/local/blog/
-#        filePath: D://blog/
-        serverPath: http://www.crudsavior.com/images/
+#        filePath: F://blog/
+        serverPath: http://175.24.172.160/images/
 jwt:
     info:
         secret: XXXXX

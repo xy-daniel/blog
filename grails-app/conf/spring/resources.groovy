@@ -1,6 +1,6 @@
 package spring
 
-import cn.cwyuan.blog.security.TcAuthenticationProvider
+import com.daniel.blog.security.TcAuthenticationProvider
 
 
 // Place your Spring DSL code here

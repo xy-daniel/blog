@@ -1,6 +1,6 @@
 package blog
 
-import cn.cwyuan.blog.InitService
+import com.daniel.blog.InitService
 
 class BootStrap {
     InitService initService

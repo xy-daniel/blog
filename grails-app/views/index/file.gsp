@@ -35,7 +35,7 @@
 
 	<div class="container" style="padding-top: 100px;padding-bottom: 20px">
 		<h4 class="page-header" style="color: black">归档 <small>${date}文章...</small></h4>
-		<p>您可在地址栏中拼接?date=****年**月进行归档查询</p>
+		<p>您可在地址栏中拼接?date=XXXX年XX月进行归档查询</p>
 		<input type="hidden" id="date" value="${date}">
 		<div class="content" id="content">
 			<ul class="timeline data">
@@ -56,7 +56,7 @@
 								"<a href=\"javascript:;\">&nbsp;</a>" +
 								"</div>" +
 								"<div class=\"timeline-body\">" +
-								"此月份没有发布文章..." +
+								"本月没有发布文章" +
 								"</div>" +
 								"</li>");
 						return

@@ -172,7 +172,7 @@ function handleData(data) {
         $(".post-content").append("<div class=\"wrapper4trans\" style=\"margin-left: auto;margin-right: auto\">" +
             "                           <div class=\"col4trans\" ontouchstart=\"this.classList.toggle('hover');\" onclick='toDetail("+ data[i].id +")'>" +
             "                               <div class=\"container4trans\">" +
-            "                                   <div class=\"front\" style=\"background-image: url(https://s1.ax1x.com/2020/06/17/NANzOs.jpg)\">" +
+            "                                   <div class=\"front\" style=\"background-image: url(https://2048-website.oss-cn-beijing.aliyuncs.com/%E8%83%8C%E6%99%AF%E5%9B%BE.jpeg)\">" +
             "                                       <div class=\"inner\">" +
             "                                           <p>"+ data[i].wzm +"</p>" +
             "                                           <span>"+ data[i].gjc +"</span>" +

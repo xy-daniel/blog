@@ -31,7 +31,7 @@
 			<div class="login-header">
 				<div class="brand">
 					<span class="logo"></span> <b>Blog</b> 控制台
-					<small>Cruder拯救者</small>
+					<small>十一次方</small>
 				</div>
 				<div class="icon">
 					<i class="fa fa-lock"></i>

@@ -4,7 +4,7 @@
     <div class="card card-inverse">
         <img class="card-img" src="<asset:assetPath src="cover/gzh.jpg"/>" alt="" />
         <div class="card-block text-lg-center" style="color: black;text-align: center">
-            <h5 class="card-title">Cruder拯救者</h5>
+            <h5 class="card-title">十一次方</h5>
             <hr/>
             <div class="row">
                 <div class="col-4">
